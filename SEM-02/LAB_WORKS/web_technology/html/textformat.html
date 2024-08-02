@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text_format/Decorate</title>
+        <meta charset="UTF-8">
+        <style>
+            p {
+                color: green;
+                text-align: center;
+                word-spacing: 3px;
+            }
+
+            p#extra {
+                text-decoration: overline;
+
+                /* create a space in first line */
+                text-indent: 30px;
+
+                /* the direction of the text (right-to-left = rtl) */
+                direction: rtl;
+                text-transform: capitalize;
+            }
+
+            p.para {
+                color: blue;
+            }
+
+            p#cap {
+                letter-spacing: 5px;
+                /* space between letters */
+
+                /* shadow for text */
+                text-shadow: 4px 3px orangered;
+            }
+
+            p#new {
+                color: red;
+                text-align: justify;
+                /* line-heigth: used to gap the distance between line. */
+                line-height: 20px;
+            }
+
+            p#fo {
+                text-align: justify;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                /* type of font */
+
+                word-spacing: 5px;
+                /* space between words */
+            }
+        </style>
+    </head>
+<body>
+    <strong>Hello</strong><u>I am Alson.</u> <br />
+    <!-- u = underlines -->
+    <!-- strong and b = bold -->
+
+    <b>I am doing some HTML.</b>
+
+    <p>
+        This is subscript.<br/>
+        H<sub>2</sub>o<br/>
+        <!-- sub to create a subscript -->
+
+        This is power.<br/>
+        10<sup>5</sup><br/>
+        <!-- sup to create superscript -->
+
+        And this is cross<br/>
+        <del>1500</del>
+        <!-- del = cross the text in between -->
+
+        <P id="extra" class="para">
+            overline with capitalization.
+        </P>
+    </p>
+
+    <p id="cap" class="para">
+        This is text shadow with letter-spacing.
+    </p>
+
+    <p id="new">
+        <b>This has a line height.</b><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate aspernatur, aperiam fuga eaque illo fugiat labore ducimus, quod quaerat velit illum perferendis? Mollitia est, voluptatem eius distinctio voluptates magni.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat tenetur laudantium amet ipsa vel atque reprehenderit nesciunt accusamus provident quasi distinctio veniam recusandae cupiditate sit mollitia nostrum odit, explicabo exercitationem?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel odio nostrum at architecto, quaerat quis ex consequatur debitis adipisci. Molestias blanditiis illum voluptate voluptas ipsum distinctio fuga nemo ut quod!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere vitae error ab perferendis et, distinctio fugiat deserunt! Consequatur nobis placeat eaque eligendi ipsa, facilis eius nemo nisi, in quo rem!
+        Lorem
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque illum cupiditate ipsa accusantium, dicta non saepe temporibus incidunt, molestias iusto ducimus vel ad accusamus id eos! Expedita veniam ipsam repudiandae.
+    </p>
+
+    <p id="fo">
+        <b>And this has word spacing.</b><br>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum numquam magnam cupiditate ducimus dignissimos fugit, modi dolore sint delectus reprehenderit sed! Repellat tempora dolorem aliquid libero fuga sapiente alias ratione?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tenetur debitis tempora ratione perspiciatis itaque, aperiam corrupti, quae, nemo deserunt ipsam commodi quod eius? Saepe suscipit debitis soluta at ullam?
+    </p>
+</body>
+
+</html>

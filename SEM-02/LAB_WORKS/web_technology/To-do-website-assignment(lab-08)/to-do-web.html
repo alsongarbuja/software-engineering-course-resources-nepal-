@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./to-do-web-style.css">
+    <script defer src="./to-do-web.js"></script>
+</head>
+<body>
+    <header>
+        <h1><u>TO - DO MAKER</u></h1>
+        <label for="task">Enter a task: </label>
+        <input type="text" id="task">
+        <button onclick="add()" id="btn">
+            Add task
+        </button>
+    </header>
+    <main>
+    <div class="box" id="uncomplete">
+        <h2>To - do</h2>
+        <ul id="list"></ul>
+    </div>
+    <div class="box" id="complete">
+        <h2>Completed</h2>
+        <ul id="cList"></ul>
+    </div>
+    </main>
+</body>
+</html>

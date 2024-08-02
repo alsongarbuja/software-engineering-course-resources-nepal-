@@ -1,0 +1,33 @@
+CSS selector are the patterns used to select the element you want to style.
+
+    some example
+        .cn - select element with classname cn
+        #i - select element with id i
+        div - select all the div
+        div p - select all p inside div
+        div+p - select p that is right next to div
+        div>p - select all p that is direct child of div
+        .cn, h1 - select element with classname cn and h1 tags
+
+
+CSS levels of style sheet
+
+    -internal level
+        By using the <style> </style> tag we can use the features
+        of css internally inside a html file itself. It is usually
+        written at the top of the html file before <body> tag.
+
+    -external level
+        By using <link> tag to link a external css file inside a 
+        HTML file we can use css features eternally. It is used inside the 
+        <head> tag usually.
+        The advantage of external over internal is
+            1, we can use the external file in many different HTML files
+            2, Its less flooded as the html and css files are seperate so easy to maintain
+
+    -inline level
+        By using style="" attribute inside any tag in html we 
+        can use the css features inside html files. It is usually
+        within a line so it is called inline level.
+
+            exmple: <div style="border: 1px; height: 300px;"> Hello </div>

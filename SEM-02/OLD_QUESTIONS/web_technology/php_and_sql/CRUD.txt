@@ -1,0 +1,21 @@
+CRUD - create, read, update and delete
+
+    for creating
+        CREATE table table_name(
+            id int PRIMARY KEY AUTO_INCREMENT,
+            username varchar(100) UNIQUE NOT NULL,
+            roll int NOT NULL UNIQUE,
+            address varchar(200) NOT NULL
+        );
+
+    for reading
+        SELECT * FROM table_name WHERE id = $id; [$id = 1, 2,...]
+
+    for updating
+        UPDATE table_name SELECT
+                    username = "newusername",
+                    roll = "newroll"
+            WHERE id = $id;
+
+    for deleting
+        DELETE FROM table_name WHERE id = $id;

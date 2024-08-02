@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // object
+        var wadu = {
+            name : "yogesh", // attribute : value
+            hobby : "Fukne",
+            morning: "jhyap",
+                drink : function (d){
+                    console.log("Always " + d);
+                }
+        };
+
+        // creates a new empty object
+        var jhapdike = new Object;
+
+        jhapdike.name = "Anil";
+        jhapdike.hobby = "FF";
+        jhapdike['morning'] = 6;
+
+        
+        console.log(wadu);
+        wadu.drink("Hukka");
+        console.log(jhapdike);
+
+
+        // array of objects
+            var torpes = [
+                {name: "Prakash", hobby: "DJ",
+                    comments: [
+                        {text: "yes", name: "Sunil"} 
+                ]},
+                {name: "Sunil", hobby: "Sahi ho"}
+            
+            ];
+
+            console.log(torpes);
+            console.log(torpes[0].comments[0].name);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

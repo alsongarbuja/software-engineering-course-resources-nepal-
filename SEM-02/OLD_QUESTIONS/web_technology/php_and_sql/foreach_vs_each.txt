@@ -1,0 +1,3 @@
+                                        foreach() vs each()
+-It returns the key-value pair until the end    || - It returns the key-value pair just once at a time
+-

@@ -1,0 +1,89 @@
+
+constructor
+        --- A constructor is a special type of member function that
+            initialize itslef upon creating a object of that class and
+            it has the same name as the class name.
+
+                [
+                    syntax:
+
+                        class A{
+                            A(){
+                                cout << "Hello";
+                            }
+                        }
+
+                        main(){
+                            A obj;
+                            // it initializes the A() function 
+                        }
+                ]            
+
+        --- Types of constructors
+                1, default constructor
+                    [The constructor which doesnot take any parameter.
+                     It is mostly used for initializing data_member to 0.]
+                2, parameterized constructor
+                    [The constructor which takes parameter.
+                     It is used to initialize data_member to certain value]
+                    [ 
+                        syntax:
+                            class A{
+                                public:
+                                    int num;
+
+                                        A(int a){
+                                            num = a;
+                                        }
+                            }
+
+                            main(){
+                                A obj(2);
+                            }
+                    ]
+                3, copy constructor
+                    [The constructor which takes another obj as parameter
+                     and used to copy the values of the object to another
+                     object.]
+
+                        [
+                            syntax:
+                                class A{
+                                    public:
+                                        int num;
+
+                                            A(){
+                                                num = 2;
+                                            }
+
+                                            A(A &obj){
+                                                num = obj.num;
+                                            }
+                                }
+
+                                main(){
+                                    A ob;
+                                    A ob1 = ob; // passing ob as parameter
+                                }
+                        ]
+                        [ Example-1 ]
+
+    Q, can constructor be overloaded?
+        -- Yes a constructor can be overloaded by the same concept as the
+           function overloading. We can use parameterized constructors with
+           different number of parameter or different type of parameter.
+
+
+    Destrutor
+        --- C++ destructor is a special member function that is executed 
+            automatically when an object is destroyed that has been created by the constructor.
+
+            [
+                syntax:
+                    ~class_name(){};
+            ]
+
+            Unlike constructor it neither takes any arguments nor it returns any values.
+            So it can't be overloaded. Only one destructor can be implemented in a class.
+
+            [ Example - 1.1 ]

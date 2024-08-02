@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="task">Task name: </label>
+    <input type="text" id="task">
+    <button onclick="add()">
+        Add
+    </button>
+    <button id="btn" onclick="makeComplete()">
+        Make complete
+    </button>
+
+    <script>
+        var task =[];
+
+                function add()
+                {
+                    var t = document.getElementById("task");
+                    if(t.value){
+                        task.push(
+                        {name:  t.value , isComplete: false}
+                        );
+                        t.value = "";  
+                        console.log(task);
+                    }  
+                };
+
+         function makeComplete()
+                {
+                    task.forEach(function(t) {
+                        if(document.getElementById("task").value == t.name){
+                            t.isComplete = true;
+                            console.log(task);
+                        }else{
+                            console.log("It is not a task.");
+                        }
+                    });
+                    
+                }
+
+    </script>
+</body>
+</html>

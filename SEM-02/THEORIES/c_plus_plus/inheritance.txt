@@ -1,0 +1,34 @@
+
+
+    **INHERITANCE**
+        --- Inheritance is an important mechanism in oop. It is the
+            process of inheriting the data member and methods of a 
+            class to other classes.
+
+                [syntax::
+                    class A{
+                        public:
+                            int num;
+                    }
+
+                    //inheriting data member of class A to B
+                    class B: public A{
+                        // now it also has a num variable
+                    }
+                ]
+                [ Here the class A is called as Base, super or Parent class
+                  Whereas the class B is sub, or child class ] 
+
+
+    TYPES OF INHERITANCE
+        http://www.tutorialdost.com/Cpp-Programming-Tutorial/49-CPP-Types-of-Inheritance.aspx
+
+
+    *** access specifier in Inheritance ***
+            Rules
+                1, only protected and public data member and functions
+                   can be inherited.
+                2, access specifier can be changed in the sub class 
+                    but { public into public, protected, private } 
+                        { protected into protected and private }
+                        { private into private only }

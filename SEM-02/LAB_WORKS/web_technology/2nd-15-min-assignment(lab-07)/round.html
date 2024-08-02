@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var etem = ['a', 'b', 'c', 'd', 'e'];
+
+            function next(){
+                var etem2 = etem.pop();
+                etem.unshift(etem2);
+                console.log(etem);
+            };
+
+            function prev(){
+                var etem3 = etem.shift();
+                etem.push(etem3);
+                console.log(etem);
+            };
+
+            next();
+            next();
+            prev();
+    </script>
+</body>
+</html>

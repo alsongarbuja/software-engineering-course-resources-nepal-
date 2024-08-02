@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TAble</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            table, td, th {
+                border: 1px solid black;
+                /* creates border */
+            }
+            th {
+                text-align: left;
+                background-color: green;
+                padding: 12px;
+            }
+            td {
+                height: 50px;
+                text-align: center;
+                vertical-align: bottom;
+                border-top: 1px solid black;
+            }
+
+/* check the css_after.html to check in more detail */
+            td:hover {
+                background-color: darkolivegreen;
+            }
+
+            td#odd:hover {
+                background-color: chocolate;
+            }
+
+            tr#all:hover {
+                background-color: powderblue;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h2 align="center">Table</h2>
+        <hr width="50%">
+        <div>
+
+            <!-- table = to create table -->
+            <table border="border" align="center">
+
+                <!-- tr = table row -->
+                <tr align="center">
+
+                    <!-- th = table heading -->
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Courses</th>
+                    <th>Marks</th>
+                </tr>
+                <tr align="center" id="all">
+
+                    <!-- td = -->
+                    <td>1</td>
+                    <td>Aa</td>
+                    <td>Computer</td>
+                    <td>70</td>
+                </tr>
+                <tr align="center">
+                    <td>2</td>
+                    <td>Bb</td>
+                    <td rowspan="2" id="odd">Arts</td>
+                    <td>80</td>
+                </tr>
+                <tr align="center">
+                    <td>3</td>
+                    <td>Cc</td>
+                    <td rowspan="2" id="odd">55</td>
+                    <!-- rowspan collapses the no. of row given -->
+
+                </tr>
+                <tr align="center">
+                    <td>4</td>
+                    <td>Dd</td>
+                    <td>Business</td>
+                </tr>
+                <tr id="all">
+                    <td colspan="4" align="center">Thank you</td>
+                    <!-- colspan to collapses the no. of col given -->
+
+                </tr>
+            </table>
+        </div>
+        <hr width="50%">
+
+    </body>
+</html>

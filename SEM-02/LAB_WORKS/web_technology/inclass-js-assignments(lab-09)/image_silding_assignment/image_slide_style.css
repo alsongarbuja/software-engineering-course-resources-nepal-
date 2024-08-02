@@ -1,0 +1,38 @@
+*
+{
+    margin: 0;
+}
+
+button {
+    border: none;
+    width: 20%;
+    font-size: 40px;
+    padding: 30px;
+    cursor: pointer;
+    background-color: rgba(51, 50, 50, 0.85);
+    color: whitesmoke;
+}
+
+div#arrows{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery{
+    width: 100%;
+    visibility: hidden;
+}
+
+#im1{
+    visibility: visible;
+}
+
+img{
+    width: 99%;
+    height: 400px;
+}

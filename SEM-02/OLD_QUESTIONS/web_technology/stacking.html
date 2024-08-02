@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>image stacking</title>
+</head>
+<style>
+    img{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+    }
+
+    .two{
+        top: 40px;
+        left: 60px;
+    }
+
+    .three{
+        top: 80px;
+        left: 100px;;
+    }
+</style>
+<body>
+    <img src="./assests/bg2.jpg" alt="new1" class="im one" onclick="change('i1')">
+    <img src="./assests/bg3.png" alt="new2" class="im two" onclick="change('i2')">
+    <img src="./assests/bg4.jpg" alt="new3" class="im three" onclick="change('i3')">
+</body>
+
+<script>
+    var image = [
+        document.querySelector(".one"),
+        document.querySelector(".two"),
+        document.querySelector(".three")
+    ];
+    function change(im1)
+    {
+        if(im1 == 'i1'){
+            image[0].style.zIndex = 2;
+            image[1].style.zIndex = 1;
+            image[2].style.zIndex = 0;
+        }else if(im1 == 'i2'){
+            image[1].style.zIndex = 2;
+            image[2].style.zIndex = 1;
+            image[0].style.zIndex = 0;
+        }else{
+            image[2].style.zIndex = 2;
+            image[1].style.zIndex = 1;
+            image[0].style.zIndex = 0;
+        }
+    }
+</script>
+
+</html>

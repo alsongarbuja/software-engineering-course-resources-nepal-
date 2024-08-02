@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+        <style>
+            .cir {
+                list-style-type: circle;
+                /* its used to style the list type */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ul = unordered list -->
+        <ul>
+
+            <!-- li = list item -->
+            <li>Languages</li>
+
+            <!-- ol = ordered list -->
+            <ol>
+                <li>Programming</li>
+                    <ul type="disc">
+                        <li>Java</li>
+                            <ol type="a">
+                                <li>JSE</li>
+                                <li>JEE</li>
+                                <li>JME</li>
+                            </ol>
+                                <li>PHP</li>
+                                <li>Javascript</li>    
+                    </ul>
+            <li>Natural Language</li>
+                <ul type="square">
+                    <li>Nepal</li>
+                        <ol>
+                            <li>Gurung</li>
+                            <li>Nepali</li>
+                            <li>Magar</li>
+                        </ol>
+                    <li>India</li>
+                        <ol>
+                            <li>Bengali</li>
+                            <li>Bhojpuri</li>
+                        </ol>
+                </ul>   
+            </ol>    
+        </ul>
+
+        <ul type="square">
+            <li>Home</li>
+            <li>About us</li>
+            <li>contact</li>
+            <li>study</li>
+            <li class="cir">Go</li>
+            <li class="cir">Re</li>
+            <li class="cir">Je</li>
+            <!-- class is used to create group  -->
+        </ul>
+    </body>
+</html>

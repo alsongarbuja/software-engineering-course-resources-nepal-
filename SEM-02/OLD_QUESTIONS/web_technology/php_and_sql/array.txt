@@ -1,0 +1,30 @@
+
+    Array are the variables which has the ability to
+store more than one value at a time.
+
+    types-
+
+    // the values have a index startin from 0
+        Indexed array [
+            $indexedarray = array('a', 'b', 'c');
+
+            echo $indexedarray[0]; => a
+        ]
+
+    // the values have a key to identify them
+        associative array [
+            $associativearray = array('a' => 1, 'b' => 2, 'c' =>3);
+
+            echo $associativearray['b']; ==> 2
+        ]
+
+    // array containing array
+        multidimensional array [
+            $multidimensionalarray = array(
+                array('one'=> 1, 'two'=> 2),
+                array('one', 'two')
+            );
+
+            echo $multidimensionalarray[0]['two']; ==> 2
+            echo $multidimensionalarray[0][0]; ==> one 
+        ]

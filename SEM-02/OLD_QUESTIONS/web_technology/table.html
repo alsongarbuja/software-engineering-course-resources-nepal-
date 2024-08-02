@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        th, tr, td{
+            border: 1px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        table{
+            display: contents;
+        }
+
+        .last-in-list{
+            border-right: none;
+            vertical-align: top;
+            text-align: left;
+        }
+
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="3">Station 1</th>
+            <th colspan="3">Station 2</th>
+            <th colspan="3">Station 3</th>
+        </tr>
+        <tr>
+            <td>TRT</td>
+            <td>syn</td>
+            <td>asyn</td>
+            <td>TRT</td>
+            <td>syn</td>
+            <td>asyn</td>
+            <td>TRT</td>
+            <td>syn</td>
+            <td rowspan="3" class="last-in-list">Asyn</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>8</td>
+            <td>9</td>
+            <td>1</td>
+            <td></td>
+            <td>10</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>1</td>
+            <td></td>
+            <td>3</td>
+            <td>1</td>
+            <td>5</td>
+            <td>8</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td colspan="9">System is balanced, first cycle starts:</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>1</td>
+            <td></td>
+            <td>8</td>
+            <td>1</td>
+            <td></td>
+            <td>3</td>
+            <td>1</td>
+            <td rowspan="3" class="last-in-list">5</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>1</td>
+            <td>5</td>
+            <td>8</td>
+            <td>1</td>
+            <td></td>
+            <td>8</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>1</td>
+            <td></td>
+            <td>3</td>
+            <td>1</td>
+            <td>5</td>
+            <td>8</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td colspan="9">Cycle Starts again:</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>1</td>
+            <td></td>
+            <td>8</td>
+            <td>1</td>
+            <td></td>
+            <td>3</td>
+            <td>1</td>
+            <td class="last-in-list">5</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+    MIME [Multipurpose Internet Mail Extension]
+            - is an Internet standard that extends the format of email messages to support 
+              text in character sets other than ASCII, as well attachments of audio, video, 
+              images, and application programs. Message bodies may consist of multiple parts, 
+              and header information may be specified in non-ASCII character sets. Email messages 
+              with MIME formatting are typically transmitted with standard protocols, such as the Simple 
+              Mail Transfer Protocol (SMTP), the Post Office Protocol (POP), and the Internet Message Access Protocol (IMAP).
+
+    MIME headers
+        - MIME-Version
+            The presence of this header field indicates the message is MIME-formatted. The value is typically "1.0". The field appears as follows:
+                MIME-Version: 1.0
+        - Content-Type
+            This header field indicates the media type of the message content, consisting of a type and subtype, for example
+                Content-Type: text/plain
+        - Content-Disposition
+            The original MIME specifications only described the structure of mail messages. They did not address the issue of presentation styles.
+                Content-Disposition: attachment; filename=genome.jpeg;
+                modification-date="Wed, 12 Feb 1997 16:29:51 -0500";
+
+    
+    SMTP [Simple Mail Transfer Protocol]
+        Simple Mail Transfer Protocol (SMTP) is the standard protocol for email services on a TCP/IP network. 
+        SMTP provides the ability to send and receive email messages.
+
+        SMTP is an application-layer protocol that enables the transmission and delivery of email over the Internet. 
+        SMTP is created and maintained by the Internet Engineering Task Force (IETF).
+
+        Simple Mail Transfer Protocol is also known as RFC 821 and RFC 2821.

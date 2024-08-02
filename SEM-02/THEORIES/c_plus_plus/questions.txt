@@ -1,0 +1,105 @@
+
+What is --
+    Inline function
+        [ 
+            The function that is compiled by compiler and the body code is placed
+            at the calling of the function for faster execution is called Inline
+            function.
+            {
+                 syntax: Inline return_type functionName(){
+                            // body code
+                        }
+            }
+            Usually it is a one line code and most of the function of the class are
+            treated as inline function by compiler.
+        ]
+
+    class   
+        [
+            Class are user-defined data type that has its own data members and
+            functions. It an important features of OOP and also known as the blue 
+            print for an object.
+        ]
+
+    object
+        [
+            Object is the instance of a certain class. It can access the data members
+            and functions of the class if the access is garented.
+        ]
+
+    CRC card
+        [
+            CRC - class responsibility collaboration is a tool used to design OOP.
+                  It consists of three section class, responsibility and collaboraters.
+
+                  -------------------------------------------------
+                  |   Class Name                                  |
+                  -------------------------------------------------
+                  |                        |                      |
+                  |    responsibility      |     collaboraters    |
+                  |                        |                      |
+                  |                        |                      |
+                  -------------------------------------------------
+
+                  responsibility = the action or duty the class has to do
+                  collaboraters = other classes which the current class has to interact
+        ]
+
+    RDD
+        [
+
+        ]
+
+    Virtual function
+        [
+
+        ]
+
+    Pure Virtual function
+        [
+
+        ]
+
+    Ambiguity
+        [
+            In hybrid and nultipath inheritance there may occur a certain
+            type of error when a sub class has the same function definitions
+            more than one form the base class, it is called Ambiguity.
+        ]
+
+    message passing
+        [
+
+        ]
+
+    principle of Substitutability
+        [
+            Substitutability is a principle in object-oriented programming stating that, 
+            in a computer program, if S is a subtype of T, then objects of type T may be 
+            replaced with objects of type S (i.e. an object of type T may be substituted 
+            with any object of a subtype S) without altering any of the desirable properties 
+            of the program
+        ]
+
+What are -
+    Types of function
+        [
+            4 types of function 
+                1, with return and argument
+                    [ return_type functionName(arg){
+                        // code
+                        return return_type;
+                    } ]
+
+                2, with return but no argument
+                    [ return_type functionName(){
+                        // code
+                        return return_type;
+                    } ]
+
+                3, with argument but no return
+                    [ void functionName(arg){} ]
+
+                4, no return and no argument
+                    [ void functionName(){} ]
+        ]

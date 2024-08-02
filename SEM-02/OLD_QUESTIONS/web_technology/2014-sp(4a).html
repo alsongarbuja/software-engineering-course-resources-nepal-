@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    var word = prompt("Enter a word");
+
+        function reverse(str){
+            // converting the word into array
+            var strArr = str.split("");
+
+            // reversing the array
+            var reversedStrr = strArr.reverse();
+
+            // joining the array and making into string
+            var word1 = reversedStrr.join("");
+
+            return word1;
+
+            // chaining in js
+            // return str.split("").reverse().join("");
+        }
+
+    alert(reverse(word));
+    
+</script>
+
+</html>

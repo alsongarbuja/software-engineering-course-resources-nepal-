@@ -1,0 +1,45 @@
+
+
+**ABSTRACTION
+    --- Data Abstraction refers to the process of providing
+        with essential information only to the outside world and
+        hiding the background details.
+    --- In C++, classes provides great level of data abstraction. 
+        They provide sufficient public methods to the outside world 
+        to play with the functionality of the object and to manipulate 
+        object data, i.e., state without actually knowing how class has 
+        been implemented internally.
+        (euta example deu class ko ani)
+
+benifits of abstraction
+    --Class internals are protected from inadvertent user-level errors, 
+        which might corrupt the state of the object.
+    --The class implementation may evolve over time in response to changing 
+        requirements or bug reports without requiring change in user-level code.
+
+
+**ENCAPSULATION
+    --- In normal terms Encapsulation is defined as wrapping up of data and information 
+        under a single unit. In Object Oriented Programming, Encapsulation is defined as 
+        binding together the data and the functions that manipulates them.
+        Encapsulation also leads to data abstraction or hiding.
+    || It is achieved by using classes with access specifiers. 
+        (example class with access specifiers)
+
+
+**ACCESS SPECIFIERS
+    --- Access specifiers are the keywords in oop that sets the accessibility
+        of a class, methods, etc.
+        In c++ there are 3 access specifiers.
+            1-- Public
+                    It is used to make the members of a class accessible
+                    from outside the class.
+                    [syntax:: public data_member;]
+            1-- Protected
+                    It is used to make the members of a class accessible
+                    by the same class and child class only.
+                    [syntax:: protected data_member;]
+            1-- Private
+                    It is used to make the members of a class accessible
+                    from within the class only.
+                    [syntax:: private data_member;]

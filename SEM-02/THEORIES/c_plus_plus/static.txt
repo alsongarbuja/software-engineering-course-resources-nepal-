@@ -1,0 +1,39 @@
+
+
+    Static data member
+        --- The data member which hava static keyword will have
+            a single memory allocated in the whole program.
+
+            [
+                syntax:
+
+                class demo{
+                    static int num;
+                }
+
+                //prototyping the static variable
+                int demo: num=0;
+            ]
+
+            **features
+                - The memory for the variable is allocated only once.
+                - It carries the previous value with the next calling.
+
+    Static function
+        --- The function that is decleared as static is a special type of
+            function that is independent of a particular object of the class. 
+
+        --- A static member function can only access static data member, 
+            other static member functions and any other functions from outside the class.
+
+                [
+                    syntax:
+                        static function functionName(){
+                            //body code
+                        }
+                ]
+
+        --- It can be used with class name and scope resolution operator only too.
+                [ className::functionName(); ]
+
+            [ EXAMPLE - 3]

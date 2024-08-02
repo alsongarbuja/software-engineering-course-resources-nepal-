@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Choose color/size: 
+        <input type="text" id="col"> 
+        <button onclick="change()">Change color</button>
+        <button onclick="size()">Change size</button>
+    </p>
+    <p id="pk">Pokhara</p>
+
+    <script>
+        var p = document.getElementById("pk");
+        var c = document.getElementById("col");
+
+            function change()
+            {
+                p.style.color = c.value;
+            }
+            
+            function size()
+            {
+                p.style.fontSize = c.value+"px";
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+Q, JS is called a client side scripting language why?
+
+------ Because all the processing or the rendering of js codes
+       is done inside the clients computer through the web browser
+       no need for server connection.
+
+------ JavaScript is a client-side scripting language, which means 
+       the source code is processed by the client's web browser rather 
+       than on the web server. This means JavaScript functions can run 
+       after a webpage has loaded without communicating with the server. 
+       For example, a JavaScript function may check a web form before it is 
+       submitted to make sure all the required fields have been filled out. 
+       The JavaScript code can produce an error message before any 
+       information is actually transmitted to the server.
+
+
+Q, DOM ?
+
+------ DOM(document object model) is language used to model the
+       HTML and XML elements as object and manipulating them for
+       changing its color, size, etc. Js is the most used for DOM
+       in web development.
+       Js have some features to use the DOM from HTML and XML like
+       document.getElementByid(), etc for manipulation of element 
+       with certain id in the doc file.
+
+
+Q, Can js be used as server side scripting language?
+
+------ JS can be used as a server-side language if we use different programs
+       like node.js, rhino, etc. It is just like normal client side JS
+       except the functionallity maybe have different APIs() and it allows us
+       to manipulate the server with out using PHP or java.

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("Enter a number:"));
+        var num2 = parseInt(prompt("Enter another number:"));
+        var func_op = parseInt(prompt("Select a methode: 1, noargnoreturn  2, noargwithreturn  3, argnoreturn  4, argwithreturn"));
+
+            switch(func_op){
+                case 1:
+                    noargnoreturn();
+                    break;
+                case 2:
+                    console.log(noargwithreturn());
+                    break;
+                case 3:
+                    argnoreturn(num1, num2);
+                    break;
+                case 4:
+                    console.log(argwithreturn(num1, num2));
+                    break;
+            }
+
+            function noargnoreturn()
+            {
+                console.log(num1+num2);
+                console.log(num1-num2);
+                console.log(num1*num2);
+                console.log(num1/num2);
+            }
+
+            function argnoreturn(n1, n2)
+            {
+                console.log(n1+n2);
+                console.log(n1-n2);
+                console.log(n1*n2);
+                console.log(n1/n2);
+            }
+
+            function noargwithreturn()
+            {
+                var op = parseInt(prompt("Choose a option: 1,Add 2,Sub 3,Mul 4,Div"));
+
+                    switch(op)
+                    {
+                        case 1:
+                            return num1+num2;
+                            break;
+                        case 2:
+                            return num1=num2;
+                            break;
+                        case 3:
+                            return num1*num2;
+                            break;
+                        case 4:
+                            return num1/num2;
+                            break;
+                    }
+            }
+
+            function argwithreturn(num1, num2)
+            {
+                var op = parseInt(prompt("Choose a option: 1,Add 2,Sub 3,Mul 4,Div"));
+
+                    switch(op)
+                    {
+                        case 1:
+                            return num1+num2;
+                            break;
+                        case 2:
+                            return num1=num2;
+                            break;
+                        case 3:
+                            return num1*num2;
+                            break;
+                        case 4:
+                            return num1/num2;
+                            break;
+                    }
+            }
+
+    </script>
+</body>
+</html>

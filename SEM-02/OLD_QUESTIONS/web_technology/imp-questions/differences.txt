@@ -1,0 +1,12 @@
+                            URL vs URI
+-URL = uniform resourse locator || -URI = uniform resourse indentifier
+-It consists of location bar    || -It consists of location bar, name, address, etc
+
+
+                                 HTTP vs FTP
+-HTTP = hyper text transfer protocal    || -FTP = file transfer protocal
+-It uses TCP port number 80             || -It uses TCP port number 20 and 21
+-Used to transfer small files(webpage)  || -Used to transfer big files(upload, download)
+-Authentication is not needed           || -Authentication is needed
+
+

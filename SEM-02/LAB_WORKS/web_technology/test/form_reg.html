@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Registration</title>
+        <link rel="stylesheet" href="./form_reg.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <p><i class="fas fa-marker"></i>&nbsp;Registration Form</p>
+
+        <h1 id="top"><a href="./form_log.html">Login</a></h1>
+
+        <div>
+        <form action="">
+            <h1>Sign Up</h1>
+
+            <!-- fieldset is used to group the form elements -->
+            <fieldset>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+
+                <label for="pass">Password:</label>
+                <input type="password" id="pass">
+            </fieldset>
+
+            <fieldset>
+                <!-- legend gives the fieldset a caption or title -->
+                <legend>Address</legend>
+
+                <label for="city">City:</label>
+                <input type="text" id="city">
+
+                <label for="street" id="street_label">Street:</label>
+                <input type="text" id="street">
+
+                <label for="province">Province:</label>
+                <select name="" id="province">
+                    <option value="1">No. 1</option>
+                    <option value="2">No. 2</option>
+                    <option value="3">No. 3</option>
+                    <option value="4">No. 4</option>
+                    <option value="5">No. 5</option>
+                    <option value="6">No. 6</option>
+                </select>
+            </fieldset>
+
+            <h4><input type="checkbox">&nbsp;I agree in all terms and conditions</h4><br/><br/>
+            <button type="submit">Create an account</button>
+            <!-- button = creates button -->
+        </form>
+        </div>
+    </body>
+</html>

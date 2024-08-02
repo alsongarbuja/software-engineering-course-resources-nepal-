@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./assests/np1.jpg" alt="nature" style="visibility: visible;">
+    <br>
+    <button onclick="showHide()" value="visible">Show/hide</button>
+</body>
+
+<script>
+    function showHide()
+    {
+        var i = document.querySelector("img");
+        var btn = document.querySelector("button");
+
+            if(btn.value == "visible"){
+                i.style.visibility = "hidden";
+                btn.value = "hidden";
+            }else{
+                i.style.visibility = "visible";
+                btn.value = "visible";
+            }
+    }
+</script>
+
+</html>

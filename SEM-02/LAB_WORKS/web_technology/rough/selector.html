@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selector</title>
+    </head>
+
+    <style>
+
+        div>p {
+            color: blue;
+        }
+
+        .first .one, .second {
+            color: red;
+        }
+
+        p~span {
+            color: green;
+        }
+        
+    </style>
+    <body>
+
+     <div class="first">
+        <span class="one">Hi</span>
+        <span class="two">Again</span>
+        <p>Can this be blue too.</p>
+            <div class="first2">
+                    <span class="one">Hello</span>
+                    <p>
+                        <span class="one">
+                            This
+                        </span>
+                    </p>
+            </div>
+    </div>
+
+    <div class="second">
+        <span class="one">Yo</span>
+        <p>My name is yes.</p>
+        <p>No.</p>
+    </div>
+
+    <p>
+        <p>The down will be green.</p>
+        <span>What to do?</span>
+        <span>Nani</span>
+        <p>Yep Nope</p>
+    </p>
+
+    </body>
+</html>

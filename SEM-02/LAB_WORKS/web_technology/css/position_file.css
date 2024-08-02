@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+}
+
+p#first {
+    visibility: hidden;
+}
+
+p#sec {
+    display: none;
+}
+
+ul {
+    border: 1px solid black;
+}
+
+p#a {
+    position: relative;
+    top: 5px;
+    left: 30px;
+    background-color: chartreuse;
+    height: 20px;
+}
+
+p#b {
+    position: static;
+    height: 20px;
+    background-color: aquamarine;
+}
+
+p.last {
+    position: absolute;
+    background-color: cadetblue;
+}
+
+p#c {
+    position: inherit;
+    border: 1px;
+    background-color: aqua;
+}
+
+p#d {
+    position: fixed;
+    background-color: whitesmoke;
+   border: 1px solid black;
+   border-radius: 10px 10px 0 0;
+   width: 250px;
+   text-align: center;
+   min-height: 30px;
+   vertical-align: middle;
+    bottom: 0;
+    right: 30px;
+}
+
+p#s {
+    position: sticky;
+    bottom: 0;
+    top: 0;
+    background-color: brown;
+    border: 1px solid black;
+}

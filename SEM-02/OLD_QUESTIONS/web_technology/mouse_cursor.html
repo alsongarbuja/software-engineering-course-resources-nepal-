@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" onclick="locate(event)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ieevent=edge">
+    <title>Document</title>
+</head>
+<body  style="height: 100%;">
+    <form>
+        <p>Width client</p>
+            X: <input type="text" id="x1">
+            Y: <input type="text" id="y1">
+        <p>Width in respect to screen</p>
+            X: <input type="text" id="x2">
+            Y: <input type="text" id="y2">
+    </form>
+</body>
+
+<script>
+    function locate(event)
+    {
+        console.log(event);
+        var X1 = document.getElementById("x1");
+        var X2 = document.getElementById("x2");
+        var Y1 = document.getElementById("y1");
+        var Y2 = document.getElementById("y2");
+        
+            X1.value = event.clientX;
+            Y1.value = event.clientY;
+
+            X2.value = event.screenX;
+            Y2.value = event.screenY;
+    }
+</script>
+
+</html>

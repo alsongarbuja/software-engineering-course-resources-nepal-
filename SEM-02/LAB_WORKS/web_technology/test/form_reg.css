@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+p {
+    padding-top: 10%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    min-height: 300px;
+}
+
+p, #top {
+    background-color: #4bc970;
+}
+
+h1#top {
+    position: sticky;
+    top: 0;
+    font-size: 20px;
+    text-align: right;
+    padding: 5px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+form {
+    max-width: 300px;
+    margin: 40px auto;
+    background-color: #f4f7f8;
+    padding: 10px 30px;
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+h1 {
+    word-spacing: 4px;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 30px;
+}
+
+legend {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+input[type="text"], 
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+    outline: 0;
+    border: 1px ;
+    background-color: #e8eeef;
+    
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+select {
+    padding: 10px;
+}
+
+button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid;
+    font-family: normal;
+    font-size: 18px;
+    border-width: 1px 1px 1px 3px;
+    cursor: pointer;
+}
+
+#street, #province {
+    width: 49.5%;
+}
+
+@media screen and (min-width: 480px){
+    form {
+        max-width: 480px;
+    }
+}

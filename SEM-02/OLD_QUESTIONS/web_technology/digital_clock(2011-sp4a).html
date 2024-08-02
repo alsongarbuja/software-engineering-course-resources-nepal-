@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital_clock</title>
+</head>
+
+<style>
+    div{
+        text-align: center;
+        padding: 20px;
+    }
+
+    span{
+        background-color: #f2f2f2;
+        padding: 12px;
+    }
+</style>
+
+<body>
+    <div>
+        <span id="hr"></span>
+        <span id="min"></span>
+        <span id="sec"></span>
+    </div>
+
+    <script>
+            function showTime(){
+                var t = new Date();
+
+                document.querySelector("#hr").textContent = "Hour:"+t.getHours();
+                document.querySelector("#min").textContent = "Minute:"+t.getMinutes();
+                document.querySelector("#sec").textContent = "Second:"+t.getSeconds();
+
+            }
+            showTime();
+            setInterval(showTime, 1000);
+
+    </script>
+
+</body>
+</html>

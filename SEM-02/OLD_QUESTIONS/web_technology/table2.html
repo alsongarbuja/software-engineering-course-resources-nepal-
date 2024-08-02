@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table</title>
+</head>
+
+<style>
+    table, td, th, tr{
+        border: 5px solid grey;
+        padding: 10px;
+    }
+
+    table{
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <th colspan="2">FILL THE FORM BELOW</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password"/></td>
+        </tr>
+        <tr>
+            <td>Feedback</td>
+            <td><textarea cols="30" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender</label></td>
+            <td>
+                <input type="radio" name="gender" checked/>male
+                <input type="radio" name="gender"/>female
+            </td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td>
+                <input type="checkbox"/>Web
+                <input type="checkbox"/>Math
+                <input type="checkbox"/>Graphics
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="reset" value="Reset All"/>
+                <input type="submit" value="Submit Above Details"/>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

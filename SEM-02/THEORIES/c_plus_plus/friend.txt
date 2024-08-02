@@ -1,0 +1,62 @@
+
+    Friend Function
+        --- A special type of function that can access any data 
+            member and member function of a class.
+
+                [
+                    syntax:
+
+                        class A{
+                            Friend return_type function_name(className &object);
+                        }
+                        return_type function_name(className &object){
+                                // body code
+                        }
+                ] 
+                [example-2]
+
+    **benifits of Friend function
+        1. It acts as the bridge between two classes by operating on their private data’s.
+
+        2. It is able to access members without need of inheriting the class.
+
+        3. It can be used to increase the versatility of overloading operator.
+
+        4. It provides functions that need data which isn’t normally used by the class.
+
+        5. Allows sharing private class information by a non-member function.
+
+    **disadvantage of Friend function
+        1. It violates the law of data hiding by allowing access to private members of the class from outside the class.
+
+        2. Breach of data integrity.
+
+        3. Conceptually messy
+
+        4. Runtime polymorphism in the member cannot be done.
+
+        5. Size of memory occupied by objects will be maximum.
+
+
+
+    Friend class
+        --- A friend class is class that is decleared friend 
+            of another class and can access the private members 
+            of the class too.
+
+            [
+                syntax:
+                    class A{
+                        public:
+                            friend class B;
+                    }
+            ]
+            [example-5]
+
+        --- Points to remember
+                1, If class B is a friend function of class A then class A
+                   doesn't automatically becomes the friend class of class B.
+                2, A friend function doesnot automatically becomes friend 
+                    function of the derived class.
+                3, Use of friend function and friend class must be limited
+                    as it violates the encapusaltion and that is not good.

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    span{
+        position: absolute;
+        top: 100px;
+        background-color: grey;
+    }
+
+    .one{
+        left: 50px;
+    }
+
+    .two{
+        left: 100px;
+    }
+
+    .three{
+        left: 150px;
+    }
+</style>
+
+<script>
+    var ele;
+
+        function grabber(event)
+        {
+            ele = event.currentTarget;
+            console.log(ele);
+
+            document.addEventListener("mousemove", move, true);
+            document.addEventListener("mouseup", drop, true);
+        }
+
+        function move(event){
+            ele.style.left = event.clientX + 'px';
+            ele.style.top = event.clientY + 'px';
+        }
+
+        function drop(event){
+            document.removeEventListener("mouseup", drop, true);
+            document.removeEventListener("mousemove", move, true);
+        }
+</script>
+
+<body>
+    <span onmousedown="grabber(event)" class="one">Roses</span>
+    <span onmousedown="grabber(event)" class="two">Ringer</span>
+    <span onmousedown="grabber(event)" class="three">Ringer</span>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+--------------------------------------------------------------------
+    Interface vs implementation
+1, Sir le deko pdf mah xa
+-------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+                                           Is-a vs has-a
+                                    inheritance vs Containership 
+1, IS-A relationship is refered to inheritance || 1, HAS-A relationship is refered to object composition
+2, The code becomes longer than composition    || 2, The code becomes shorter than inheritance
+3, Difficult to re-implement the behaviours    || 3, Easy to re-implement the behaviours
+4, 
+----------------------------------------------------------------------------------------------------------
+
+--------------------------------------------
+    stack vs heap memory allocation
+https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/
+-------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+                                            class vs structure
+1, Class are stored as heap on memory                 || 1, structure are stored as stack on memory
+2, Members of class are private default               || 2, Members of structure are public by default
+3, Class can be abstract                              || 3, structure cannot be abstract
+4, Class can have data member and member function     || 4, structure can only have data members
+5, class is a refrence type so modification on one    || 5, structure are value type so modification on one variable
+   object doesnot affect other objects                ||    affects other variable
+----------------------------------------------------------------------------------------------------------------------    
+    
+----------------------------------------------------------------------------------------------------------------------
+                        programming in small vs programming in big
+1, It refers to program written by a person     || 1, It refers to program written by group of people
+2, sir le deko pdf
+----------------------------------------------------------------------------------------------------------------------

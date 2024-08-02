@@ -1,0 +1,39 @@
+
+
+Generic programming
+        [
+            Generic programming is a style of computer programming in which algorithms 
+            are written in terms of types to-be-specified-later that are then instantiated 
+            when needed for specific types provided as parameters.
+
+            Template are used in C++ to achieve the generic programming.
+        ]
+
+rules
+        T.1: Use templates to raise the level of abstraction of code
+        T.2: Use templates to express algorithms that apply to many argument types
+        T.3: Use templates to express containers and ranges
+        T.5: Combine generic and OO techniques to amplify their strengths, not their costs
+
+Advantages
+    i. One C++ Class Template can handle different types of parameters.  
+    ii. Compiler generates classes for only the used types. If the template is instantiated 
+        for int type, compiler generates only an int version for the C++ template class.  
+    iii. Templates reduce the effort on coding for different data types to a single set of code.  
+    iv. Testing and debugging efforts are reduced.
+
+Disadvantage
+    i. Many compilers historically have very poor support for templates, so the use of templates can make code 
+        somewhat less portable. 
+    ii. Almost all compilers produce confusing, unhelpful error messages when errors are detected in template code. 
+        This can make templates difficult to develop
+    iii. Each use of a template may cause the compiler to generate extra code (an instantiation of the template), 
+         so the indiscriminate use of templates can lead to code bloat,  resulting in excessively large executable. 
+
+
+[ 
+    EXAMPLE - 8 (class template)
+    8.1 (class multiple)
+    EXAMPLE - 9 (function template)
+    9.1 (function multiple)
+]

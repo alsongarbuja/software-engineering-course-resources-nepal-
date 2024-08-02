@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moving</title>
+</head>
+<style>
+    img{
+        position: absolute;
+        top: 120px;
+        left: 0;
+    }
+</style>
+
+<body>
+    <input type="number" placeholder="X-Axis" id="xAxis" min="0"><br><br>
+    <input type="number" placeholder="y-Axis" id="yAxis" min="100"><br><br>
+    <button onclick="move()">MOVE</button>
+
+    <img src="./assests/np1.jpg" alt="nature">
+</body>
+
+<script>
+    function move(){
+        var leftRight = document.getElementById("xAxis").value;
+        var upDown = document.getElementById("yAxis").value;
+        var image = document.querySelector("img");
+
+        image.style.left = leftRight + "px";
+        image.style.top = upDown + "px";
+    }
+</script>
+
+</html>

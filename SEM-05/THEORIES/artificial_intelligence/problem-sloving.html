@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>Problem Solving</h1>
+        <p>
+            Problem solving is one of the important task of any AI system and it is done in a sequence of actions.
+            <br>
+            <figure>
+                <span class="object">Identifying Problem</span> &rarr;
+                <span class="object">Developing alternatives</span> &rarr;
+                <span class="object">Selecting Best alternative</span> &rarr;
+                <span class="object">Implementing the solution</span>
+            </figure>
+            <figcaption>
+                Fig: Problem solving steps
+            </figcaption>
+        </p>
+        <br>
+        <p>
+            For a agent to have a problem solving skill, it must be desinged as <b>Formulate, Search and Execute</b>
+            <br>
+            Here Formulate Refers to developing the alternative solutions to the problem,
+            Search Refers to selecting the best alternative of all, and Execute refers to
+            implementing the selected solution to solve the problem, if not solved repeat.
+        </p>
+        <br>
+        <div>
+            <h3>Well Defined Problem(WDP)</h3>
+            <p>
+                A well defined problem has the followinf 4 components:
+
+                <ul>
+                    <li>
+                        <details>
+                            <summary>Initial State</summary>
+                            <p>
+                                It is the state that agent starts in, it can be any random possible scenario.
+                            </p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Possible State</summary>
+                            <p>Description of possible actions available to agent</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Goal test function</summary>
+                            <p>It is a function that checks if the current state is the goal state or not</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Path Cost Function</summary>
+                            <p>It is a function that calculates the cost to each state from the pervious state or initail state</p>
+                        </details>
+                    </li>
+                </ul>
+                <br>
+                In each step the <b>goal test function</b> and <b>path cost function</b> is executed.
+                <br>
+                The performance of agent = summation of all cost of paths from intial state to goal state.
+            </p>
+        </div>
+        <br>
+        <div>
+            <h3>Planning Algorithm</h3>
+            <p>
+                It is the process of planning on how to proceed with each goal on the algorithm to be designed.
+            </p>
+            <p>
+                The two types of planning algorithms are:
+                <ul>
+                    <li>
+                        <details>
+                            <summary>Linear Planning</summary>
+                            <ul class="inner-ul">
+                                <li>It is the planning algorithm type in which each goal is solved one after another in a sequential order.</li>
+                                <li>It uses Goal Stacks to accomplish its planning.</li>
+                                <li>It reduces search space as not all possible goal are considered.</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Non-Linear Planning</summary>
+                            <ul class="inner-ul">
+                                <li>It is the planning algorithm type in whihc multiple goal are solved at a time but not in parallel.</li>
+                                <li>It uses Goal Set to accomplish its planning</li>
+                                <li>It has larger search space since all possible goal ordering may have to be considered</li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <br>
+                Some properties of planning algorithm are:
+                <ul>
+                    <li><b>Soundness: </b>A planning algorithm is sound if all the predefiend conditions and goals are meet without violating any constraints.</li>
+                    <li><b>Completness: </b>A planning algorithm is complete if a solution is found whenever one actually exists</li>
+                    <li><b>Optimality: </b>A planning algorithm is optimal if the order in which solution are found is consistent with some measure of plan quality.</li>
+                </ul>
+            </p>
+        </div>
+        <br>
+        <div>
+            <h3>Production Rule system</h3>
+            <p>
+                It is a simple system that is build upon a production rule with condition and action.
+                <br>
+                A production rule consists of following components:
+                <ul>
+                    <li><b>A set of rules: </b> Each consisting of left side to hold the condition and right side for holding the action</li>
+                    <li><b>One or more knowledge base: </b> Information about the current problem</li>
+                    <li><b>A control strategy: </b>Specifying the order in which rule will be compared to database</li>
+                    <li><b>A rule applier: </b>To apply the rule</li>
+                </ul>
+            </p>
+        </div>
+    </main>
+</body>
+</html>

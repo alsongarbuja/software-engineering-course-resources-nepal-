@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old question solutions</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h4>
+            Q) What are drawbacks of propotitional logic? How it can be resolved by predicate logic? Example.
+        </h4>
+        <p>
+            <b>-></b>
+            The drawbacks of propotitional logic are:
+            <br>
+            <ul>
+                <li>
+                    We cannot represent relations like ALL, some, or none with propositional logic. 
+                    <br>Example:
+                    <br>All the girls are intelligent.
+                    <br>Some apples are sweet.
+                </li>
+                <li>Propositional logic has limited expressive power.</li>
+                <li>In propositional logic, we cannot describe statements in terms of their properties or logical relationships.</li>
+            </ul>
+            <br><br>
+            &nbsp;&nbsp;
+            We can solve the propotional logic using predicate logic by following steps:
+            <br>
+            <ul>
+                <li>
+                    First we convert the given propotional statement to predicate statement.(i.e using variables).
+                    <br>
+                    For example: 2 is even(propositional) to x is even / even(x) (predicate)
+                </li>
+                <li>
+                    Use the connectives (&and;-AND, &or;-OR, &not;-NOT)
+                </li>
+                <li>
+                    Use quantifiers for quantitive statements. (&forall;-For all, &exist;-For some)
+                    <br>
+                    example: All the books are red - &forall;<sub>x</sub> book(x) &rarr; red(x)
+                </li>
+            </ul>
+        </p>
+        <h4>
+            Q) Why do we need to reason on uncertainty?
+        </h4>
+        <p>
+            <br><br>
+            <b>-></b>
+            <a href="./tms.html#reason-uncertain">Here</a>
+        </p>
+        <br><br>
+        <h4>
+            Q) Difference between ANN and BNN?
+        </h4>
+        <p>
+            <b>-></b>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ANN</th>
+                        <th>BNN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>It stands for Artificial Neural Network</td>
+                        <td>It stands for Biological Neural Network</td>
+                    </tr>
+                    <tr>
+                        <td>It is faster compared to BNN</td>
+                        <td>It is slower compared to ANN</td>
+                    </tr>
+                    <tr>
+                        <td>Process operates in sequential mode</td>
+                        <td>Process can operate in massive parallel operations</td>
+                    </tr>
+                    <tr>
+                        <td>If any information gets corrupted, it cannot be retrived.</td>
+                        <td>If any information gets corrupted, it can be retrived.</td>
+                    </tr>
+                    <tr>
+                        <td>The activity is continously monitored by a control unit.</td>
+                        <td>No control unit is present to monitor the information being processed.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <h4>Q) What is AI? Describe AI Winter. Why and how did AI boom in 21<sup>st</sup> century?</h4>
+        <p>
+            <b>-></b>
+            Artificial Intelligence is the field of computer science and technology that is realted with computer systems
+            that has its own intelligence, which means it can learn and  evolve in its own with out human interventions.
+            <br><br>
+            &nbsp;&nbsp;
+            AI winter is the term describing the decline in the investment as well as interest in the fields of AI. It usually
+            occurs when the ROI (Returns of Investment) of investor is not meet, or when the AI driven product doesnot deliver
+            the things it promised to do.
+            <br><br>
+            &nbsp;&nbsp;
+            In the 21<sup>st</sup> the technological advancement has sky rocketed and with the advancement of technology there is
+            the rise of AI. With people being around smart technologies nowadays they tend to be more attracted towards automation
+            also they tend to be lazy, hence the need for AI that can do heavy lifting for them when the attention is more and the
+            advancement of technology is sky high it is the best time for AI to boom.
+        </p>
+        <h4>
+            What do you mean by Skolemnization? Explain the CNF Conversion steps in predicate logic. Also convert "Anything anyone eats and
+            is not killed by is Food" to FOL and equivalent CNF.
+        </h4>
+        <p>
+            <b>-></b>
+            Skolemnization is the process/step in CNF conversion from FOL to Conjuctive Form where all the existential quantifiers &exist; are removed
+            or eliminated from the predicate statements. It is done by using the existential quantifier with Skolem constant
+            <br>
+        
+            <br><br>
+            &nbsp;&nbsp;
+            Steps for CNF conversion:
+            <br>
+            <ul>
+                <li>
+                    Step 1: <b>Remove Implications &Implies;, &rarr;, &iff;, &harr;</b>
+                    It can be done by using: <b>&alpha; &rarr; &beta; &Equal; &not; &alpha; &or; &beta;</b>
+                    and <b>&alpha; &iff; &beta; &Equal; (&alpha; &rarr; &beta;) &and; (&beta; &rarr; &alpha;)</b>
+                </li>
+                <li>
+                    Step 2: <b>Standardize variable</b> It means use new variable for each new statements 
+                </li>
+                <li>
+                    Step 3: <b>Move negation inwards</b> It can be done as <br>
+                    &not; (&forall;<sub>(x)</sub> P<sub>(x)</sub>) = &exist; &not; p<sub>(x)</sub> <br>
+                    &not; (&Exists;<sub>(x)</sub> P<sub>(x)</sub>) = &forall; &not; p<sub>(x)</sub> <br>
+                    &not; (&alpha; &or; &beta;) = &not; &alpha; &and; &not; &beta; <br>
+                    &not; (&alpha; &and; &beta;) = &not; &alpha; &or; &not; &beta; <br>
+                    &not; (&not; &alpha;) = &alpha; <br>
+                </li>
+                <li>
+                    Step 4: <b>Skolemnization</b> It is the process of removing the existential quantifier from the statements and
+                    replacing them with a constant called <b>Skolem constant</b>
+                </li>
+                <li>
+                    Step 5: <b>Drop univeral quantifier</b> Remove the universal quantifier from the statements.
+                </li>
+            </ul>
+            <br><br>
+            &nbsp;&nbsp;
+            "Anything anyone eats and is not killed by is Food" to FOL: <br>
+            &nbsp;&nbsp;
+            &forall;<sub>x</sub> &forall;<sub>y</sub> eats(y, x) ^ &not; killed_by(y) &rarr; food(x)
+            <br><br>
+            &nbsp;&nbsp;
+            Conversion to CNF: <br>
+            &nbsp;&nbsp;
+            <b>1:</b> &not;(&forall;<sub>x</sub> &forall;<sub>y</sub> eats(y, x) ^ &not; killed_by(y)) &or; food(x)
+            <br>
+            &nbsp;&nbsp;
+            <b>2:</b> same, as all of is single statement
+            <br> &nbsp;&nbsp;
+            <b>3:</b> &not; &forall;<sub>x</sub> &forall;<sub>y</sub> eats(y, x) &or; killed_by(y) &or; food(x)
+            <br> &nbsp;&nbsp;
+            <b>4:</b> same, as no existential quantifier (&Exists;)
+            <br> &nbsp;&nbsp;
+            <b>5:</b> &not; eats(y, x) &or; killed_by(y) &or; food(x)
+        </p>
+        <h4>
+            Q) How can you make a system capable of communication in nepali language? What challenges might you encounter?
+        </h4>
+        <p>
+            <b>-></b>
+            We can make a system capable of communication in nepali language by using NLP (natural language processing) system in
+            our AI system. NLP is a system that is used to understand as well as generate natural languages(language used by humans to communicate).
+            <br><br>
+            &nbsp;&nbsp;
+            We can train our AI system with nepali languages like nepali alphabets (क, ख, ग,...) and words, then sentences while
+            mappping the meaning of each word and sentences to the english dictionary meanings.
+            <br>
+            &nbsp;&nbsp;
+            The challenges that we might face when designing and creating this NLP system are:
+            <br> 
+            &nbsp;&nbsp;
+            <ul>
+                <li>Phonetic errors: Which is the error when two similar sounding words can confuse the system for example: आँट (courage) / आँत (part of inside body)</li>
+                <li>Orthorgaphic errors: Which is the error due to lack of comperhension of the nepali language for exmaple: विध्यालय instead of विद्यालय</li>
+                <li>Typographic errors: Which is the error due to typing mistakes for example: मालाई instead of मलाई</li>
+            </ul>
+        </p>
+        <h4>
+            Briefly distinguish between Antecedent mode and Consequent mode. What do you understand by Constraint Satisfaction? Mention its steps and an example.
+        </h4>
+        <p>
+            <b>-></b>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Antecedent mode</th>
+                        <th>Consequent mode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>It is the reasoning system where we start from facts and move towards goal.</td>
+                        <td>It is the reasoning system where we start from conclusion and move towards the fact.</td>
+                    </tr>
+                    <tr>
+                        <td>Also called event-driven, forward reasoning</td>
+                        <td>Also called goal-driven, backward reasoning</td>
+                    </tr>
+                    <tr>
+                        <td>Used for determining dieases from given symptoms.</td>
+                        <td>Used for determining symptoms from given disease.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+            &nbsp;&nbsp;
+            Constraint Satisfaction is the process of finding solution to a problem that imposes a pre condition or constraint which must be satisfied.
+            <br>
+            &nbsp;&nbsp;
+            It consists of the following steps:
+            <ul>
+                <li>Constraint are discovered and propagated as far as possible throughout the system.</li>
+                <li>If no solution, search begins. A guess is made and added as new constraint which can be propagated and continue to finding solution.</li>
+            </ul>
+            <br><br>
+            &nbsp;&nbsp;
+            For example: <b>SUDUKO</b>: Here we are given a pre condition of each row and column containing 1 to 9 without repetition and
+            also each 3*3 section of the suduko must have 1 - 9 without repetition.
+            <br><br>
+            &nbsp;&nbsp;
+            We started by discovering those conditions and propageted to each cell of the suduko board.
+            Then we start putting numbers in each cell considering the constraints imposed and find solution progressively.
+        </p>
+    </main>
+</body>
+</html>

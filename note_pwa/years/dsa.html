@@ -1,0 +1,1615 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dsa</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    @media screen and (max-width: 700px){
+      .stackedit__html>ul {
+        padding-left: 0;
+      }
+
+      table {
+        font-size: .5rem;
+      }
+
+      .tb {
+        font-size: .2rem;
+      }
+
+      code {
+        max-width: 340px;
+      }
+    }
+  </style>
+
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body class="stackedit" onload="modeChoose()">
+  <span class="night"><i class="fas fa-moon"></i></span>
+  <span class="menu">&rarr;</span>
+  <span class="closeMenu">&times;</span>
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#definitions" class="mainLink">Definitions</a>
+<ul>
+<li><a href="#circular-queue">Circular Queue</a></li>
+<li><a href="#priority-queue">Priority Queue</a></li>
+<li><a href="#stack">Stack</a></li>
+<li><a href="#linked-list">Linked List</a></li>
+<li><a href="#doubly-linked-list">Doubly Linked List</a></li>
+<li><a href="#circular-linked-list">Circular Linked List</a></li>
+<li><a href="#enqueue-and-dequeue">Enqueue and Dequeue</a></li>
+<li><a href="#linear-and-non-linear-data-structure">Linear and Non-linear Data structure</a></li>
+<li><a href="#stable-and-unstable-sorting">Stable and Unstable Sorting</a></li>
+<li><a href="#internal-and-external-sorting">Internal and External Sorting</a></li>
+<li><a href="#hashing-and-collision">Hashing and Collision</a></li>
+<li><a href="#collision-resolving-technique">Collision Resolving technique</a></li>
+<li><a href="#hash-function-and-hash-tables">Hash function and Hash tables</a></li>
+<li><a href="#graph-connected-graph-and-digraph">Graph, Connected Graph and Digraph</a></li>
+<li><a href="#spanning-and-minimum-spanning-tree">Spanning and Minimum Spanning tree</a></li>
+<li><a href="#height-balanced-tree-and-weight-balanced-tree">Height balanced tree and Weight balanced tree</a></li>
+<li><a href="#what-is-b-tree">What is B+ tree</a></li>
+<li><a href="#huffman-code">Huffman code</a></li>
+<li><a href="#what-is-shortest-path-algorithm">What is shortest path algorithm</a></li>
+</ul>
+</li>
+<li><a href="#infix-postfix-and-prefix" class="mainLink">Infix, Postfix and Prefix</a>
+<ul>
+<li><a href="#converting-infix-to-postfix">Converting Infix to Postfix</a></li>
+<li><a href="#converting-infix-to-prefix">Converting Infix to Prefix</a></li>
+<li><a href="#evaluating-postfix">Evaluating Postfix</a></li>
+</ul>
+</li>
+<li><a href="#advantages-and-disadvantages" class="mainLink">Advantages and Disadvantages</a>
+<ul>
+<li><a href="#advantage-of-postfix-over-infix">Advantage of postfix over infix</a></li>
+<li><a href="#advantage-of-doubly-linked-list">Advantage of Doubly Linked List</a></li>
+<li><a href="#advantage-of-circular-queue-over-linear-queue">Advantage of Circular Queue over Linear Queue</a></li>
+<li><a href="#advantage-and-disadvantage-of-recursion">Advantage and Disadvantage of Recursion</a></li>
+<li><a href="#advantage-and-disadvantage-of-linked-list-implementation-over-array">Advantage and Disadvantage of Linked List implementation over array</a></li>
+</ul>
+</li>
+<li><a href="#difference" class="mainLink">Difference</a>
+<ul>
+<li><a href="#stack-and-queue">Stack and queue</a></li>
+<li><a href="#data-structure-and-data-types">Data structure and Data types</a></li>
+<li><a href="#infix-postfix-and-prefix-1">infix, postfix and prefix</a></li>
+<li><a href="#circular-queue-and-linear-queue">Circular Queue and linear Queue</a></li>
+<li><a href="#recursion-and-iteration">Recursion and Iteration</a></li>
+<li><a href="#static-list-and-dynamic-list">Static list and dynamic list</a></li>
+<li><a href="#deterministic-algorithm-and-non-deterministic-algorithm">Deterministic algorithm and Non-Deterministic algorithm</a></li>
+<li><a href="#graph-and-tree">Graph and Tree</a></li>
+<li><a href="#traversing-in-graph-and-traversing-in-tree">Traversing in Graph and Traversing in Tree</a></li>
+<li><a href="#bubble-sort-and-selection-sort">Bubble sort and Selection Sort</a></li>
+<li><a href="#set-matrix-and-linked-list-representation-of-graph">Set matrix and Linked list representation of graph</a></li>
+<li><a href="#singly-linked-list-and-doubly-linked-list-and-circular-linked-list">Singly Linked list and Doubly linked list and Circular Linked List</a></li>
+<li><a href="#breadth-first-search-and-depth-first-search">Breadth First Search and Depth First Search</a></li>
+<li><a href="#adt-and-c-class">ADT and C++ Class</a></li>
+</ul>
+</li>
+<li><a href="#more-than-definition" class="mainLink">More than definition</a>
+<ul>
+<li><a href="#application-of-stack">Application of Stack</a></li>
+<li><a href="#application-of-linked-list">Application of Linked list</a></li>
+<li><a href="#application-of-b-tree">Application of B+ tree</a></li>
+<li><a href="#condition-for-stack-overflow-and-stack-underflow">Condition for stack overflow and stack underflow</a></li>
+<li><a href="#list-5-basic-operation-of-linked-list">List 5 basic operation of Linked list</a></li>
+<li><a href="#types-of--dequeue">4 types of  dequeue</a></li>
+<li><a href="#balancing-avl-tree">Balancing AVL Tree</a></li>
+<li><a href="#tree-traversal">Tree traversal</a></li>
+<li><a href="#adjacency-matrix-representation-of-graph">Adjacency matrix representation of graph</a></li>
+</ul>
+</li>
+<li><a href="#sorting" class="mainLink">Sorting</a>
+<ul>
+<li><a href="#what-is-sorting">What is Sorting</a></li>
+<li><a href="#quick-sort">Quick Sort</a></li>
+<li><a href="#radix-sort">Radix Sort</a></li>
+<li><a href="#selection-sort">Selection Sort</a></li>
+<li><a href="#heap-sort">Heap Sort</a></li>
+<li><a href="#merge-sort">Merge Sort</a></li>
+</ul>
+</li>
+<li><a href="#trees" class="mainLink">Trees</a>
+<ul>
+<li><a href="#construct-avl-tree">Construct AVL Tree</a></li>
+<li><a href="#construct-bst-tree">Construct BST Tree</a></li>
+<li><a href="#construct-huffman-tree">Construct Huffman Tree</a></li>
+<li><a href="#generate-huffman-code">Generate Huffman code</a></li>
+</ul>
+</li>
+<li><a href="#algorithms" class="mainLink">Algorithms</a>
+<ul>
+<li><a href="#kruskals-algorithm">Kruskal’s Algorithm</a></li>
+<li><a href="#dijkstra-algorithm">Dijkstra Algorithm</a></li>
+<li><a href="#wars-halls-algorithm">Wars hall’s Algorithm</a></li>
+<li><a href="#binary-tree-from-given-pre-order-and-in-order-traversal">Binary tree from given Pre-order and In-order traversal</a></li>
+<li><a href="#tower-of-hanoi">Tower of Hanoi</a></li>
+</ul>
+</li>
+<li><a href="#short-notes" class="mainLink">Short Notes</a>
+<ul>
+<li><a href="#divide-and-conquer-algorithm">Divide and Conquer algorithm</a></li>
+<li><a href="#worst-case-complexity">Worst case Complexity</a></li>
+<li><a href="#big-o-notation">Big O Notation</a></li>
+<li><a href="#min-vs-max-heap">Min vs Max heap</a></li>
+<li><a href="#transitive-closure">Transitive Closure</a></li>
+<li><a href="#deque">Deque</a></li>
+<li><a href="#serial-and-parallel-algorithm">Serial and Parallel algorithm</a></li>
+<li><a href="#game-tree">Game Tree</a></li>
+</ul>
+</li>
+<li><a href="#algorithms-for-programs" class="mainLink">Algorithms for programs</a>
+<ul>
+<li><a href="#insert-and-delete-from-a-circular-queue">Insert and delete from a Circular Queue</a></li>
+<li><a href="#using-stack-as-linked-list">Using Stack as Linked List</a></li>
+<li><a href="#linked-list-other-operations">Linked List other operations</a></li>
+<li><a href="#insertion-and-deletion-in-doubly-linked-list">Insertion and deletion in Doubly Linked list</a></li>
+<li><a href="#algorithm-to-delete-element-from-b-tree">Algorithm to delete element from B+ tree</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <ul>
+<li>
+<h1 id="definitions"><strong><code>Definitions</code></strong></h1>
+<ul>
+<li>
+<h2 id="circular-queue"><strong>Circular Queue</strong></h2>
+<ul>
+<li>A Circular Queue is a type of queue in which the last location of the queue is connected to the first location of the queue. (i.e if we have a circular queue with 5 location then the 5th location is connected back to the 1st location).</li>
+<li>It overcomes the problem of unutilized space in linear queue where in order to add new elements more then the size of the queue we had to delete all the previous data. We can do so by adding new data at the location from where data is deleted.</li>
+</ul>
+</li>
+<li>
+<h2 id="priority-queue"><strong>Priority Queue</strong></h2>
+<ul>
+<li>Priority Queue is a type of queue in which the elements have been assigned priority and the processing of different operation is done according to the priorities. The processing is done as:-
+<ul>
+<li>Element with higher priority is processed first</li>
+<li>Elements with same priorities are processed in order they were added to the queue.</li>
+</ul>
+</li>
+<li>There are two types of Priority Queue:- <code>Ascending priority queue and Descending priority queue</code></li>
+</ul>
+</li>
+<li>
+<h2 id="stack"><strong>Stack</strong></h2>
+<ul>
+<li>Stack is a linear data structure in which data items are inserted and deleted at one end of the structure. It works in LIFO manner(Last In First Out) which means the data that is inserted/Pushed at last will be deleted/Popped first from the stack.</li>
+</ul>
+</li>
+<li>
+<h2 id="linked-list"><strong>Linked List</strong></h2>
+<ul>
+<li>Linked list is a linear collection of data elements that are linked with one another. The datas are stored in a node like structure and each node consists of two fields. The <code>information field</code> where actual data is kept and <code>address field</code> which holds the memory address of the next element. The address field of last element points to NULL.</li>
+</ul>
+</li>
+</ul>
+
+<table class="tb">
+<thead>
+<tr>
+<th>20</th>
+<th>2040</th>
+<th>–&gt;</th>
+<th>30</th>
+<th>2024</th>
+<th>–&gt;</th>
+<th>40</th>
+<th>NULL</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table><ul>
+<li>
+<h2 id="doubly-linked-list"><strong>Doubly Linked List</strong></h2>
+<ul>
+<li>Doubly Linked List is a type of linked list in which each node not only consists of information and next element address field but also a additional field that holds the address of the previous node. The address field holding address of previous node of the first node and the address field holding the address of net node of the last node is pointed to NULL</li>
+</ul>
+</li>
+</ul>
+
+<table class="tb">
+<thead>
+<tr>
+<th>NULL</th>
+<th>10</th>
+<th>1001</th>
+<th>–&gt;</th>
+<th>1000</th>
+<th>20</th>
+<th>1002</th>
+<th>–&gt;</th>
+<th>1001</th>
+<th>30</th>
+<th>NULL</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table><ul>
+<li>
+<h2 id="circular-linked-list"><strong>Circular Linked List</strong></h2>
+<ul>
+<li>Circular linked list is a type of linked list in which the address field of the final element contains the memory address of the first element. (i.e the final node is linked back to the first node).</li>
+</ul>
+</li>
+</ul>
+
+<table class="tb">
+<thead>
+<tr>
+<th>10</th>
+<th>1001</th>
+<th>–&gt;</th>
+<th>20</th>
+<th>1002</th>
+<th>–&gt;</th>
+<th>30</th>
+<th>1000</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table><ul>
+<li>
+<h2 id="enqueue-and-dequeue"><strong>Enqueue and Dequeue</strong></h2>
+<ul>
+<li>Enqueue is the process of inserting an element at the end of the queue that is at the rear of the queue.</li>
+<li>Dequeue is the process of deleting and inserting element at either end of the queue but not in the middle. It is of two types:- <code>input restricted</code> and <code>output restricted</code></li>
+</ul>
+</li>
+<li>
+<h2 id="linear-and-non-linear-data-structure"><strong>Linear and Non-linear Data structure</strong></h2>
+<ul>
+<li>Linear Data structure are those type of data structure which have data elements connected sequentially. All the elements are present at a single level. Example:- Array, lists, Queue, etc.</li>
+<li>Non-linear Data structure are those type of data structure which have data elements connected hierarchically. Elements are present at different levels. Example:- Map, Tree, Graph, etc.</li>
+</ul>
+</li>
+<li>
+<h2 id="stable-and-unstable-sorting"><strong>Stable and Unstable Sorting</strong></h2>
+<ul>
+<li>A stable sorting algorithm are those sorting algorithm that maintains the order of same keys in the original problem even in its sorted form. Example:- Merge sort, Bubble sort, insertion sort, etc.</li>
+<li>A unstable sorting algorithm are those sorting algorithm that doesn’t maintain the order of same keys in the original problem in its sorted result. i.e the order is altered. Example:- Quick sort, heap sort, etc.</li>
+</ul>
+</li>
+<li>
+<h2 id="internal-and-external-sorting"><strong>Internal and External Sorting</strong></h2>
+<ul>
+<li>Internal sorting is a way of sorting small collection of data within the main memory. It means the data to be sorted is small enough to be sorted in the main memory itself. <code>Example: quick sort, radix sort, etc</code></li>
+<li>External sorting is a way of sorting data which cannot be fitted into the main memory thus using the external secondary memory to sort the data. <code>Example: merge sort, distribution sort etc</code></li>
+</ul>
+</li>
+<li>
+<h2 id="hashing-and-collision"><strong>Hashing and Collision</strong></h2>
+<ul>
+<li>Hashing is the process of making data table using hash functions that converts the given bigger data into smaller key and use them as index. It is used to store data that are bigger in size by breaking them down into smaller keys.</li>
+<li>When hashing list of data some data may yield same key, when two or more data hashes same keys then that condition is called collision in hashing.</li>
+</ul>
+</li>
+<li>
+<h2 id="collision-resolving-technique"><strong>Collision Resolving technique</strong></h2>
+<ul>
+<li>To handle collision we have two main techniques:-
+<ol>
+<li>Open hashing (Separate chaining)
+<ul>
+<li>It is the method in which each cell of the table where collision occurs points to a linked list.</li>
+<li>It is used mostly when we don’t know the number of datas to be inserted or deleted.</li>
+<li>Advantage:-
+<ul>
+<li>It is simple to implement.</li>
+<li>Hash table never fills up.</li>
+</ul>
+</li>
+<li>Disadvantage:-
+<ul>
+<li>If the chain becomes long, searching time becomes long.</li>
+<li>Uses extra spaces for links</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Closed hashing (Open addressing)
+<ul>
+<li>It is the method in which each data is stored in the hash table itself.</li>
+<li>It is used when the number of datas to be inserted or deleted is known.</li>
+<li>Advantage:-
+<ul>
+<li>No extra spaces for links.</li>
+<li>Every slot of the hash table is used.</li>
+</ul>
+</li>
+<li>Disadvantage:-
+<ul>
+<li>It requires more computation.</li>
+<li>Clustering and load factor may occur.</li>
+</ul>
+</li>
+<li>There are three ways of obtaining Closed hashing:-
+<ol>
+<li>Linear probing
+<ul>
+<li>It is the method in which probing (Searching for next empty slot) is linear.</li>
+<li>Clustering occurs while using this method as more collision occurs.</li>
+</ul>
+</li>
+<li>Quadratic probing
+<ul>
+<li>It is the method in which probing is quadratic.</li>
+<li>It works in i2 in i’th iteration.</li>
+</ul>
+</li>
+<li>Double hashing
+<ul>
+<li>It is the method in which a second hashing function is done for the same key.</li>
+<li>Clustering is not encountered but time for 2 hashing functions is more.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="hash-function-and-hash-tables"><strong>Hash function and Hash tables</strong></h2>
+<ul>
+<li>Hash functions are those functions that are used to break down the bigger sized data into smaller key that are used as index to store the data.</li>
+<li>Hash table is the table that contains the hashed data.</li>
+</ul>
+</li>
+<li>
+<h2 id="graph-connected-graph-and-digraph"><strong>Graph, Connected Graph and Digraph</strong></h2>
+<ul>
+<li>A Graph is a set of nodes(or vertices) and a set of arcs(or edges). Each arc in a graph is specified by a pair of nodes.</li>
+<li>A connected graph is a graph that is connected, i.e every vertex in the graph is connected with at least one other vertex.</li>
+<li>The graph is said to be Digraphs(Directed graphs) if the pairs of nodes(vertices) that makes up the arcs (edges) are ordered pairs.</li>
+</ul>
+</li>
+<li>
+<h2 id="spanning-and-minimum-spanning-tree"><strong>Spanning and Minimum Spanning tree</strong></h2>
+<ul>
+<li>Spanning tree is a subset of a tree that contains all the nodes in the parent tree and have no cyclic graph formed.</li>
+<li>Minimum spanning tree is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible edge weight.</li>
+</ul>
+</li>
+<li>
+<h2 id="height-balanced-tree-and-weight-balanced-tree"><strong>Height balanced tree and Weight balanced tree</strong></h2>
+<ul>
+<li>A height balanced tree is a binary tree that has balanced height, i.e the difference between height of left subtrees to height of right subtrees is not more than 1.</li>
+<li>A weight balanced tree is a binary tree that has balanced weight, i.e the difference between the left subtree leaves to the right subtree leaves is not more than 1.(<code>leaves are the nodes in the tree that doesn't have any child node</code>)</li>
+</ul>
+</li>
+<li>
+<h2 id="what-is-b-tree"><strong>What is B+ tree</strong></h2>
+<ul>
+<li>A B+ tree is a generalized form of BST(Binary Search tree) where all the data are present at the leaf nodes only where as the internal and root node contains the index pointing to the data. The leaf nodes are also connected with each other with a linked list.</li>
+</ul>
+</li>
+<li>
+<h2 id="huffman-code"><strong>Huffman code</strong></h2>
+<ul>
+<li>A Huffman code is a particular type of optimal prefix code that is commonly used for lossless data compression.</li>
+</ul>
+</li>
+<li>
+<h2 id="what-is-shortest-path-algorithm"><strong>What is shortest path algorithm</strong></h2>
+<ul>
+<li>Shortest path algorithm is an algorithm that specifies the path from one vertex to another vertex in a weighted graph such that the sum of the edges it took is minimized.</li>
+<li>Example:- Dijkstra algorithm, Bellman-Ford algorithm, etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="infix-postfix-and-prefix"><strong><code>Infix, Postfix and Prefix</code></strong></h1>
+<ul>
+<li>
+<h2 id="converting-infix-to-postfix"><strong>Converting Infix to Postfix</strong></h2>
+<ul>
+<li><strong>Step 1:</strong> Initialize an empty stack and output list</li>
+<li><strong>Step 2:</strong> Read each character (operator or operand) from the infix expression</li>
+<li><strong>Step 3:</strong>
+<ul>
+<li>If <code>(character = operand)</code> append it to the output list</li>
+<li>If <code>(character = operator other than closing parenthesis)</code> append to the stack
+<ul>
+<li>If <code>(the operator has lower or same precedence than the previous operator on the stack)</code> then pop the previous operator append to the output list before appending the current operator on the stack</li>
+</ul>
+</li>
+<li>If <code>(character = closing parenthesis)</code> then pop all the operators from the stack till the opening parenthesis pair and append them to the output list.</li>
+</ul>
+</li>
+<li><strong>Step 4:</strong> Repeat step 3 for every character in the infix expression</li>
+<li><strong>Step 5:</strong> If <code>all the characters are read and the stack is not empty</code> then pop all the operators from the stack append to the output list and the postfix expression is gained.</li>
+</ul>
+</li>
+<li>
+<h2 id="converting-infix-to-prefix"><strong>Converting Infix to Prefix</strong></h2>
+<ul>
+<li><strong>Step 1:</strong> Reverse the infix expression</li>
+<li><strong>Step 2:</strong> Obtain the Postfix expression from the reversed infix expression</li>
+<li><strong>Step 3:</strong> Reverse the obtained Postfix</li>
+</ul>
+</li>
+<li>
+<h2 id="evaluating-postfix"><strong>Evaluating Postfix</strong></h2>
+<ul>
+<li><strong>Step 1:</strong> Initialize an empty stack</li>
+<li><strong>Step 2:</strong> Read the characters from the given postfix expression</li>
+<li><strong>Step 3:</strong>
+<ul>
+<li>If (<code>character = operand</code>) push it to the stack</li>
+<li>If (<code>character = operator</code>)
+<ul>
+<li>pop the top two operands from the stack</li>
+<li>evaluate B operator A where <code>A=top most operand and B=next to the top operand</code></li>
+<li>then push back the result to the stack.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Step 4:</strong> Repeat step 3 until all character is read and we obtain the result.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="advantages-and-disadvantages"><strong><code>Advantages and Disadvantages</code></strong></h1>
+<ul>
+<li>
+<h2 id="advantage-of-postfix-over-infix"><strong>Advantage of postfix over infix</strong></h2>
+<ol>
+<li>There is no need of brackets while using postfix notation</li>
+<li>It is easily understood by computer and easy to implement</li>
+<li>It reflects the order in which operations are performed</li>
+<li>It is slightly easier to evaluate</li>
+<li>It is very convenient for evaluating formulas on a computer with stacks.</li>
+</ol>
+</li>
+<li>
+<h2 id="advantage-of-doubly-linked-list"><strong>Advantage of Doubly Linked List</strong></h2>
+<ul>
+<li>A DLL can be traversed in both forward and backward direction.</li>
+<li>The deletion operation in DLL is more efficient if pointer to the node to be deleted is given</li>
+<li>We can quickly insert the new node before a given node.</li>
+</ul>
+</li>
+<li>
+<h2 id="advantage-of-circular-queue-over-linear-queue"><strong>Advantage of Circular Queue over Linear Queue</strong></h2>
+<ul>
+<li>It takes up less memory than the linear queue.</li>
+<li>A new item can be inserted in the location from where a previous item is deleted.</li>
+<li>Infinite number of elements can be added continuously but deletion must be used.</li>
+</ul>
+</li>
+<li>
+<h2 id="advantage-and-disadvantage-of-recursion"><strong>Advantage and Disadvantage of Recursion</strong></h2>
+<ul>
+<li>Advantage of Recursion are:-
+<ol>
+<li>Unlike a iteration which have to written every time we have to use them, Recursion function can be defined once and we can call at any place.</li>
+<li>We don’t have to specify any incremental and decremental variables.</li>
+</ol>
+</li>
+<li>Disadvantage of Recursion are:-
+<ol>
+<li>The time to execute the same problem the Recursion function takes more time than iteration.</li>
+<li>Call overhead is necessary for Recursion.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="advantage-and-disadvantage-of-linked-list-implementation-over-array"><strong>Advantage and Disadvantage of Linked List implementation over array</strong></h2>
+<ul>
+<li>Advantage of Linked List are:-
+<ol>
+<li>Linked list is a dynamic data structure so it can grow and shrink at runtime by allocating and deallocating memory.</li>
+<li>Insertion and deletion of nodes are really easier.</li>
+<li>Data structures such as stack and queues can be easily implemented using linked list.</li>
+<li>As the size of the linked list can increase or decrease at run time so there is no memory wastage.</li>
+</ol>
+</li>
+<li>Disadvantage of Linked list are:-
+<ol>
+<li>Elements or nodes traversal is difficult in a linked list.</li>
+<li>In linked list reverse traversing is really difficult.</li>
+<li>More memory is required to store elements in the linked list as compared to arrays.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="difference"><strong><code>Difference</code></strong></h1>
+<ul>
+<li>
+<h2 id="stack-and-queue"><strong>Stack and queue</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Stack</th>
+<th>Queue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It is a linear list in which data is inserted and deleted from the same end called top of stack</td>
+<td>It is a linear list in which data is inserted from one end called rear and deleted from another end called front.</td>
+</tr>
+<tr>
+<td>It has only one pointer called tos</td>
+<td>It has two pointers called front and rear</td>
+</tr>
+<tr>
+<td>It works in LIFO(Last In First Out) manner</td>
+<td>It works in FIFO(First In First Out) manner</td>
+</tr>
+<tr>
+<td>Example: Stack of books, plates, etc</td>
+<td>Example: Line in a bank, toll, etc</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="data-structure-and-data-types"><strong>Data structure and Data types</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Data structure</th>
+<th>Data types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data structure is the collection that holds data which can be manipulated and used in programming so that operations and algorithms can be more easily applied.</td>
+<td>Data type is the representation of nature and type of data that has been going to be used in programming or in other words data type describes all that data which share a common property.</td>
+</tr>
+<tr>
+<td>Data Structures in programming are implemented in concrete implementation as their definition is already defined by the language that what type of data they are going to store and deal with.</td>
+<td>Data types in programming are implemented in abstract implementation whose definition is provided by different languages in different ways.</td>
+</tr>
+<tr>
+<td>In Data structure the data is assigned to using some set of algorithms and operations like push, pop and so on.</td>
+<td>In case of data type the value of data is not stored as it only represents the type of data that can be stored.</td>
+</tr>
+<tr>
+<td>Time complexity comes in the case of data structure as it mainly deals with manipulation and execution of logic over data that it stores.</td>
+<td>In case of data type only type and nature of data is concerned then there is no issue of time complexity</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="infix-postfix-and-prefix-1"><strong>infix, postfix and prefix</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Infix expression</th>
+<th>Prefix expression</th>
+<th>Postfix expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The expression in which the operators are in between the operands is called infix expression.</td>
+<td>The expression in which the operators are ahead of the operands is called prefix expression.</td>
+<td>The expression in which the operators are after the operands is called postfix expression.</td>
+</tr>
+<tr>
+<td><code>&lt;operand&gt;&lt;operator&gt;&lt;operand&gt;</code> syntax is followed.</td>
+<td><code>&lt;operator&gt;&lt;operand&gt;&lt;operand&gt;</code> syntax is followed.</td>
+<td><code>&lt;operand&gt;&lt;operand&gt;&lt;operator&gt;</code> syntax is followed.</td>
+</tr>
+<tr>
+<td>It is easy to understand by humans.</td>
+<td>It is easy to understand by computers.</td>
+<td>It is easy to understand by computers.</td>
+</tr>
+<tr>
+<td>The expression consists of brackets.</td>
+<td>The expression doesn’t consist of brackets.</td>
+<td>The expression doesn’t consist of brackets.</td>
+</tr>
+<tr>
+<td>It is also called an arithmetic expression.</td>
+<td>It is called polish notation.</td>
+<td>It is called reverse polish notation.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="circular-queue-and-linear-queue"><strong>Circular Queue and linear Queue</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Circular Queue</th>
+<th>Linear Queue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In this queue the front and rear pointer can point at the same place.</td>
+<td>In this queue the front and rear pointer cannot point at the same place</td>
+</tr>
+<tr>
+<td>In this queue the last element is connected to the first element</td>
+<td>In this queue the last element is not connected the first element.</td>
+</tr>
+<tr>
+<td>Pointers are updated by (P+1)%n, where P=pointer value, n=size-1</td>
+<td>Pointers are updated by 1</td>
+</tr>
+<tr>
+<td>We can insert data to the space from where we deleted a data in a already full Circular queue.</td>
+<td>We have to delete all the data of the queue first in order to insert data in a already full linear queue.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="recursion-and-iteration"><strong>Recursion and Iteration</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th><strong>recursion</strong></th>
+<th><strong>iteration</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It is the process of repeating a function over and over again until a base condition is satisfied.</td>
+<td>It is the process of repeating a block of code until some condition is satisfied.</td>
+</tr>
+<tr>
+<td>We use it for repetition of function.</td>
+<td>We use it for repetition of block of code.</td>
+</tr>
+<tr>
+<td><code>return</code> with calling of the function is used to do recursion.</td>
+<td><code>for</code>, <code>while</code>, etc loop are used to do iteration.</td>
+</tr>
+<tr>
+<td><code>If else</code> statement is used to check the base condition.</td>
+<td>Conditions are written inside paranthesis of the loop.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="static-list-and-dynamic-list"><strong>Static list and dynamic list</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Static list</th>
+<th>Dynamic list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory allocation is done in compile time.</td>
+<td>Memory allocation is done in runtime.</td>
+</tr>
+<tr>
+<td>Data is stored in a stack.</td>
+<td>Data is stored in heap.</td>
+</tr>
+<tr>
+<td>Datas cannot be changed during the program.</td>
+<td>Datas are determined during the program.</td>
+</tr>
+<tr>
+<td>Max size is predetermined.</td>
+<td>Max size of the list can be determined during program time.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="deterministic-algorithm-and-non-deterministic-algorithm"><strong>Deterministic algorithm and Non-Deterministic algorithm</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Deterministic algorithm</th>
+<th>Non-deterministic algorithm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The algorithm in which the output is always same for the given input is called deterministic algorithm.</td>
+<td>The algorithm in which the output is different for the same given input is called non-deterministic algorithm.</td>
+</tr>
+<tr>
+<td>Can solve the problem in polynomial time.</td>
+<td>Can’t solve the problem in polynomial time.</td>
+</tr>
+<tr>
+<td>Can determine the next step of execution.</td>
+<td>Cannot determine the next step of execution due to more than one path algorithm can take.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="graph-and-tree"><strong>Graph and Tree</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Graph</th>
+<th>Tree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two nodes can have unidirectional and bidirectional paths</td>
+<td>Two vertices can have only one path.</td>
+</tr>
+<tr>
+<td>There is no concept root node on graph.</td>
+<td>There exactly one root node and every child have only one parent.</td>
+</tr>
+<tr>
+<td>Graphs can have loop as well as self loop.</td>
+<td>Tree cannot have loop and self loop.</td>
+</tr>
+<tr>
+<td>Graph is traversed using BFS and DFS methods.</td>
+<td>Tree is traversed using pre-order, in-order and post-order techniques.</td>
+</tr>
+<tr>
+<td>It has a network model.</td>
+<td>It has a hierarchical structure.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="traversing-in-graph-and-traversing-in-tree"><strong>Traversing in Graph and Traversing in Tree</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Traversing in Graph</th>
+<th>Traversing in Tree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Graphs can have unidirectional and bidirectional Path between vertices.</td>
+<td>Trees can have only one path between any two vertices.</td>
+</tr>
+<tr>
+<td>We use BFS (Breadth First Search) and DFS (Depth First Search) traversing in Graphs.</td>
+<td>We use in-order, pre-order and post-order traversing in Trees.</td>
+</tr>
+<tr>
+<td>It has a network model.</td>
+<td>It has a hierarchy model.</td>
+</tr>
+<tr>
+<td>It can have loops and self-loops. Making traversing difficult.</td>
+<td>It cannot have loops and self-loops. Hence traversing is easy compared to graphs.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="bubble-sort-and-selection-sort"><strong>Bubble sort and Selection Sort</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Bubble Sort</th>
+<th>Selection Sort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It is a simple sorting algorithm that repeatedly goes through the list, comparing adjacent pairs and swapping them if they are in wrong order.</td>
+<td>It is a simple sorting algorithm that takes the smallest value(considering ascending order) in the list and moves to the proper position in the array.</td>
+</tr>
+<tr>
+<td>Checks the neighboring elements and swaps them accordingly.</td>
+<td>Selects the minimum element from the unsorted sub-array and places it at the next position of the sorted array.</td>
+</tr>
+<tr>
+<td>Less efficient.</td>
+<td>More efficient</td>
+</tr>
+<tr>
+<td>It is slower than selection sort.</td>
+<td>Faster than bubble sort.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="set-matrix-and-linked-list-representation-of-graph"><strong>Set matrix and Linked list representation of graph</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Set matrix representation(Adjacency matrix)</th>
+<th>Linked list representation(Adjacency list)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This representation makes use of the VxV matrix. Where V is the number of vertices in the graph.</td>
+<td>In this representation, for every vertex we store its neighbors in a linked list.</td>
+</tr>
+<tr>
+<td>Space required in worst case is O(V2).</td>
+<td>Space required in worst case is O(V+E)</td>
+</tr>
+<tr>
+<td>In order to add a new vertex to VxV matrix the storage must be increases to (V+1)2.</td>
+<td>In order to add a new vertex we add a new node with a pointer next pointing to the neighbor vertex.</td>
+</tr>
+<tr>
+<td>To add an edge say from i to j, matrix[i][j] = 1</td>
+<td>We check the availability of the vertices and add linked nodes accordingly.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="singly-linked-list-and-doubly-linked-list-and-circular-linked-list"><strong>Singly Linked list and Doubly linked list and Circular Linked List</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Singly Linked List</th>
+<th>Doubly Linked List</th>
+<th>Circular Linked List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Singly Linked list or simply Linked List is a list of collection of data that are linked with each other.</td>
+<td>Doubly Linked List is a type of Linked list that also contains the link back to the previous node.</td>
+<td>Circular Linked List is a type of linked list in which the last node points back to the first node forming a circle.</td>
+</tr>
+<tr>
+<td>Each node consists of only one address field that points to the next node.</td>
+<td>Each node consists of two address fields that points to the next and previous node respectively.</td>
+<td>Each node consists of only one address field that points to the next node.</td>
+</tr>
+<tr>
+<td>The final node’s address field points to NULL.</td>
+<td>The final node’s next address field as well as the first node’s previous address field both points to NULL.</td>
+<td>The final node’s address field points to the first node.</td>
+</tr>
+<tr>
+<td>Reverse traversing is very difficult.</td>
+<td>Reverse traversing is easy.</td>
+<td>Reverse traversing is difficult.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="breadth-first-search-and-depth-first-search"><strong>Breadth First Search and Depth First Search</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Breadth First Search(BFS)</th>
+<th>Depth First Search(DFS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BFS is a traversal technique used to traverse through a graph where it visits all the neighbors first and moves to more deeper nodes.</td>
+<td>DFS is a traversal technique used to traverse through a graph where it visits all the children nodes of the source node first and climbs back to visit the unvisited neighbors.</td>
+</tr>
+<tr>
+<td>It uses Queue data structure for finding the shortest path.</td>
+<td>It uses the stack data structure.</td>
+</tr>
+<tr>
+<td>It is more suitable for searching vertices which are closer to the given source.</td>
+<td>It is more suitable when there are solutions away from source.</td>
+</tr>
+<tr>
+<td>It considers all neighbors first and so not suitable for decision making trees used in games or puzzle</td>
+<td>It considers the children nodes first hence more suitable for games and puzzles.</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="adt-and-c-class"><strong>ADT and C++ Class</strong></h2>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>ADT</th>
+<th>C++ class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>An ADT is a abstract data type which means the implementation of an ADT is not defined.</td>
+<td>A c++ class is an data type that consists of data members and member functions.</td>
+</tr>
+<tr>
+<td>It an abstract type.</td>
+<td>It isn’t abstract.</td>
+</tr>
+<tr>
+<td>We use ADT to make a outer layer of operations for algorithms which can be used by other data types to define how the operation works.</td>
+<td>We use the classes to implement the ADT to define the operation to be performed.</td>
+</tr>
+<tr>
+<td>Example:- interface,</td>
+<td>Example:- std, user defined classes, etc</td>
+</tr>
+</tbody>
+</table></li>
+<li>
+<h1 id="more-than-definition"><strong><code>More than definition</code></strong></h1>
+<ul>
+<li>
+<h2 id="application-of-stack"><strong>Application of Stack</strong></h2>
+<ul>
+<li>Stack can be used in computing as well as non computing sector. Some of its application in computing sector are:-
+<ol>
+<li>Expression evaluation like postfix, infix expression</li>
+<li>Converting one expression to another</li>
+<li>For string conversion functions</li>
+<li>For checking opening and closing parenthesis</li>
+</ol>
+</li>
+<li>Some application in non-computing sector are:-
+<ol>
+<li>Stacks of books, plates, etc</li>
+<li>Wearing and removing Bangles</li>
+<li>Garage with only one car wide width</li>
+<li>Button cell stacked in watches</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="application-of-linked-list"><strong>Application of Linked list</strong></h2>
+<ul>
+<li>Linked list can be used to:-
+<ol>
+<li>Implementation of stacks and queues</li>
+<li>Performing arithmetic operations on long integers</li>
+<li>Manipulation of polynomials by storing constants in the node of linked list</li>
+<li>Implementation of graphs</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="application-of-b-tree"><strong>Application of B+ tree</strong></h2>
+<ol>
+<li>It is used to store large amounts of data which cannot be stored in main memory.</li>
+<li>It is used to make trees have faster operation in insertion, deletion and search.</li>
+<li>It is used in database indexing</li>
+<li>It is used in Multilevel indexing</li>
+</ol>
+</li>
+<li>
+<h2 id="condition-for-stack-overflow-and-stack-underflow"><strong>Condition for stack overflow and stack underflow</strong></h2>
+<ul>
+<li><code>Stack overflow</code> is the condition in stack when data is tired to insert into a stack that has passed its storage capacity. i.e When the data to be inserted are more than than the number of data the stack can hold.</li>
+<li><code>Stack Underflow</code> is the condition in stack when data is tried to delete from the stack that doesn’t have any data in it. i.e When the stack is empty and deletion operation is performed.</li>
+</ul>
+</li>
+<li>
+<h2 id="list-5-basic-operation-of-linked-list"><strong>List 5 basic operation of Linked list</strong></h2>
+<ul>
+<li>The 5 basic operation of Linked List are:-
+<ul>
+<li><code>Insertion:</code> It is the process of adding a new node or data at the beginning of the linked list.</li>
+<li><code>Deletion:</code> It is the process of deleting a node or data from the beginning of the linked list.</li>
+<li><code>Display:</code> It is the process of displaying all the nodes or datas currently at the linked list.</li>
+<li><code>Search:</code> It is the process of searching a data or node using the given key.</li>
+<li><code>Delete:</code> It is the process of deleting a node or data using the given key.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="types-of--dequeue"><strong>4 types of  dequeue</strong></h2>
+<ul>
+<li>The 4 types of dequeue in Double ended queue are:-
+<ul>
+<li><code>Dinject:</code> It is the process of inserting data from the rear of the queue.</li>
+<li><code>Dpop:</code> It is the process of deleting data from the front of the queue.</li>
+<li><code>Dpush:</code> It is the process of inserting data from the front of the queue.</li>
+<li><code>Deject:</code> It is the process of deleting data from the rear of the queue.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="balancing-avl-tree"><strong>Balancing AVL Tree</strong></h2>
+<ul>
+<li>
+<p><strong>Left Rotation</strong></p>
+<ul>
+<li>If a tree becomes unbalanced, when a node is inserted into the right subtree of the right subtree, then we perform a single left rotation</li>
+</ul>
+<p><img src="../assets/images/avl_left_rotation.jpg" alt="Left Rotation example"></p>
+<ul>
+<li>In our example, node <strong>A</strong> has become unbalanced as a node is inserted in the right subtree of A’s right subtree. We perform the left rotation by making <strong>A</strong> the left-subtree of B.</li>
+</ul>
+</li>
+<li>
+<p><strong>Right Rotation</strong></p>
+<ul>
+<li>AVL tree may become unbalanced, if a node is inserted in the left subtree of the left subtree. The tree then needs a right rotation.</li>
+</ul>
+<p><img src="../assets/images/avl_right_rotation.jpg" alt="Right Rotation example"></p>
+<ul>
+<li>In our example, node <strong>C</strong> has become unbalanced as a node is inserted in the left subtree of C’s left subtree. We perform the right rotation by making <strong>C</strong> the right-subtree of B.</li>
+</ul>
+</li>
+<li>
+<p><strong>Left-Right Rotation</strong></p>
+<ul>
+<li>A left-right rotation is a combination of left rotation followed by right rotation.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th><strong>State</strong></th>
+<th><strong>Action</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../assets/images/right_subtree_of_left_subtree.jpg" alt="Image"></td>
+<td>A node has been inserted into the right subtree of the left subtree. This makes <strong>C</strong> an unbalanced node. These scenarios cause AVL tree to perform left-right rotation.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/subtree_left_rotation.jpg" alt="Image"></td>
+<td>We first perform the left rotation on the left subtree of <strong>C</strong>. This makes <strong>A</strong>, the left subtree of <strong>B</strong>.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/left_unbalanced_tree.jpg" alt="Image"></td>
+<td>Node <strong>C</strong> is still unbalanced, however now, it is because of the left-subtree of the left-subtree.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/right_rotation.jpg" alt="Image"></td>
+<td>We shall now right-rotate the tree, making <strong>B</strong> the new root node of this subtree. <strong>C</strong> now becomes the right subtree of its own left subtree.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/balanced_avl_tree.jpg" alt="Image"></td>
+<td>The tree is now balanced</td>
+</tr>
+</tbody>
+</table><ul>
+<li><strong>Right-Left Rotation</strong>
+<ul>
+<li>A right-left rotation is a combination of right rotation followed by left rotation.</li>
+</ul>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th><strong>State</strong></th>
+<th><strong>Action</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../assets/images/left_subtree_of_right_subtree.jpg" alt="Image"></td>
+<td>A node has been inserted into the left subtree of the right subtree. This makes <strong>A</strong>, an unbalanced node with balance factor 2.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/subtree_right_rotation.jpg" alt="Image"></td>
+<td>First, we perform the right rotation along <strong>C</strong> node, making <strong>C</strong> the right subtree of its own left subtree <strong>B</strong>. Now, <strong>B</strong> becomes the right subtree of <strong>A</strong>.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/right_unbalanced_tree.jpg" alt="Image"></td>
+<td>Node <strong>A</strong> is still unbalanced because of the right subtree of its right subtree and requires a left rotation.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/left_rotation.jpg" alt="Image"></td>
+<td>A left rotation is performed by making <strong>B</strong> the new root node of the subtree. <strong>A</strong> becomes the left subtree of its right subtree <strong>B</strong>.</td>
+</tr>
+<tr>
+<td><img src="../assets/images/balanced_avl_tree.jpg" alt="Image"></td>
+<td>The tree is now balanced</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<h2 id="tree-traversal"><strong>Tree traversal</strong></h2>
+<ul>
+<li>Tree traversal is the process of visiting every node in a tree at once. It is used in many application in order to find specific node to delete or add node to that node, etc.</li>
+<li>There are different ways of traversing a tree. They are classified according to the order of nodes they visit. They are:-
+<ol>
+<li>Pre-Order (NLR)
+<ul>
+<li>In this way of traversing the tree we first visit the root node and visit its left node followed by its right node.</li>
+</ul>
+</li>
+<li>In-Order (LNR)
+<ul>
+<li>In this way of traversing the tree we first visit the left most node then its parent node followed by the right node.</li>
+</ul>
+</li>
+<li>Post-Order (LRN)
+<ul>
+<li>In this mode of traversing the tree we first visit the left most node then we visit the right node followed by the parent node.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="adjacency-matrix-representation-of-graph"><strong>Adjacency matrix representation of graph</strong></h2>
+<ul>
+<li>A adjacency matrix is a square matrix used to represent a finite graph.</li>
+<li>It specifies the number of direct paths a vertex have with other vertex.</li>
+<li>For undirected graph:-<br>
+<img src="../assets/images/adj-Undirected.JPG" alt="Adjacency matrix for undirected graph"></li>
+<li>For directed graph:-<br>
+<img src="../assets/images/adj-directed.JPG" alt="Adjacency matrix for directed graph"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="sorting"><strong><code>Sorting</code></strong></h1>
+<ul>
+<li>
+<h2 id="what-is-sorting"><strong>What is Sorting</strong></h2>
+<ul>
+<li>Sorting is the operation of arranging data in some given order such as increasing or decreasing.</li>
+</ul>
+</li>
+<li>
+<h2 id="quick-sort"><strong>Quick Sort</strong></h2>
+<ul>
+<li>Quick sort is a divide and conquer sorting algorithm used to sort list of array by dividing the list into sub list and recursively sorting each sub-lists.</li>
+<li>It has a very good average case behavior among all the sorting techniques.</li>
+<li>In quick sort we make partition of the array and choose a key value called pivot and rest of the elements are grouped into two partition such as:-
+<ul>
+<li>One partition contains elements smaller than key value</li>
+<li>Another partition contains elements larger than key value</li>
+</ul>
+</li>
+<li><strong><code>Example:</code></strong></li>
+</ul>
+</li>
+<li>
+<h2 id="radix-sort"><strong>Radix Sort</strong></h2>
+<ul>
+<li>Radix sort or Bucket sort is a sorting technique that is used to sort the list of positive numbers only. In this sorting technique we initialize an array of size the same as Number of data in the list and all are set to zero. They are called cell of bucket,(hence the Bucket sort).</li>
+<li>In first iteration the unit digit numbers are placed in the bucket and sorted, in second iteration tenth digit numbers are sorted and so on.</li>
+<li><strong><code>Example:</code></strong></li>
+</ul>
+</li>
+<li>
+<h2 id="selection-sort"><strong>Selection Sort</strong></h2>
+<ul>
+<li>It is one of the simplest form of sorting. In this sort as the name suggest we select a element compare that with all the other elements and interchange the selected element with the compared element if selected element is greater.</li>
+<li>After the first iteration the smallest number is placed at the 0<sup>th</sup> index of the list.</li>
+<li>Then we select another element and compare that with all the remaining element other than the 0<sup>th</sup> index element.</li>
+<li>For list having <code>n</code> elements we have to iterate <code>(n-1)</code> times.</li>
+<li><strong><code>Example:-</code></strong></li>
+</ul>
+</li>
+<li>
+<h2 id="heap-sort"><strong>Heap Sort</strong></h2>
+<ul>
+<li>Heap sort is a comparison based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the maximum element and place the maximum element at the end. We repeat the same process for the remaining element.</li>
+<li>Algorithm for heap sort:-
+<ul>
+<li>Build a max heap from the input data.</li>
+<li>At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1.</li>
+<li>Repeat above steps while the size of the heap is greater than 1.</li>
+</ul>
+</li>
+<li><strong><code>Example:</code></strong></li>
+</ul>
+</li>
+<li>
+<h2 id="merge-sort"><strong>Merge Sort</strong></h2>
+<ul>
+<li>Merge sort is the sorting technique that divides the list into pairs sort them and merge them to get a bigger sorted list. We do this until we get one list having size <code>N</code> for a given unsorted list of size <code>N</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="trees"><strong><code>Trees</code></strong></h1>
+<ul>
+<li>
+<h2 id="construct-avl-tree"><strong>Construct AVL Tree</strong></h2>
+<pre><code>  Step 1: Insert the node in the same way as in BST
+  Step 2: Check Balance factor(BF) of each node.
+  			BF = height of left nodes - height of right nodes
+  Step 3: If(BF != either -1,0,1) then
+  			If(Nodes are in straight lines)
+  				Apply single rotation to correct the balance factor.
+  			If(Nodes are in dog leg position)
+  				Apply double rotation to correct the balance factor
+  Step 4: Continue adding and checking from step 1 to 3 for all the nodes to insert.
+</code></pre>
+</li>
+<li>
+<h2 id="construct-bst-tree"><strong>Construct BST Tree</strong></h2>
+<pre><code>  Step 1: Insert the first element as root node
+  Step 2: Compare the new element with the root node
+  		If(new element is bigger) add to right of the root node
+  		If(new element is lesser) add to right of the root node
+  Step 3: Compare the next element with root same as in step 2 and also compare
+  		with the previous element in same manner if necessary
+  Step 4: Repeat step 3 for all the remaining elements.
+</code></pre>
+</li>
+<li>
+<h2 id="construct-huffman-tree"><strong>Construct Huffman Tree</strong></h2>
+<pre><code>  Step 1: Make nodes of all the data non-repeatedly, instead write frequency of occurrence.
+  Step 2: Add any two nodes with the least frequencies and create a new node with that frequency
+  		as the data and the two nodes as child nodes.
+  Step 3: Move those child nodes a level below.
+  Step 4: Repeat the step 2 and 3 in the top most level until only one root node is encountered at the top most level.
+</code></pre>
+</li>
+<li>
+<h2 id="generate-huffman-code"><strong>Generate Huffman code</strong></h2>
+<pre><code>  Step 1: Make a Huffman tree for the given data
+  Step 2: Assign 0's to all the left edges and 1's to all right edges.
+  			Note: We can assign 0's to right and 1's to left also
+  Step 3: Now from the root node move towards the node you want the code of.
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="algorithms"><strong><code>Algorithms</code></strong></h1>
+<ul>
+<li>
+<h2 id="kruskals-algorithm"><strong>Kruskal’s Algorithm</strong></h2>
+<pre><code>  Step 1: Write all the edges from smallest to biggest.
+  Step 2: Take the smallest edge from the list
+  			if (cycle is formed) discard the edge
+  			if (cycle is not formed) add to new tree and remove the edge form list
+  Step 3: Repeat Step 2 until all the vertices are joined.
+</code></pre>
+<img src="../assets/images/kruskals-example.gif" alt="kruskals-algorithm-example"/>
+</li>
+<li>
+<h2 id="dijkstra-algorithm"><strong>Dijkstra Algorithm</strong></h2>
+<pre><code>  Step 1: Write the paths from the source to all the vertices.
+  Step 2: Give them initial distance of infinity
+  Step 3: Calculate the path distance from Source to its direct neighbors
+  			If (The new Path is smaller) then exchange the path distance and
+  				update the previous vertex.
+  Step 4: Look for new smallest path with unvisited vertex
+  			Calculate the path from Source to the neighbors of the new vertex
+  			If (The new Path is smaller) then exchange the path distance and
+  				update the previous vertex.
+  Step 5: Repeat step 4 until destination node is gained.
+</code></pre>
+<img src="../assets/images/Dijkstra.gif" alt="dijkstra-algorithm-example"/>
+</li>
+<li>
+<h2 id="wars-halls-algorithm"><strong>Wars hall’s Algorithm</strong></h2>
+<pre><code>  Step 1: Make a Copy of the adjacent matrix of the graph.
+  Step 2: For each nodes(one to another) look for paths if any list the pairs.
+  Step 3: For each node if 
+  `there is at least one or more pairs in the list`  put `1` else put `0`
+</code></pre>
+</li>
+<li>
+<h2 id="binary-tree-from-given-pre-order-and-in-order-traversal"><strong>Binary tree from given Pre-order and In-order traversal</strong></h2>
+<pre><code>  Step 1: The first node of the pre-order is always root node.
+  Step 2: Look at the next node in pre-order and compare with root node in 
+  			in-order.
+  				If (The new node is in left of the root) put the new node to left
+  				else put the new node to right.
+  Step 3: Repeat step 2 for every other node from pre-order compare with each
+  				node already added  too if necessary.
+</code></pre>
+</li>
+<li>
+<h2 id="tower-of-hanoi"><strong>Tower of Hanoi</strong></h2>
+<pre><code>  Assume we have N disks in source peg and we have 2 other pegs auxiliary and destination peg
+  Step 1:  Move N-1 disks from source to auxiliary peg
+  Step 2:  Move  Nth disks from source to destination peg
+  Step 3:  Move N-1 disks form auxiliary to destination peg
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="short-notes"><strong><code>Short Notes</code></strong></h1>
+<ul>
+<li>
+<h2 id="divide-and-conquer-algorithm"><strong>Divide and Conquer algorithm</strong></h2>
+<ul>
+<li>Divide and Conquer algorithm are those type of algorithm where the original problem is divided into smaller problems and solving them recursively. As the name suggest we divide the problem into smaller similar problems and Conquer them(i.e solve them).</li>
+<li>Most of the divide and Conquer algorithms have three parts:- Divide the problem into number of subproblems similar to the original problem, Conquer the subproblems by solving them recursively and finally Combine the solutions from the subproblems into the solution of original problem.</li>
+<li>Some of the divide and conquer algorithms are:- <code>quick sort</code>, <code>merge sort</code>, etc</li>
+</ul>
+</li>
+<li>
+<h2 id="worst-case-complexity"><strong>Worst case Complexity</strong></h2>
+<ul>
+<li>Worst case complexity is a method that measures the resources(i.e running time, memory, etc) of an algorithm for the given number of inputs.</li>
+<li>It gives an upper bound of the algorithm determining the maximum time an algorithm is running or maximum memory usage it does.</li>
+<li>It is used to check the efficiency of two or more algorithms for a given number of inputs.</li>
+</ul>
+</li>
+<li>
+<h2 id="big-o-notation"><strong>Big O Notation</strong></h2>
+<ul>
+<li>Big o notation is a notation used to describe the performance and complexity of an algorithm.</li>
+<li>It specifically denotes the worst case scenario and can be used to describe the execution time required on the space used by the algorithm.</li>
+<li>It is helpful in the sense that it helps to build much more efficient algorithms for certain tasks in programs.</li>
+</ul>
+</li>
+<li>
+<h2 id="min-vs-max-heap"><strong>Min vs Max heap</strong></h2>
+<ul>
+<li>Heap is a special type of complete binary tree in which the values of the parent node are compared with the values in its children nodes. There are two types of heap, they are:-
+<ul>
+<li><strong>Min heap</strong> is a type of heap in which the value of the parent node must be less than or equal to the values of its children nodes.</li>
+<li><strong>Max heap</strong> is a type of heap in which the value of the parent node must be greater than or equal to the values of its children nodes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="transitive-closure"><strong>Transitive Closure</strong></h2>
+<ul>
+<li>Transitive closure is the set of relation (r*) in a graph G that contains all the possible direct links from one vertex to another if they are linked in some way in as minimum relations as possible. Where the set of relation ( r ) is the subset of (r*)</li>
+<li>It is used when we want to know if a path of certain length from one node to another node exists or not in the given non weighted , directed graph.</li>
+<li>Example:- We want to find if a path of length 2 or less exists or not between node <code>a and b</code> then the value of <code>(adj[a][b] || adj~2~[a][b])</code>  must be true <code>where adj and adj~2~ are adjacency matrix for path of length 1 and 2 respectively</code></li>
+</ul>
+</li>
+<li>
+<h2 id="deque"><strong>Deque</strong></h2>
+<ul>
+<li>Deque abbreviation for Double Ended Queue is a generalized form of Queue, Where the insertion and deletion operation can be done at both the front and rear ends.</li>
+<li>As we can insert and delete from both the ends we can implement a Queue as well as a stack using Deque.</li>
+<li>Some of the operations of Deque are: <code>insertFront(), insertLast(), deleteFront(), deleteLast(), isEmpty(), isFull(), etc</code></li>
+<li>It is used in a dynamic multithreading processing algorithm called work stealing algorithm where one thread can steal work from another thread. By using deque we can implement each thread as deque giving the ability to steal work from one deque by another.</li>
+</ul>
+</li>
+<li>
+<h2 id="serial-and-parallel-algorithm"><strong>Serial and Parallel algorithm</strong></h2>
+<ul>
+<li>Serial algorithm are those type of algorithm that handles the set of operations serially, i.e one at a time. It is the traditional way of handling algorithm. Single processor is needed to handle this type of algorithm. It is easy to implement but can take more time to solve a problem then parallel algorithm.</li>
+<li>Parallel algorithm are those type of algorithm that handles multiple set of operations at a given time i.e parallelly. Multiple processor is needed to handle this type of algorithm. It is hard to implement as compared to serial algorithm but takes much less time than that of serial algorithm to solve a certain problem.</li>
+</ul>
+</li>
+<li>
+<h2 id="game-tree"><strong>Game Tree</strong></h2>
+<ul>
+<li>Game Tree is one of the application of trees, where we determine the best next possible move in games like tic-tac-toe, chess, etc after analyzing all the possible moves at the given point of the game.</li>
+<li>Although the next best move for that player doesn’t yields ultimate victory for that player as the game tree can only determine the best next move and cannot predict several moves ahead.</li>
+<li>The evaluation returns certain numerical result, the higher the result the better the next move and the lower the result the least effective the next move.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="algorithms-for-programs"><strong><code>Algorithms for programs</code></strong></h1>
+<ul>
+<li>
+<h2 id="insert-and-delete-from-a-circular-queue"><strong>Insert and delete from a Circular Queue</strong></h2>
+<ul>
+<li>For Insertion, <code>front, rear = pointers and MAX = size of Queue</code></li>
+<li><code>Assume we start from front = rear = -1</code>
+<ul>
+<li><strong>Step 1:</strong> IF (<code>front == (rear+1)%MAX</code>) Overflow and Exit</li>
+<li><strong>Step 2:</strong> rear = (rear+1)%MAX;</li>
+<li><strong>Step 3:</strong> queue[rear] = data;</li>
+<li><strong>Step 4:</strong> IF (<code>front == -1</code>) front = 0;</li>
+</ul>
+</li>
+<li>For deletion, <code>Same assumtion as above</code>
+<ul>
+<li><strong>Step 1:</strong> IF (<code>rear == -1 &amp;&amp; front == rear</code>) Underflow and Exit</li>
+<li><strong>Step 2:</strong> delete = queue[front];</li>
+<li><strong>Step 3:</strong> front = (front+1)%MAX;</li>
+<li><strong>Step 4:</strong> IF (<code>front == (rear+1)%MAX</code>) front = rear = -1;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="using-stack-as-linked-list"><strong>Using Stack as Linked List</strong></h2>
+<ul>
+<li>Since insertion and deletion can only be done from one end in stack but from both end in Linked List. We take any one end for now <code>front</code> as the <code>TOS</code> of the Linked list
+<ul>
+<li>For Insertion in the front</li>
+<li><code>Start points to the first node</code>
+<ul>
+<li><strong>Step 1:</strong>  Create a new node [newNode]</li>
+<li><strong>Step 2:</strong> newNode-&gt;next = start;</li>
+<li><strong>Step 3:</strong> start = newNode;</li>
+</ul>
+</li>
+<li>For deletion from the front</li>
+<li><code>delete is a function that delets the given node</code>
+<ul>
+<li><strong>Step 1:</strong> Create a temporary node [t1]</li>
+<li><strong>Step 2:</strong> t1 = start;</li>
+<li><strong>Step 3:</strong> start = start-&gt;next;</li>
+<li><strong>Step 4:</strong> delete(t1);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="linked-list-other-operations"><strong>Linked List other operations</strong></h2>
+<ul>
+<li><code>Insertion in the rear</code>
+<ul>
+<li><strong>Step 1:</strong> Create a new node [newNode]</li>
+<li><strong>Step 2:</strong> Create a temporary node [t]</li>
+<li><strong>Step 3:</strong> t = start;</li>
+<li><strong>Step 4:</strong> While(<code>t-&gt;next != NULL</code>) { t= t-&gt;next; }</li>
+<li><strong>Step 5:</strong> t-&gt;next = newNode;</li>
+</ul>
+</li>
+<li><code>Deletion from the rear</code>
+<ul>
+<li><strong>Step 1:</strong>  Create two temporary nodes [t1,t2]</li>
+<li><strong>Step 2:</strong> t1 = t2 = start;</li>
+<li><strong>Step 3:</strong> Traverse t1 to the end of the list
+<ul>
+<li>While (<code>t1-&gt;next != NULL</code>) { t1 = t1-&gt;next; }</li>
+</ul>
+</li>
+<li><strong>Step 4:</strong> Traverse t2 until t1
+<ul>
+<li>While (<code>t2-&gt;next != t1</code>) { t2 = t2-&gt;next; }</li>
+</ul>
+</li>
+<li><strong>Step 5:</strong> t2-&gt;next = t1-&gt;next;</li>
+<li><strong>Step 6:</strong> delete(t1);</li>
+</ul>
+</li>
+<li><code>Insertion after the given node</code>
+<ul>
+<li><strong>Step 1:</strong> Read the given key [k]</li>
+<li><strong>Step 2:</strong> Create a new Node [newNode]</li>
+<li><strong>Step 3:</strong> Create a temporary node [t]</li>
+<li><strong>Step 4:</strong> t = start;</li>
+<li><strong>Step 5:</strong> While(<code>t-&gt;next != k</code>) { t = t-&gt;next; }</li>
+<li><strong>Step 6:</strong> newNode-&gt;next = t-&gt;next;</li>
+<li><strong>Step 7:</strong> t-&gt;next = newNode;</li>
+</ul>
+</li>
+<li><code>Deletion of the given node</code>
+<ul>
+<li><strong>Step 1:</strong> Read the given key [k]</li>
+<li><strong>Step 2:</strong> Create a temporary node [t]</li>
+<li><strong>Step 3:</strong> t = start;</li>
+<li><strong>Step 4:</strong> While(<code>t-&gt;next != k</code>) { t = t-&gt;next; }</li>
+<li><strong>Step 5:</strong> t-&gt; next = k-&gt;next;</li>
+<li><strong>Step 6:</strong> delete(k)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="insertion-and-deletion-in-doubly-linked-list"><strong><code>Insertion and deletion in Doubly Linked list</code></strong></h2>
+<ul>
+<li><code>Insertion at the front</code>
+<ul>
+<li><strong>Step 1:</strong> Create a new node [n]</li>
+<li><strong>Step 2:</strong> n-&gt;left = start-&gt;left;</li>
+<li><strong>Step 3:</strong> n-&gt;right = start;</li>
+<li><strong>Step 4:</strong> start-&gt;right = n;</li>
+</ul>
+</li>
+<li><code>Deletion from the front</code>
+<ul>
+<li><strong>Step 1:</strong> Create a temporary node [t1]</li>
+<li><strong>Step 2:</strong> t1 = start;</li>
+<li><strong>Step 3:</strong> start = start-&gt;right;</li>
+<li><strong>Step 4:</strong> delete(t1);</li>
+</ul>
+</li>
+<li><code>Insertion at the end</code>
+<ul>
+<li><strong>Step 1:</strong> Create a new node [n]</li>
+<li><strong>Step 2:</strong> Create a temporary node [t]</li>
+<li><strong>Step 3:</strong> t = start;</li>
+<li><strong>Step 4:</strong> While(<code>t-&gt;right != NULL</code>) { t = t-&gt;right; }</li>
+<li><strong>Step 5:</strong> n-&gt;right = t-&gt;right;</li>
+<li><strong>Step 6:</strong> t-&gt;right = n;</li>
+<li><strong>Step 7:</strong> n-&gt;left = t;</li>
+</ul>
+</li>
+<li><code>Deletion from the end</code>
+<ul>
+<li><strong>Step 1:</strong> Create two temporary node [t1, t2]</li>
+<li><strong>Step 2:</strong> t1 = t2 = start;</li>
+<li><strong>Step 3:</strong> While(<code>t1-&gt;right != NULL</code>) { t1 = t1-&gt;right; }</li>
+<li><strong>Step 4:</strong> While(<code>t2-&gt;right != t1</code>) { t2 = t2-&gt;right; }</li>
+<li><strong>Step 5:</strong> t2-&gt;right = t1-&gt;right;</li>
+<li><strong>Step 6:</strong> delete(t1);</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="algorithm-to-delete-element-from-b-tree"><strong>Algorithm to delete element from B+ tree</strong></h2>
+<ul>
+<li><strong>Step 1:</strong> Traverse up to the leaf node where the data is present.</li>
+<li><strong>Step 2:</strong> If ( <code>the node has more than minimum number of keys it can hold</code> ) then simply delete the key/data.</li>
+<li><strong>Step 3:</strong> If ( <code>the node has the exact number of keys it can hold</code> ) then delete the key and borrow a key from immediate sibling also make the median key of the sibling node the parent node.</li>
+<li><strong>Step 4:</strong> If ( <code>the node has more than minimum number keys it can hold and the key is present at the internal node also</code> ) then delete the key from the leaf as well as internal node and make the in-order successor fill up the internal node.</li>
+<li><strong>Step 5:</strong> If ( <code>the node has the exact number of keys it can hold and the key is present at the internal node also</code> ) then delete the key and borrow a key from the immediate sibling through the parent and fill the empty internal node with the borrowed key.</li>
+<li><strong>Step 6:</strong> If ( <code>the node has the exact number of keys it can hold and the key is present at the internal node above immediate parent node</code> ) then delete the key, merge the empty space with its siblings and fill the grandparent node with the in-order successor.</li>
+<li><strong>Step 7:</strong> If ( <code>the node has the exact number of keys it can hold and the key is present at the internal node and there is no immediate successor</code> ) then delete the key and move the grandparent node a step down to make a parent node. [ it shrinks the height of B+ tree ]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>

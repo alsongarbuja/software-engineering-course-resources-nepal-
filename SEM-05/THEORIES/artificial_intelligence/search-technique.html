@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Technique</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>Search Techniques</h1>
+        <p>
+            <b>Search Techniques</b> is the process of searching an item from a list of element.
+        </p>
+        <br>
+        <h3>Types of Search Techniques</h3>
+        <ul>
+            <li>
+                <h4>Uniformed Search<b>(Blind search)</b></h4>
+            </li>
+            <li>
+                <h4>Informed Search<b>(Heuristic Search)</b></h4>
+            </li>
+        </ul>
+        <br>
+        <div>
+            <h3>Uniformed Search</h3>
+            <p>
+                They have no additional information about states beyond that provided
+                in problem definition.
+            </p>
+            <p>
+                They have no preference as to which node it should explore first.
+            </p>
+            <p>
+                Procedure: Generate successors and distinguish a goal state from non-goal state.
+            </p>
+            <p>
+                Examples: <b>Breadth First Search, Depth First Search, Depth Limited Search, etc</b>
+            </p>
+        </div>
+        <div>
+            <h3><b>1, Breadth First Search</b></h3>
+            <ul class="inner-ul">
+                <li>
+                    The Root node is expanded first, then the successor nodes are expanded,
+                    after which their successor nodes are expanded and so on.
+                </li>
+                <li>
+                    It is also called <b>Level-by-level</b> traversing.
+                </li>
+                <li>
+                    Downward motion procceds level by level until goal is reached
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3><b>2, Depth First Search</b></h3>
+            <ul class="inner-ul">
+                <li>
+                    The Root node is expanded first, then the first shallow successor node is 
+                    expanded till the deepest level, then traverse back to the next shallow node
+                    and repeat until goal is reached.
+                </li>
+                <li>
+                    It has a very modest memory requirements.
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h3>Informed Search</h3>
+            <p>
+                Strategies that know whether one `non-goal state` is more promising than another.
+            </p>
+            <p>
+                Employs heuristic<b>(to discover/investigative)</b> for its moves. Heuristic is a rule
+                of thumb that probably leads to a solution.
+            </p>
+            <p>
+                Examples: <b>Greedy Best First Search, A* Search, Hill Climbing</b>
+            </p>
+        </div>
+        <div>
+            <h3><b>1, Greedy Best First Search</b></h3>
+            <ul class="inner-ul">
+                <li>
+                    Greedy Best first search is a informed searching technique in which the algorithm
+                    seeks minimum cost to reach the goal.
+                </li>
+                <li>
+                    It uses <b>Heuristic function</b> to decide which node to expand.
+                </li>
+                <li>
+                    It is neither <b>complete</b> nor <b>optimal</b>. 
+                </li>
+                <li>
+                    It makes decisions based only on the information it has at any one step,
+                    without regard to the overall problem.
+                </li>
+                <li>
+                    <b>F(n) = H(n)</b>, where H(n) is the heuristic function result
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3><b>2, A* Search</b></h3>
+            <ul class="inner-ul">
+                <li>
+                    A* search is a informed searching technique in which the algorithm
+                    seeks minimum cost to reach the goal as well as cost to reach the node.
+                </li>
+                <li>
+                    It is both <b>complete</b> nor <b>optimal</b>. 
+                </li>
+                <li>
+                    It is the widely known form of best first search.
+                </li>
+                <li>
+                    <b>F(n) = G(n) + H(n)</b>, where G(n) cost to reach the node H(n) is the heuristic function result
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3><b>3, Hill Climbing</b></h3>
+            <ul class="inner-ul">
+                <li>
+                    Hill climbing is a Depth first search with a heuristic measurement
+                </li>
+                <li>
+                    It is an optimization techinque that is used to find <b>Local Optimum</b>
+                    solution to a computational problem. 
+                </li>
+                <li>
+                    It starts off with a solution that is very poor compared to the optimal solution 
+                    and then iteratively improves from there.
+                </li>
+                <li>
+                    It may not give the optimal solution as it might stop looking for further solutions
+                    thinking it has found the optimal solution when actually it is not.
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dsa test</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body class="stackedit">
+  <span class="menu">&rarr;</span>
+  <span class="closeMenu">&times;</span>
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+<ul>
+<li><a href="#fall">2016-Fall</a>
+<ul>
+<li><a href="#a">1a,</a></li>
+<li><a href="#b">1b,</a></li>
+<li><a href="#a-1">2a,</a></li>
+<li><a href="#b-1">2b,</a></li>
+<li><a href="#a-2">3a,</a></li>
+<li><a href="#b-2">3b,</a></li>
+<li><a href="#a-3">4a,</a></li>
+<li><a href="#b-3">4b,</a></li>
+<li><a href="#a-4">5a,</a></li>
+<li><a href="#b-4">5b,</a></li>
+<li><a href="#a-5">6a,</a></li>
+<li><a href="#b-5">6b,</a></li>
+<li><a href="#write-short-notes-on">7 Write short notes on:</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="fall">2016-Fall</h1>
+<h2 id="a">1a,</h2>
+<h3 id="discuss-the-concept-of-data-structure.-explain-various-ways-of-representing-rational-number-as-an-adt.">Discuss the concept of data structure. Explain various ways of representing rational number as an ADT.</h3>
+<ul>
+<li>
+<p>A ADT consists of two parts:-</p>
+</li>
+<li>
+<p>Public or external part</p>
+</li>
+<li>
+<p>This part of ADT consists of the conceptual picture (i.e the user’s view of what the object looks like, how the structure is organized) and the conceptual operations (i.e what user can do with the ADT)</p>
+</li>
+<li>
+<p>Private or internal part</p>
+</li>
+<li>
+<p>This part of ADT consists of the representation (i.e how the structure is actually stored) and the implementation of the operation (i.e the actual code)</p>
+</li>
+</ul>
+<blockquote>
+<p>later part</p>
+</blockquote>
+<ul>
+<li>In mathematics, a rational number is the quotient of two integers where the divisor is not zero. In other words a function a/b where a and b are both integers and b ≠ 0. Since the values and operations of a rational number can be defined independently of computer terminology, it is an ADT.</li>
+</ul>
+<h2 id="b">1b,</h2>
+<h3 id="write-an-algorithm-for-conversion-of-infix-to-postfix-expression.-convert-the-following-infix-expression-to-postfix-in-tabular-form-a-bcdef-gh">Write an algorithm for conversion of infix to postfix expression. Convert the following infix expression to postfix in tabular form: (a-b/c$d)<em>e/(f-g</em>h)</h3>
+<blockquote>
+<p>Difference between infix, prefix and postfix expression (2016-spring/1b)</p>
+</blockquote>
+<p>|Infix expression|Prefix expression|Postfix expression|</p>
+<p>|–|--|–|</p>
+<p>|The expression in which the operators are in between the operands is called infix expression.|The expression in which the operators are ahead of the operands is called prefix expression.|The expression in which the operators are after the operands is called postfix expression.|</p>
+<p>|&lt; operand &gt;&lt; operator &gt;&lt; operand &gt; syntax is followed.|&lt; operator &gt;&lt; operand &gt;&lt; operand &gt; syntax is followed.|&lt; operand &gt;&lt; operand &gt;&lt; operator &gt; syntax is followed.|</p>
+<p>|It is easy to understand by humans.|It is easy to understand by computers.|It is easy to understand by computers.|</p>
+<p>|The expression consists of brackets.|The expression doesn’t consist of brackets.|The expression doesn’t consist of brackets.|</p>
+<p>|It is also called an arithmetic expression.|It is called polish notation.|It is called reverse polish notation.|</p>
+<blockquote>
+<p>Algorithm for evaluating Postfix expression</p>
+</blockquote>
+<p>Step 1: Initialize a empty stack</p>
+<p>Step 2: Read the characters from left to right one by one</p>
+<p>If ( the character is operand ) Push to the stack</p>
+<p>If ( the character is operator ) Pop the top two operands from the stack and do the operation (B operator A) and push the result back to the stack.</p>
+<p>Step 3: Repeat step 2 until all the characters are read.</p>
+<p>Step 4: End.</p>
+<h2 id="a-1">2a,</h2>
+<h3 id="differentiate-between-stack-and-queue.-how-do-you-insert-and-delete-an-element-in-a-circular-queue-explain-with-an-example.">Differentiate between stack and queue. How do you insert and delete an element in a circular queue? Explain with an example.</h3>
+<blockquote>
+<p>Define circular Queue (2016-Spring/2a)</p>
+</blockquote>
+<ul>
+<li>
+<p>A circular queue is one type of queue where the last location of the queue ( i.e if we have n size queue ) then nth location is connected back to the first location.</p>
+</li>
+<li>
+<p>It overcomes the problem of unutilized space of linear queue by adding a new data to the queue at the place from where a data was deleted.</p>
+</li>
+</ul>
+<blockquote>
+<p>Difference between stack and queue</p>
+</blockquote>
+<p>|Stack|Queue|</p>
+<p>|–|--|</p>
+<p>|It is a type of linear list where insertion and deletion takes place from the same point called the top of stack(TOS).|It is a type of linear list where insertion takes place at the rear and deletion takes place at the front of the queue.|</p>
+<p>|It works in LIFO manner (Last-In-First-Out)|It works in FIFO manner (First-In-First-Out)|</p>
+<p>|Insertion operation is called push and deletion operation is called pop.|Insertion operation is called enqueue and deletion operation is called dequeue.|</p>
+<p>|Only one pointer (i.e tos) is used to do the operation in stack.|Two pointers (i.e front and rear) are used to do the operation in a queue.|</p>
+<h2 id="b-1">2b,</h2>
+<h3 id="differentiate-between-static-and-dynamic-list.-how-do-you-insert-an-element-into-a-contiguous-list.">Differentiate between static and dynamic list. How do you insert an element into a contiguous list.</h3>
+<blockquote>
+<p>List basic five operations of linked list (2016-Spring/2b)</p>
+</blockquote>
+<ul>
+<li>
+<p>Linked list is a type of list where each node or data consists of a pointer that points to the next data or node. The 5 basic operations in linked list are:-</p>
+</li>
+<li>
+<p>Insertion: It is the process of adding a new node or data at the beginning of the linked list.</p>
+</li>
+<li>
+<p>Deletion: It is the process of deleting a node or data from the beginning of the linked list.</p>
+</li>
+<li>
+<p>Display: It is the process of displaying all the nodes or datas currently at the linked list.</p>
+</li>
+<li>
+<p>Search: It is the process of searching a data or node using the given key.</p>
+</li>
+<li>
+<p>Delete: It is the process of deleting a node or data using the given key.</p>
+</li>
+</ul>
+<blockquote>
+<p>Algorithm for inserting an element into a contiguous list</p>
+</blockquote>
+<p>Step 1: If lastend = Max - 1</p>
+<p>Declare full and Exit</p>
+<p>Step 2: If lastend = -1</p>
+<p>Pos = 0</p>
+<p>Step 3: If lastend &gt; -1</p>
+<p>Read Position(Pos)</p>
+<p>Step 4: If Pos &gt; lastend+1</p>
+<p>Declare out of range and exit</p>
+<p>Step 5: Read data ‘X’</p>
+<p>Step 6: [right shift operation]</p>
+<p>t = lastend</p>
+<p>while(t &gt;= Pos){</p>
+<p>C_list[t+1] = C_list[t]</p>
+<p>t = t-1</p>
+<p>}</p>
+<p>Lastend++</p>
+<p>C_list[Pos] = x;</p>
+<p>Step 7: End</p>
+<h2 id="a-2">3a,</h2>
+<h3 id="define-enqueue-and-dequeue.-explain-four-types-of-dequeue-with-suitable-example.">Define Enqueue and Dequeue. Explain four types of dequeue with suitable example.</h3>
+<ul>
+<li>
+<p>It is the process of inserting or adding new data to the queue from the rear of the queue.</p>
+</li>
+<li>
+<p>It is the process of deleting data from the queue.</p>
+</li>
+</ul>
+<blockquote>
+<p>4 types of dequeue with examples</p>
+</blockquote>
+<ul>
+<li>
+<p>A Deque(Double ended queue) is a type of queue where insertion and deletion can take place from both ends of the queue.</p>
+</li>
+<li>
+<p>The 4 types of dequeue in Double ended queue are:-</p>
+</li>
+<li>
+<p>Dinject: It is the process of inserting data from the rear of the queue.</p>
+</li>
+<li>
+<p>Dpop: It is the process of deleting data from the front of the queue.</p>
+</li>
+<li>
+<p>Dpush: It is the process of inserting data from the front of the queue.</p>
+</li>
+<li>
+<p>Deject: It is the process of deleting data from the rear of the queue.</p>
+</li>
+</ul>
+<h2 id="b-2">3b,</h2>
+<h3 id="what-is-recursion-what-are-its-advantages-and-disadvantages-give-the-difference-between-recursion-and-iteration-by-taking-reference-of-factorial-funcation.">What is recursion? What are its advantages and disadvantages? Give the difference between recursion and iteration by taking reference of factorial funcation.</h3>
+<blockquote>
+<p>Explain B+ tree</p>
+</blockquote>
+<ul>
+<li>B+ tree is a generalized form of BST (Binary Search Tree) where all the datas are present only at the leaf nodes and all the internal nodes contain the index pointing to the data, also the leaf nodes are connected with each other with a linked list.</li>
+</ul>
+<blockquote>
+<p>Application</p>
+</blockquote>
+<ul>
+<li>
+<p>It is used to store large amounts of data which cannot be stored in main memory.</p>
+</li>
+<li>
+<p>It is used to make trees have faster operation in insertion, deletion and search.</p>
+</li>
+<li>
+<p>It is used in database indexing</p>
+</li>
+<li>
+<p>It is used in Multilevel indexing</p>
+</li>
+</ul>
+<blockquote>
+<p>Algorithm to delete element from B+ tree</p>
+</blockquote>
+<p>Step 1: Traverse up to the leaf node where the data is present.</p>
+<p>Step 2: If ( the node has more than minimum number of keys it can hold ) then simply delete the key/data.</p>
+<p>Step 3: If ( the node has the exact number of keys it can hold ) then delete the key and borrow a key from immediate sibling also make the median key of the sibling node the parent node.</p>
+<p>Step 4: If ( the node has more than minimum number keys it can hold and the key is present at the internal node also ) then delete the key from the leaf as well as internal node and make the inorder successor fill up the internal node.</p>
+<p>Step 5: If ( the node has the exact number of keys it can hold and the key is present at the internal node also ) then delete the key and borrow a key from the immediate sibling through the parent and fill the empty internal node with the borrowed key.</p>
+<p>Step 6: If ( the node has the exact number of keys it can hold and the key is present at the internal node above immediate parent node ) then delete the key, merge the empty space with its siblings and fill the grandparent node with the inorder successor.</p>
+<p>Step 7: If ( the node has the exact number of keys it can hold and the key is present at the internal node and there is no immediate successor ) then delete the key and move the grandparent node a step down to make a parent node. [ it shrinks the height of B+ tree ]</p>
+<h2 id="a-3">4a,</h2>
+<h3 id="design-a-binary-tree-whose-pre-order-traversal-is-faekcdhgb-and-in-order-travesal-is-eackfhdbg">Design a Binary tree whose pre-order traversal is (FAEKCDHGB) and in-order travesal is (EACKFHDBG)</h3>
+<p>Step 1: From the pre-order we can find the first node is root (i.e F)</p>
+<p>Step 2: From the in-order we can say E,A,C,K are left subtree and H,D,B,G are the right subtree of the root node.</p>
+<p>Step 3: Read the next node from pre-order and place to the left or right of the root node looking at the in-order sequence.</p>
+<p>Step 4: Repeat step 3 for all the remaining nodes.</p>
+<p>Step 5: End</p>
+<p><img src="" alt="Figure: Binary Tree"></p>
+<h2 id="b-3">4b,</h2>
+<h3 id="what-is-a-height-balanced-tree-insert-3214567-in-an-empty-avl-tree.">What is a height balanced tree? Insert 3,2,1,4,5,6,7 in an empty AVL tree.</h3>
+<ul>
+<li>Height balanced tree is a type of Binary tree that has balanced height i.e the difference between height of left subtrees and height of right subtrees is not more than 1</li>
+</ul>
+<blockquote>
+<p>Draw AVL tree for (3,2,1,4,5,6,7)</p>
+</blockquote>
+<p><img src="" alt="Figure: AVL Tree"></p>
+<h2 id="a-4">5a,</h2>
+<h3 id="define-hash-function.-suppose-in-a-company-with-its-68-employees-every-employee-has-4-digit-employee-number-and-also-assume-that-memory-table-has-100-address-starting-from-000102...99-the-employee-numbers-are-4205-3605-7777-8282-7626-0234-2522-5228-5175-1002.-perform-division-methos-folding-method-and-mid-square-method.-allocate-the-desired-result-in-memory.">Define Hash function. Suppose, In a company with its 68 employees, every employee has 4 digit employee number and also assume that memory table has 100 address starting from 00,01,02,…,99 The employee numbers are 4205, 3605, 7777, 8282, 7626, 0234, 2522, 5228, 5175, 1002. Perform division methos, folding method and mid square method. Allocate the desired result in memory.</h3>
+<ul>
+<li>A Hash function is a special type of hashing function that generates smaller keys from the given set of larger keys that can be used for indexing in a hash table.</li>
+</ul>
+<blockquote>
+<p>Using division method</p>
+</blockquote>
+<p>We use 97 as the divider and and use k mod 97 function</p>
+<p>|34|4205|</p>
+<p>|–|--|</p>
+<p>|16|3605|</p>
+<p>|17|7777|</p>
+<p>|37|8282|</p>
+<p>|60|7626|</p>
+<p>|40|0234|</p>
+<p>|00|2522|</p>
+<p>|87|5228|</p>
+<p>|34|5175|</p>
+<p>|32|1002|</p>
+<blockquote>
+<p>Using mid-square method</p>
+</blockquote>
+<p>|82|4205|</p>
+<p>|–|--|</p>
+<p>|96|3605|</p>
+<p>|81|7777|</p>
+<p>|91|8282|</p>
+<p>|55|7626|</p>
+<p>|07|0234|</p>
+<p>|00|2522|</p>
+<p>|31|5228|</p>
+<p>|80|5175|</p>
+<p>|04|1002|</p>
+<blockquote>
+<p>Using folding method</p>
+</blockquote>
+<p>|47|4205|</p>
+<p>|–|--|</p>
+<p>|41|3605|</p>
+<p>|54|7777|</p>
+<p>|64|8282|</p>
+<p>|02|7626|</p>
+<p>|36|0234|</p>
+<p>|47|2522|</p>
+<p>|80|5228|</p>
+<p>|26|5175|</p>
+<p>|12|1002|</p>
+<h2 id="b-4">5b,</h2>
+<h3 id="explain-selection-sort.-sort-the-following-list-using-heap-sort-31415936535897">Explain Selection sort. Sort the following list using heap sort: 31,41,5,9,36,53,58,97</h3>
+<ul>
+<li>
+<p>Selection sort is a type of comparison sort in which the 0th element (1st position) is compared with all the other elements and if the 0th element is greater than the compared one they are interchanged.</p>
+</li>
+<li>
+<p>This process is repeated again for 2nd position element and so on.</p>
+</li>
+</ul>
+<blockquote>
+<p>Sort the following data using heap sort (31,41,5,9,36,53,58,97)</p>
+</blockquote>
+<p><img src="" alt="Image solving with heap sort"></p>
+<h2 id="a-5">6a,</h2>
+<h3 id="explain-warshall’s-algorithm-to-find-the-transitive-closure-of-a-digraph.-for-the-adjacency-matrices-a-given-below-i-draw-the-corresponding-diagraph.-ii-find-the-matrix-t-of-the-transitive-closure-using-the-digraph-implementation-of-warshalls-algorithm.">Explain Warshall’s algorithm to find the transitive closure of a digraph. For the adjacency matrices A given below i, draw the corresponding diagraph. ii, find the matrix T of the transitive closure using the digraph implementation of Warshall’s algorithm.</h3>
+<p>A = [[0 1 0 0][0 0 1 0][0 0 0 1][1 0 0 0]]</p>
+<p>Step 1: Make a copy of the adjacency matrix of the digraph.</p>
+<p>Step 2: Find paths from every vertex to another vertex and make pairs.</p>
+<p>Step 3: For a edge(one vertex to another) if it contains at least one or more path or pairs then put 1 in the matrix if not put 0</p>
+<p>Step 4: End</p>
+<blockquote>
+<p>Draw digraph and find matrix T of transitive closure for that digraph</p>
+</blockquote>
+<p>A = [(0100)(0010)(0001)(1000)]</p>
+<p>Let’s suppose the vertices are a, b,c and d then the digraph is</p>
+<p>Its transitive closure is</p>
+<p>T =</p>
+<p>||a|b|c|d|</p>
+<p>|–|--|–|--|–|</p>
+<p>|<strong>a</strong>|1|1|1|1|</p>
+<p>|<strong>b</strong>|1|1|1|1|</p>
+<p>|<strong>c</strong>|1|1|1|1|</p>
+<p>|<strong>d</strong>|1|1|1|1|</p>
+<h2 id="b-5">6b,</h2>
+<h3 id="define-shortest-path-algorithm.-find-shortest-part-from-c-to-e-using-dijkstra-algorithm.">Define Shortest path algorithm. Find shortest part from C to E using Dijkstra Algorithm.</h3>
+<p>//TODO graph</p>
+<ul>
+<li>
+<p>Shortest path algorithm is an algorithm that specifies the path from one vertex to another vertex in a weighted graph such that the sum of the edges it took is minimized.</p>
+</li>
+<li>
+<p>Examples of shortest path algorithms are Dijkstra algorithm, Bellman-Ford algorithm, Floyd-warshall algorithm, etc.</p>
+</li>
+</ul>
+<blockquote></blockquote>
+<p><img src="" alt="Question image"></p>
+<p>Step 1: Set the distance from C to all the other vertices as infinity and to C as 0</p>
+<p>Step 2: Visit the unvisited neighbour of the current vertex and calculate the distance. If the new distance is less than the previous distance then update the distance of that vertex also update their previous vertex as the current vertex.</p>
+<p>Step 3: Select the next unvisited vertex which has the smallest distance till now.</p>
+<p>Step 4: Repeat step 2 and 3 until all the vertices are visited.</p>
+<p>1st visit: Visited vertices = [ C ], unvisited vertices = [ A, B, D, E, F, G ]</p>
+<p>Distances</p>
+<p>C to C = 0</p>
+<p>C to A = 4, [C] // [C] is previous vertex</p>
+<p>C to B = infinity</p>
+<p>C to D = 2 [C]</p>
+<p>C to E = infinity</p>
+<p>C to F = 5 [C]</p>
+<p>C to G = infinity</p>
+<p>2nd visit: Visited vertices = [ C, D ], unvisited vertices = [ A, B, E, F, G ]</p>
+<p>Distances</p>
+<p>C to C = 0</p>
+<p>C to A = 3 [D]</p>
+<p>C to B = 5 [D]</p>
+<p>C to D = 2 [C]</p>
+<p>C to E = 9 [D]</p>
+<p>C to F = 5 [C]</p>
+<p>C to G = 6 [D]</p>
+<p>3nd visit: Visited vertices = [ C, D, A ], unvisited vertices = [ B, E, F, G ]</p>
+<p>Distances</p>
+<p>C to C = 0</p>
+<p>C to A = 3 [D]</p>
+<p>C to B = 5 [D]</p>
+<p>C to D = 2 [C]</p>
+<p>C to E = 9 [D]</p>
+<p>C to F = 5 [C]</p>
+<p>C to G = 6 [D]</p>
+<p>4th visit: Visited vertices = [ C, D, A , B], unvisited vertices = [ E, F, G ]</p>
+<p>Distances</p>
+<p>C to C = 0</p>
+<p>C to A = 3 [D]</p>
+<p>C to B = 5 [D]</p>
+<p>C to D = 2 [C]</p>
+<p>C to E = 9 [D]</p>
+<p>C to F = 5 [C]</p>
+<p>C to G = 6 [D]</p>
+<p>5th visit: Visited vertices = [ C, D, A, B, F ], unvisited vertices = [ E, G ]</p>
+<p>Distances</p>
+<p>C to C = 0</p>
+<p>C to A = 3 [D]</p>
+<p>C to B = 5 [D]</p>
+<p>C to D = 2 [C]</p>
+<p>C to E = 9 [D]</p>
+<p>C to F = 5 [C]</p>
+<p>C to G = 6 [D]</p>
+<p>6th visit: Visited vertices = [ C, D, A B, F , G], unvisited vertices = [ E ]</p>
+<p>Distances</p>
+<p>C to C = 0</p>
+<p>C to A = 3 [D]</p>
+<p>C to B = 5 [D]</p>
+<p>C to D = 2 [C]</p>
+<p>C to E = 9 [D]</p>
+<p>C to F = 5 [C]</p>
+<p>C to G = 6 [D]</p>
+<p>7th visit: Visited vertices = [ C, D, A B, F, G, E], unvisited vertices = [ ]</p>
+<p>Distances</p>
+<p>C to C = 0</p>
+<p>C to A = 3 [D]</p>
+<p>C to B = 5 [D]</p>
+<p>C to D = 2 [C]</p>
+<p>C to E = 9 [D]</p>
+<p>C to F = 5 [C]</p>
+<p>C to G = 6 [D]</p>
+<p>So the shortest distance from C to E is C – D – E whose total distance is equal to 9</p>
+<h2 id="write-short-notes-on">7 Write short notes on:</h2>
+<h3 id="a-deterministic-and-non-deterministic-algorithm">a, Deterministic and Non-Deterministic algorithm</h3>
+<blockquote>
+<p>Priority Queue (2016-Spring/7a)</p>
+</blockquote>
+<ul>
+<li>
+<p>Priority Queue is a collection of element such that each element has been assigned a priority and such that the order in which element are processed and deleted from follows the rules as:-</p>
+</li>
+<li>
+<p>An element with higher priority is processed before any elements of lower priority.</p>
+</li>
+<li>
+<p>Two elements with same priority are processed according to the order in which they are added to the queue.</p>
+</li>
+<li>
+<p>It can be of two types:-</p>
+</li>
+<li>
+<p>Ascending priority queue</p>
+</li>
+<li>
+<p>Descending priority queue</p>
+</li>
+</ul>
+<h3 id="b-quick-sort">b, Quick sort</h3>
+<blockquote>
+<p>Min vs Max heap (2016-Spring/7b)</p>
+</blockquote>
+<ul>
+<li>
+<p>Heap is a special type of complete binary tree in which the values of the parent node are compared with the values in its children nodes.There are two types of heap, they are:-</p>
+</li>
+<li>
+<p><strong>Min heap</strong> is a type of heap in which the value of the parent node must be less than or equal to the values of its children nodes.</p>
+</li>
+<li>
+<p><strong>Max heap</strong> is a type of heap in which the value of the parent node must be greater than or equal to the values of its children nodes.</p>
+</li>
+</ul>
+<h3 id="c-tree-traversal">c, Tree traversal</h3>
+<ul>
+<li>
+<p>Tree traversal is the process of traveling from a node to another node reading all the datas available in a tree only once.</p>
+</li>
+<li>
+<p>It is used when we want to search certain elements from the tree, either to find its location, or delete it from the tree.</p>
+</li>
+<li>
+<p>We use different types of traversal for traversing in trees. They are:-</p>
+</li>
+<li>
+<p><strong>In-order</strong> ( left - node - right ) Here we first visit the left subtree then the root node and the right subtree.</p>
+</li>
+<li>
+<p><strong>Pre-order</strong> ( node - left - right ) Here we first visit the root node, then the left subtree and the right subtree.</p>
+</li>
+<li>
+<p><strong>Post-order</strong> ( left - right - node ) Here we first visit the left subtree, then the right subtree and the root node.</p>
+</li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>

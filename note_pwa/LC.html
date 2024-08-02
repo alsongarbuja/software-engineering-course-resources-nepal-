@@ -1,0 +1,3390 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC.md</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196f3"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        .big-img {
+            transform: rotate(-90deg);
+            max-width: 50%;
+            padding: 0;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 700px) {
+            .stackedit__html>ul {
+                padding-left: 0;
+            }
+
+            table {
+                font-size: .5rem;
+            }
+
+            .tb {
+                font-size: .2rem;
+            }
+
+            code {
+                max-width: 370px;
+            }
+        }
+    </style>
+
+    <script defer src="./js/script.js"></script>
+</head>
+
+<body class="stackedit">
+    <span class="night"><i class="fas fa-moon"></i></span>
+    <span class="menu">&rarr;</span>
+    <span class="closeMenu">&times;</span>
+    <div class="stackedit__left">
+        <div class="stackedit__toc">
+
+            <ul>
+                <li><a href="#chapter-1" class="mainLink">Chapter 1</a>
+                    <ul>
+                        <li><a href="#digital-and-analog-system">Digital and Analog system</a></li>
+                        <li><a href="#difference-between-digital-and-analog">Difference between digital and analog</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#chapter-2" class="mainLink">Chapter 2</a>
+                    <ul>
+                        <li><a href="#number-system">Number System</a></li>
+                        <li><a href="#conversion-from-one-number-system-to-another">Conversion from one number system to
+                                another</a></li>
+                        <li><a href="#radix-and-diminished-radix-complement">Radix and Diminished Radix complement</a>
+                        </li>
+                        <li><a href="#subtraction-with-rs-complement">Subtraction with r’s complement</a></li>
+                        <li><a href="#subtraction-with-r-1s-complement">Subtraction with (r-1)'s complement</a></li>
+                        <li><a href="#code">Code</a></li>
+                        <li><a href="#types-of-code">Types of Code</a></li>
+                    </ul>
+                </li>
+                <li><a href="#chapter-3" class="mainLink">Chapter 3</a>
+                    <ul>
+                        <li><a href="#boolean-algebra">Boolean Algebra</a></li>
+                        <li><a href="#laws-for-boolean-algebra">Laws for boolean Algebra</a></li>
+                        <li><a href="#de-morgans-law">De-morgan’s Law</a></li>
+                        <li><a href="#logic-gates">Logic Gates</a></li>
+                        <li><a href="#universal-gates">Universal Gates</a></li>
+                    </ul>
+                </li>
+                <li><a href="#chapter-4" class="mainLink">Chapter 4</a>
+                    <ul>
+                        <li><a href="#k-map">K-map</a></li>
+                        <li><a href="#dont-care-condition">Don’t care condition</a></li>
+                    </ul>
+                </li>
+                <li><a href="#chapter-5" class="mainLink">Chapter 5</a>
+                    <ul>
+                        <li><a href="#combinational-logic-circuit">Combinational Logic circuit</a></li>
+                        <li><a href="#adder">Adder</a></li>
+                        <li><a href="#subtractor">Subtractor</a></li>
+                        <li><a href="#code-convertor">Code Convertor</a></li>
+                        <li><a href="#parity-generator-and-checker">Parity generator and checker</a></li>
+                    </ul>
+                </li>
+                <li><a href="#chapter-7" class="mainLink">Chapter 7</a>
+                    <ul>
+                        <li><a href="#flipflops">FlipFlops</a></li>
+                        <li><a href="#rs-flipflop">RS-FlipFlop</a></li>
+                        <li><a href="#jk-flipflop">JK-FlipFlop</a></li>
+                        <li><a href="#t-flipflop">T-FlipFlop</a></li>
+                        <li><a href="#d-flipflop">D-FlipFlop</a></li>
+                        <li><a href="#master-slave-flipflop">Master-slave-FlipFlop</a></li>
+                    </ul>
+                </li>
+                <li><a href="#chapter-8" class="mainLink">Chapter 8</a>
+                    <ul>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#shift-register">Shift Register</a></li>
+                        <li><a href="#counter">Counter</a></li>
+                        <li><a href="#synchronous-up-counter-using-jk-ff">Synchronous up counter using JK FF</a></li>
+                        <li><a href="#asynchronous-down-counter-using-t-ff">Asynchronous down counter using T FF</a></li>
+                    </ul>
+                </li>       
+                <li><a href="#difference-between" class="mainLink">Difference between</a>
+                    <ul>
+                        <li><a href="#latch-and-flipflops">Latch and Flipflops</a></li>
+                        <li><a href="#synchronous-and-asynchronous-counter">Synchronous and asynchronous counter</a></li>
+                        <li><a href="#combinational-and-sequential-circuit">Combinational and Sequential circuit</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="stackedit__right">
+        <div class="stackedit__html">
+            <h1 id="chapter-1"><code>Chapter 1</code></h1>
+            <ul>
+                <li>
+                    <h2 id="digital-and-analog-system">Digital and Analog system</h2>
+                    <ul>
+                        <li><strong>Digital system</strong>
+                            <ul>
+                                <li>Digital System are those systems that takes in a digital signal as input, process
+                                    that and produce a digital output. Eg:- Computer, calculator, etc.</li>
+                                <li>They are represented in 0’s and 1’s.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Analog system</strong>
+                            <ul>
+                                <li>Analog System are those systems that takes in a analog signal as input, process that
+                                    and produce a analog output. Eg:-<br>
+                                    amplifier, diode, etc</li>
+                                <li>They are represented in the form of waves.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="difference-between-digital-and-analog">Difference between digital and analog</h2>
+                </li>
+            </ul>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Digital System</th>
+                        <th>Analog System</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Digital System are those systems that takes in a digital signal as input, process that and
+                            produce a digital output.</td>
+                        <td>Analog System are those systems that takes in a analog signal as input, process that and
+                            produce a analog output.</td>
+                    </tr>
+                    <tr>
+                        <td>They take digital signals as input.</td>
+                        <td>They take analog signal as input.</td>
+                    </tr>
+                    <tr>
+                        <td>They are stored in form of 0’s and 1’s</td>
+                        <td>They are stored in the form of waves.</td>
+                    </tr>
+                    <tr>
+                        <td>They are easy to generate and store in electronic devices.</td>
+                        <td>They are not easy to store in electronic devices.</td>
+                    </tr>
+                    <tr>
+                        <td>They can be reshaped.</td>
+                        <td>They cann’t be reshaped.</td>
+                    </tr>
+                    <tr>
+                        <td>Eg:- Computer, calculator, etc.</td>
+                        <td>Eg:- amplifier, diode, etc</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 id="chapter-2"><code>Chapter 2</code></h1>
+            <ul>
+                <li>
+                    <h2 id="number-system">Number System</h2>
+                    <ul>
+                        <li>Number System is a way of representing numbers in a format that is bind by certain rules.
+                        </li>
+                        <li><strong>Types of number system used in computer</strong>
+                            <ol>
+                                <li>Decimal
+                                    <ul>
+                                        <li>In this number system we use the combination of numbers from 0 to 9 only.
+                                        </li>
+                                        <li>Hence it is also called as Base<sub>10</sub></li>
+                                    </ul>
+                                </li>
+                                <li>Binary
+                                    <ul>
+                                        <li>In this number system we use the combination of 0’s and 1’s only to
+                                            represent numbers.</li>
+                                        <li>Hence called Base<sub>2</sub></li>
+                                        <li>It is used by all the modern computers and electronic devices.</li>
+                                    </ul>
+                                </li>
+                                <li>Octal
+                                    <ul>
+                                        <li>In this number system we use the combination of numbers from 0 to 4 only to
+                                            represent numbers.</li>
+                                        <li>Hence called Base<sub>5</sub></li>
+                                    </ul>
+                                </li>
+                                <li>Hexadecimal
+                                    <ul>
+                                        <li>In this number system we use the combination of numbers from 0 to 9 as in
+                                            decimal and additional alphapets from A to F to represent numbers.</li>
+                                        <li>Most of the modern computers use this number system.</li>
+                                        <li>Hence called Base<sub>16</sub></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="conversion-from-one-number-system-to-another">Conversion from one number system to another
+                    </h2>
+                    <ul>
+                        <li><strong>Decimal to Others</strong>
+                            <ol>
+                                <li>Divide the decimal number with base of other number system</li>
+                                <li>Add the reminder of each step in a output list.</li>
+                                <li>Reverse the output list and we have the answer.</li>
+                            </ol>
+                            <ul>
+                                <li>Example:-</li>
+                            </ul>
+                            <pre><code>    (120) to binary
+    120/2 = 60 [reminders 0]
+    60/2 = 30 [reminders 0,0]
+    30/2 = 15 [reminders 0,0,0]
+    15/2 = 7 [reminders 0,0,0,1]
+    7/2 = 3 [reminders 0,0,0,1,1]
+    3/2 = 1 [reminders 0,0,0,1,1,1]
+    1/2 = 0 [reminders 0,0,0,1,1,1,1]
+
+    output = 0001111
+    Reverse it
+    (120) = (1111000)
+    
+    // To convert to octal divide by 5
+    // To convert to hexadecimal divide by 16
+</code></pre>
+                            <ul>
+                                <li>*<strong>For Fractional Part</strong>
+                                    <ol>
+                                        <li>Mulitply the fraction part by the base of the other number system.</li>
+                                        <li>Add the non fraction part to the output list and continute with step 1 for
+                                            atleast 3 times.</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                            <pre><code>    (120.375) to binary
+
+    Non fractional part is same as above
+    For fractional part
+
+    0.375*2 = 0.75 [output 1111000.0]
+    0.75*2 = 1.5 [output 11110000.01]
+    0.5*2 = 1   [output 11110000.011]
+</code></pre>
+                        </li>
+                        <li><strong>Others to Decimal</strong>
+                            <ol>
+                                <li>Multiply each digit with the base of the number system.</li>
+                                <li>Give the base multiplier power starting from 0, from right.</li>
+                            </ol>
+                            <ul>
+                                <li>Example:-</li>
+                            </ul>
+                            <pre><code>    (1111000) to decimal
+
+    =&gt; 1*2+1*2+1*2+1*2+0*2+0*2+0*2
+    =&gt; 1*2^6+1*2^5+1*2^4+1*2^3+0*2^2+0*2^1+0*2^0
+    =&gt; 1*64+1*32+1*16+1*8+0*4+0*2+0*1
+    =&gt; 120
+</code></pre>
+                            <ul>
+                                <li><em><strong>For fraction part</strong></em>
+                                    <ol>
+                                        <li>Multiply each digit with 1/base of the number system</li>
+                                        <li>Give power to the bases starting from 1 from left.</li>
+                                        <li>add the answer to output list</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                            <pre><code>    (1111000.011) to decimal
+
+    For non fraction part same as above
+    For fraction part
+
+    =&gt; 0*(1/2)+1*(1/2)+1*(1/2)
+    =&gt; 0*(1/2^1)+1*(1/2^2)+1*(1/2^3)
+    =&gt; 0*(1/2)+1*(1/4)+1*(1/8)
+    =&gt; 0.375
+
+    answer = 120+0.375 = 120.375
+</code></pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="radix-and-diminished-radix-complement">Radix and Diminished Radix complement</h2>
+                    <ul>
+                        <li>Radix(<code>r's</code>)
+                            <ul>
+                                <li>For a given number <code>N</code> in base <code>r</code> with <code>n</code> number
+                                    of digits, the r’s complement is defined as
+                                    <ul>
+                                        <li><strong>r<sup>n</sup> - N</strong></li>
+                                    </ul>
+                                </li>
+                                <li>Example:-</li>
+                            </ul>
+                            <pre><code>    r's complement of (101100)
+
+    here, r = 2; n = 6; N = 101100;
+
+        2's complement = r^n - N
+                       = 2^6 - 101100
+                       = (64)base10 - 101100
+                       = 1000000 - 101100
+                       = 010100
+</code></pre>
+                        </li>
+                        <li>Diminished Radix(<code>(r-1)'s</code>)
+                            <ul>
+                                <li>For a given number <code>N</code> in base <code>r</code> with <code>n</code> number
+                                    of digits and <code>m</code> number of digits after decimal point, the (r-1)'s
+                                    complement is defined as
+                                    <ul>
+                                        <li><strong>r<sup>n</sup> - r<sup>-m</sup> - N</strong></li>
+                                    </ul>
+                                </li>
+                                <li>Example:-</li>
+                            </ul>
+                            <pre><code>    (r-1)'s complement of (52520)
+
+    here, r = 10; n = 5; m = 0; N = 52520;
+
+        9's complement = r^n - r^(-m) - N
+                       = 10^5 - 10^(-0) - 52520
+                       = 100000 - 1 - 52520
+                       = 47479
+</code></pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="subtraction-with-rs-complement">Subtraction with r’s complement</h2>
+                    <ul>
+                        <li><strong>Steps for subtraction with r’s compliment</strong>
+                            <ol>
+                                <li>Find r’s complement of <code>Subtratend N</code></li>
+                                <li>Add the result with <code>Minued M</code></li>
+                                <li>If the sum yields carry
+                                    <ul>
+                                        <li>Then simply discard it and remaining is answer</li>
+                                    </ul>
+                                </li>
+                                <li>If the sum doesn’t yield carry
+                                    <ul>
+                                        <li>Then perform r’s complement of the result and add a negative sign</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <ul>
+                                <li><em><strong>Where in 10-5, 10 is Minued(M) and 5 is Subtratend(N)</strong></em></li>
+                            </ul>
+                        </li>
+                        <li>Example:-</li>
+                    </ul>
+                    <pre><code>    subtract (1010100) - (1000100) using r's complement
+
+    here M = (1010100); N = (1000100); r = 2;
+
+    2's complement of N = (0111011) + 1
+                        = 0111100
+    
+    Adding with M = (0111100) + (1010100) = 10010000
+
+    Since there is carry we discard it and answer is
+        0010000
+    
+    // If there was no carry we had to find
+    // the 2's complement of the answer and 
+    // add a negative sign
+</code></pre>
+                </li>
+                <li>
+                    <h2 id="subtraction-with-r-1s-complement">Subtraction with (r-1)'s complement</h2>
+                    <ul>
+                        <li><strong>Steps for subtraction with (r-1)'s compliment</strong>
+                            <ol>
+                                <li>Find (r-1)'s complement of <code>Subtratend N</code></li>
+                                <li>Add the result with <code>Minued M</code></li>
+                                <li>If the sum yields carry
+                                    <ul>
+                                        <li>Then discard the carry and add 1 to get the answer</li>
+                                    </ul>
+                                </li>
+                                <li>If the sum doesn’t yield carry
+                                    <ul>
+                                        <li>Then perform (r-1)'s complement of the result and add a negative sign</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <ul>
+                                <li><em><strong>Where in 10-5, 10 is Minued(M) and 5 is Subtratend(N)</strong></em></li>
+                            </ul>
+                        </li>
+                        <li>Example:-</li>
+                    </ul>
+                    <pre><code>    subtarct (3250) - (72532) using (r-1)'s complement
+
+    here, M = 3250; N = 72532' r = 10;
+
+    9's complement of N = 10^5 - 10^(-0) - 72532
+                        = 1000000 - 1 - 72532
+                        = 27467
+
+    Adding with M = 3250+27467 = 30717
+
+    since no carry we take 9's complement of 30717
+        = 10^5 - 10^0 - 30717
+        = 100000 - 1 - 30717
+        = 69282
+    Now add negative sign and answer is (-69282)
+
+    //If there was carry then discard the carry
+    //Add one and we get the answer
+</code></pre>
+                </li>
+                <li>
+                    <h2 id="code">Code</h2>
+                    <ul>
+                        <li>Codes are the way of representing numbers, letters and symbols in digital electronics. As
+                            electronic devices only understand 0’s and 1’s we use different codes to convert the human
+                            readable characters and numbers into codes so that devices can understand it too.</li>
+                        <li><strong>Use</strong>
+                            <ol>
+                                <li>It is used make combination of 0’s and 1’s such that computers can understand the
+                                    characters and numbers.</li>
+                                <li></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="types-of-code">Types of Code</h2>
+                    <ol>
+                        <li>
+                            <p>BCD code</p>
+                            <ul>
+                                <li>It is a weighted 4-bit binary number combination. It stands for Binary coded
+                                    deciaml.</li>
+                                <li>A weighted code are those code where each bit of binary carries certain weight.</li>
+                                <li>There are different BCD codes, some of which are:- <code>8421 BCD</code>,
+                                    <code>2421</code>, <code>84-2-1</code> <code>XS3</code> etc</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Decimal</th>
+                                        <th>8421</th>
+                                        <th>2421</th>
+                                        <th>84-2-1</th>
+                                        <th>XS3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0011</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0001</td>
+                                        <td>0001</td>
+                                        <td>0111</td>
+                                        <td>0100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>0010</td>
+                                        <td>0010</td>
+                                        <td>0110</td>
+                                        <td>0101</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>0011</td>
+                                        <td>0011</td>
+                                        <td>0101</td>
+                                        <td>0110</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>0100</td>
+                                        <td>0100</td>
+                                        <td>0100</td>
+                                        <td>0111</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>0101</td>
+                                        <td>1011</td>
+                                        <td>1011</td>
+                                        <td>1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>0110</td>
+                                        <td>1100</td>
+                                        <td>1010</td>
+                                        <td>1001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>0111</td>
+                                        <td>1101</td>
+                                        <td>1001</td>
+                                        <td>1010</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>1000</td>
+                                        <td>1110</td>
+                                        <td>1000</td>
+                                        <td>1011</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>1001</td>
+                                        <td>1111</td>
+                                        <td>1111</td>
+                                        <td>1100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                            <p>Gray code</p>
+                            <ul>
+                                <li>
+                                    <p>It is a reflected code system in which the next number have only one bit change
+                                        such that it the new code doesn’t match any other codes</p>
+                                </li>
+                                <li>
+                                    <p>It is useful when converting analog information to digital information as only a
+                                        bit is changed in every other code, there is less chances of errors.</p>
+                                </li>
+                                <li>
+                                    <p><strong>Converting to Binary</strong></p>
+                                    <ol>
+                                        <li>Write the first bit of the gray code same in the result binary code.</li>
+                                        <li>Add the binary code bit with the next gray code.</li>
+                                        <li>If carry comes discard the carry and simply write the answer bit in result
+                                            binary code.</li>
+                                        <li>If no carry simply write the answer to binary code.</li>
+                                        <li>repeat until all bit in gray code is added</li>
+                                    </ol>
+                                    <p><img src="./assets/images/gray-to-binary.jpg" class="big-img" alt="gray code to binary"></p>
+                                </li>
+                                <li>
+                                    <p><strong>Binary to Gray</strong></p>
+                                    <ol>
+                                        <li>Write the first bit of the binary code same in the result gray code.</li>
+                                        <li>Add the 1<sup>st</sup> and 2<sup>nd</sup> binary bit</li>
+                                        <li>If carry, discard the carry and write the answer to the result gray code.
+                                        </li>
+                                        <li>If no carry, simply write the answer to the result gray code.</li>
+                                        <li>Repeat for 2<sup>nd</sup> and 3<sup>rd</sup> and so on until all bits are
+                                            added.</li>
+                                    </ol>
+                                    <p><img src="./assets/images/binary-to-gray.jpg" class="big-img" alt="binary to gray code"></p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Alphanumeric code</p>
+                            <ul>
+                                <li>In communation systems, the messages or information signals are represented by
+                                    numbers, letters, symbols. This code is known as alphanumeric code.</li>
+                                <li>Some of the well known alphanumeric codes are:- <code>ASCII</code>,
+                                    <code>Unicode</code>, <code>EBCDIC</code>, etc</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Instruction</p>
+                            <ul>
+                                <li>Instruction are the codes or commands given by the processor to different units of
+                                    computer to perform certain task.</li>
+                                <li>They are coded for assembly language programming. Eg:- <code>ADD B</code>,
+                                    <code>MOV A B</code>, etc</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <h1 id="chapter-3"><code>Chapter 3</code></h1>
+            <ul>
+                <li>
+                    <h2 id="boolean-algebra">Boolean Algebra</h2>
+                    <ul>
+                        <li>Boolean algebra is a algebra that is used for simplifying logical algebra.</li>
+                        <li>It is mostyle used to:-
+                            <ol>
+                                <li>Minimize the number of logic gates</li>
+                                <li>Minimize the cost.</li>
+                                <li>Design logic circuit with only one logic gate.</li>
+                                <li>Reduce the propagation delay in the logic circuit.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="laws-for-boolean-algebra">Laws for boolean Algebra</h2>
+                    <ul>
+                        <li>OR LAW</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operation</th>
+                                <th>output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A+0</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>A+1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>A+A</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>A+~A</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li>AND LAW</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operation</th>
+                                <th>output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A.0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>A.1</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>A.A</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>A.~A</td>
+                                <td>A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li>COMPLIMENT LAW</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operation</th>
+                                <th>output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A</td>
+                                <td>~A</td>
+                            </tr>
+                            <tr>
+                                <td>~A</td>
+                                <td>A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li>COMMUTATIVE LAW
+                            <ul>
+                                <li>A+(B+C) = (A+B)+C</li>
+                                <li>A.(B.C) = (A.B).C</li>
+                            </ul>
+                        </li>
+                        <li>DISTRIBUTIVE LAW
+                            <ul>
+                                <li>A.(B+C) = (A.B)+(A.C)</li>
+                                <li>A+(B.C) = (A+B).(A+C)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="de-morgans-law">De-morgan’s Law</h2>
+                    <ul>
+                        <li>
+                            <p>De-morgan’s 1<sup>st</sup> law</p>
+                            <ul>
+                                <li>The Product of complement is equal to the complement of sum.</li>
+                                <li><code>~A.~B = ~(A+B)</code></li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>~A</th>
+                                        <th>~B</th>
+                                        <th>A+B</th>
+                                        <th><sub>A.</sub>B</th>
+                                        <th>~(A+B)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                            <p>De-morgan’s 2<sup>2nd</sup> law</p>
+                            <ul>
+                                <li>The sum of complement is equal to the complement of product.</li>
+                                <li><code>~(A.B) = ~A+~B</code></li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>~A</th>
+                                        <th>~B</th>
+                                        <th>A.B</th>
+                                        <th><sub>A+</sub>B</th>
+                                        <th>~(A.B)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="logic-gates">Logic Gates</h2>
+                    <ul>
+                        <li>
+                            <p>They are the hardware or devices that produces output 0 or 1 depending upon the given
+                                inputs and the logic used.</p>
+                        </li>
+                        <li>
+                            <p>They take one or more inputs and produce a single output.</p>
+                        </li>
+                        <li>
+                            <p><strong>Basic gates</strong></p>
+                            <ol>
+                                <li>
+                                    <p><strong>AND</strong></p>
+                                    <ul>
+                                        <li>It takes two inputs and perform a logical multiplication and produce an
+                                            output.</li>
+                                        <li><code>The output is 1 only if both inputs are 1</code></li>
+                                    </ul>
+                                    <p><img src="./assets/images/and-lc.jpg" alt="AND gate"></p>
+                                    <ul>
+                                        <li><em>Truth table</em></li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>A</th>
+                                                <th>B</th>
+                                                <th>A.B</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p><strong>OR</strong></p>
+                                    <ul>
+                                        <li>It takes two inputs and perform a logical addition and produce an output.
+                                        </li>
+                                        <li><code>The output is 0 only if both inputs are 0</code></li>
+                                    </ul>
+                                    <p><img src="./assets/images/or-lc.jpg" alt="OR gate"></p>
+                                    <ul>
+                                        <li><em>Truth table</em></li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>A</th>
+                                                <th>B</th>
+                                                <th>A.B</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p><strong>NOT</strong></p>
+                                    <ul>
+                                        <li>It takes one input and performs compliment of that number.</li>
+                                    </ul>
+                                    <p><img src="./assets/images/not-lc.jpg" alt="NOT gate"></p>
+                                    <ul>
+                                        <li><em>Truth Table</em></li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>A</th>
+                                                <th>~A</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p><strong>Derived gates</strong></p>
+                            <ol>
+                                <li>
+                                    <p><strong>NAND</strong></p>
+                                    <ul>
+                                        <li>It is a combination gate of AND and NOT gates. It takes 2 inputs put them
+                                            through AND gate and the resut is run in the NOT gate.</li>
+                                        <li><code>The output is 0 only if both inputs are 1</code></li>
+                                    </ul>
+                                    <p><img src="./assets/images/nand-lc.jpg" alt="NAND gate"></p>
+                                    <ul>
+                                        <li><em>Truth Table</em></li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>A</th>
+                                                <th>B</th>
+                                                <th>~(A.B)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p><strong>NOR</strong></p>
+                                    <ul>
+                                        <li>It is a combination gate of OR and NOT gates. It takes 2 inputs put them
+                                            through OR gate and the resut is run in the NOT gate.</li>
+                                        <li><code>The output is 1 only if both inputs are 0</code></li>
+                                    </ul>
+                                    <p><img src="./assets/images/nor-lc.jpg" alt="NOR gate"></p>
+                                    <ul>
+                                        <li><em>Truth Table</em></li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>A</th>
+                                                <th>B</th>
+                                                <th>~(A.B)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p><strong>XOR</strong></p>
+                                    <ul>
+                                        <li>Exclusive OR is a logical gate which has
+                                            <code>output 1 if given inputs are different</code> and
+                                            <code>output is 0 if given inputs are same</code>.</li>
+                                        <li>It is used for logical comparision.</li>
+                                        <li>It is denoted by <code>A (+) B</code> and given by formula
+                                            <code>~A.B+A.~B</code></li>
+                                    </ul>
+                                    <p><img src="./assets/images/xor-lc.jpg" alt="XOR gate"></p>
+                                    <ul>
+                                        <li><em>Truth Table</em></li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>A</th>
+                                                <th>B</th>
+                                                <th>A (+) B</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p><strong>XNOR</strong></p>
+                                    <ul>
+                                        <li>Exclusive OR is a logical gate which has
+                                            <code>output 0 if given inputs are different</code> and
+                                            <code>output is 1 if given inputs are same</code>.</li>
+                                        <li>It is used for logical comparision.</li>
+                                        <li>It is denoted by <code>A (.) B</code> and given by formula
+                                            <code>~A.~B+A.B</code></li>
+                                    </ul>
+                                    <p><img src="./assets/images/xnor-lc.jpg" alt="XNOR gate"></p>
+                                    <ul>
+                                        <li><em>Truth Table</em></li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>A</th>
+                                                <th>B</th>
+                                                <th>A (.) B</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="universal-gates">Universal Gates</h2>
+                    <ul>
+                        <li>Universal gates are those logical gates which can be to make basic as well as other logical
+                            gates using only that gate solely.</li>
+                        <li>The 2 universal gates are:-
+                            <ol>
+                                <li>
+                                    <p><strong>NAND</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p>A NAND gate can be used to make any other logical gates including Basic
+                                                gates.</p>
+                                        </li>
+                                        <li>
+                                            <p><em><strong>NAND as NOT</strong></em></p>
+                                            <ul>
+                                                <li>By joining the two inputs of a NAND gate we can make a NAND gate
+                                                    work as NOT gate.</li>
+                                            </ul>
+                                            <p><img src="./assets/images/nand-as-not.jpg" alt="NAND as NOT gate"></p>
+                                        </li>
+                                        <li>
+                                            <p><em><strong>NAND as AND</strong></em></p>
+                                            <ul>
+                                                <li>By using two NAND gates serially we can make a NAND gate work as AND
+                                                    gate.</li>
+                                            </ul>
+                                            <p><img src="./assets/images/nand-as-and.jpg" alt="NAND as AND gate"></p>
+                                        </li>
+                                        <li>
+                                            <p><em><strong>NAND as OR</strong></em></p>
+                                            <ul>
+                                                <li>By using two NAND gates paralley we can make a NAND gate work as a
+                                                    OR gate.</li>
+                                            </ul>
+                                            <p><img src="./assets/images/nand-as-or.jpg" alt="NAND as OR gate"></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>NOR</strong></p>
+                                    <ul>
+                                        <li>
+                                            <p>A NOR gate can be used to make any other logical gates including Basic
+                                                gates.</p>
+                                        </li>
+                                        <li>
+                                            <p><em><strong>NOR as NOT</strong></em></p>
+                                            <ul>
+                                                <li>By joining the two inputs of a NOR gate we can make a NOR gate work
+                                                    as NOT gate.</li>
+                                            </ul>
+                                            <p><img src="./assets/images/nor-as-not.jpg" alt="NOR as NOT gate"></p>
+                                        </li>
+                                        <li>
+                                            <p><em><strong>NOR as AND</strong></em></p>
+                                            <ul>
+                                                <li>By using two NOR gates paralley we can make a NOR gate work as AND
+                                                    gate.</li>
+                                            </ul>
+                                            <p><img src="./assets/images/nor-as-and.jpg" alt="NOR as AND gate"></p>
+                                        </li>
+                                        <li>
+                                            <p><em><strong>NOR as OR</strong></em></p>
+                                            <ul>
+                                                <li>By using two NOR gates serially we can make a NOR gate work as a OR
+                                                    gate.</li>
+                                            </ul>
+                                            <p><img src="./assets/images/nor-as-or.jpg" alt="NOR as OR gate"></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h1 id="chapter-4"><code>Chapter 4</code></h1>
+            <ul>
+                <li>
+                    <h2 id="k-map">K-map</h2>
+                    <ul>
+                        <li>K-map is a graphical method of simplification of boolean expression. It provides a
+                            systematic method of simplifying boolean expression represented in <code>SOP</code> and
+                            <code>POS</code> form.</li>
+                        <li><strong>Rules for grouping in k-map</strong>
+                            <ol>
+                                <li>Adjacent cell must differ by single variable and non-diagonal.</li>
+                                <li>The 1’s should be grouped to 1,2,4,8,16,etc</li>
+                                <li>Every 1 should be included in atlease one group, can be overlapping too.</li>
+                                <li>Number of groups must be minimized.</li>
+                            </ol>
+                        </li>
+                        <li><em><strong>For Pos form group the 0’s</strong></em></li>
+                        <li><em>Example:-</em>
+                            <ul>
+                                <li>
+                                    <p>Design logic circuit to implement the boolean function</p>
+                                </li>
+                                <li>
+                                    <p><code>F(A,B,C,D) = (1,3,7,11,15)</code></p>
+                                    <ul>
+                                        <li><code>F in bcd (0001,0011,0111,1011,1111)</code></li>
+                                        <li>K-map for F</li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>~C ~D</th>
+                                                <th>~C D</th>
+                                                <th>C D</th>
+                                                <th>C ~D</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>~A ~B</strong></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>~AB</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>AB</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>A~B</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul>
+                                        <li><code>F = ~A~BD + CD</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="dont-care-condition">Don’t care condition</h2>
+                    <ul>
+                        <li>Don’t care condition is a condition in which the state of the input doesnot matter whether
+                            the input is 0 or 1 the output will be same.</li>
+                        <li>It is mostly useful while desigining a logic circuit as we can eliminate the don’t cares
+                            which we don’t need and use only which we need.</li>
+                        <li><em>Example:-</em>
+                            <ul>
+                                <li>
+                                    <p>Design logic circuit to implement the boolean function</p>
+                                </li>
+                                <li>
+                                    <p><code>F(A,B,C,D) = (1,3,7,11,15)</code></p>
+                                </li>
+                                <li>
+                                    <p><code>D(A,B,C,D) = (0,2,5)</code></p>
+                                    <ul>
+                                        <li><code>F in bcd (0001,0011,0111,1011,1111)</code></li>
+                                        <li><code>D in bcd (0000, 0010, 0101)</code></li>
+                                        <li>K-map for F</li>
+                                    </ul>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>~C ~D</th>
+                                                <th>~C D</th>
+                                                <th>C D</th>
+                                                <th>C ~D</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>~A ~B</strong></td>
+                                                <td>x=1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>x=1</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>~AB</strong></td>
+                                                <td></td>
+                                                <td>x=0</td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>AB</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>A~B</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul>
+                                        <li><code>F = ~A~B + CD</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h1 id="chapter-5"><code>Chapter 5</code></h1>
+            <ul>
+                <li>
+                    <h2 id="combinational-logic-circuit">Combinational Logic circuit</h2>
+                    <ul>
+                        <li>Those logic circuit that are memoryless and the output of any instance depends solely upon
+                            the combination of the given inputs are called combinational logic circuit.</li>
+                        <li>They don’t have any feedback path.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="adder">Adder</h2>
+                    <ul>
+                        <li>
+                            <p><strong>Half Adder</strong></p>
+                            <ul>
+                                <li>It is the binary adder used to add 2 bit binary digits.</li>
+                                <li>It takes two inputs and returns 2 outputs carry© and sum(s).</li>
+                                <li><em>Truth Table</em></li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>S</th>
+                                        <th>C</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li>As we can see
+                                    <ul>
+                                        <li>Sum (s) = <code>~A.B+A.~B</code> = <code>A(+)B</code></li>
+                                        <li>Carry © = <code>A.B</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p><img src="./assets/images/" alt="half adder realization"></p>
+                        </li>
+                        <li>
+                            <p><strong>Full Adder</strong></p>
+                            <ul>
+                                <li>It is the binary adder used to add 3 bit binary digits.</li>
+                                <li>It takes three inputs the third input being carry in(C<sub>in</sub>) and returns 2
+                                    outputs carry out(c<sub>out</sub>) and sum(s).</li>
+                                <li><em>Truth Table</em></li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>S</th>
+                                        <th>C</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p><img src="./assets/images/" alt="full adder realization"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="subtractor">Subtractor</h2>
+                    <ul>
+                        <li>
+                            <p><strong>Half Subtractor</strong></p>
+                            <ul>
+                                <li>It is a binary subtractor used to subtract 2 bit binary digit.</li>
+                                <li>It takes 2 inputs and returns 2 outputs difference(d) and borrow(b)</li>
+                                <li><em>Truth Table</em></li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>D</th>
+                                        <th>B<sub>o</sub></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li>For Difference <code>D = A~B + ~AB = A xor B</code></li>
+                                <li>For Borrow out <code>Bo = ~AB</code></li>
+                            </ul>
+                            <p><img src="./assets/images/" alt="half subtractor realization"></p>
+                        </li>
+                        <li>
+                            <p><strong>Full Subtractor</strong></p>
+                            <ul>
+                                <li>It is a binary subtractor used to subtract 3 bit binary digit.</li>
+                                <li>It takes 3 inputs third one being borrow in(b<sub>in</sub>) and returns 2 outputs
+                                    difference(d) and borrow out(b<sub>out</sub>)</li>
+                                <li><em>Truth Table</em></li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>B<sub>in</sub></th>
+                                        <th>D</th>
+                                        <th>B<sub>out</sub></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p><img src="./assets/images" alt="full subtractor realization"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="code-convertor">Code Convertor</h2>
+                    <ul>
+                        <li>
+                            <p>Code Convertor is a combinational logic circuit that is used to convert one code base to
+                                another code base.</p>
+                        </li>
+                        <li>
+                            <p>It is useful when sending data or information from one system to another when both the
+                                system works in different code base.</p>
+                        </li>
+                        <li>
+                            <p>BCD to Excess 3 convertor</p>
+                            <ul>
+                                <li>Truth table</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Decimal</th>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>C</th>
+                                        <th>D</th>
+                                        <th></th>
+                                        <th>W</th>
+                                        <th>X</th>
+                                        <th>Y</th>
+                                        <th>Z</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li>Don’t care = <code>1010, 1011, 1100, 1101, 1110, 1111</code></li>
+                                <li>K-map W is</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>~C ~D</th>
+                                        <th>~CD</th>
+                                        <th>CD</th>
+                                        <th>C~D</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>~A ~B</strong></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>~AB</strong></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>AB</strong></td>
+                                        <td>x=1</td>
+                                        <td>x=1</td>
+                                        <td>x=1</td>
+                                        <td>x=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>A~B</strong></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>x=1</td>
+                                        <td>x=1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li><code>W = A + BC + BD</code></li>
+                                <li>K-map X is</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>~C ~D</th>
+                                        <th>~CD</th>
+                                        <th>CD</th>
+                                        <th>C~D</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>~A ~B</strong></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>~AB</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>AB</strong></td>
+                                        <td>x=1</td>
+                                        <td>x=0</td>
+                                        <td>x=0</td>
+                                        <td>x=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>A~B</strong></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>x=1</td>
+                                        <td>x=1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li><code>X = ~BC + ~BD + B~C~D</code></li>
+                                <li>K-map Y is</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>~C ~D</th>
+                                        <th>~CD</th>
+                                        <th>CD</th>
+                                        <th>C~D</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>~A ~B</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>~AB</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>AB</strong></td>
+                                        <td>x=1</td>
+                                        <td>x=0</td>
+                                        <td>x=1</td>
+                                        <td>x=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>A~B</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>x=1</td>
+                                        <td>x=0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li><code>Y = ~C~D + CD = C xnor D</code></li>
+                                <li>K-map Z is</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>~C ~D</th>
+                                        <th>~CD</th>
+                                        <th>CD</th>
+                                        <th>C~D</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>~A ~B</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>~AB</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>AB</strong></td>
+                                        <td>x=1</td>
+                                        <td>x=0</td>
+                                        <td>x=0</td>
+                                        <td>x=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>A~B</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>x=0</td>
+                                        <td>x=1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li><code>Z = ~C~D + C~D = ~D(~C + C) = ~D</code></li>
+                            </ul>
+                            <p><img src="./assets/images/" alt="BCD to XS3 convertor realization"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="parity-generator-and-checker">Parity generator and checker</h2>
+                    <ul>
+                        <li>
+                            <p>When message and information is sent through one system to another through any means
+                                there maybe some loss of data or temper to data maybe done.</p>
+                        </li>
+                        <li>
+                            <p>In order to detect that error(as the error cannot be reverted) we use an extra bit during
+                                the transmission of the information, that extra bit is known as parity bit.</p>
+                        </li>
+                        <li>
+                            <p>There are 2 types of parity, <code>even parity</code> where the number of 1’s is made
+                                even and <code>odd parity</code> where the number of 1’s is made odd.</p>
+                        </li>
+                        <li>
+                            <p>Parity Generator</p>
+                            <ul>
+                                <li>It is a combinational logic circuit that is used in the transmission side of the
+                                    communication system where a extra parity bit is generated for each code.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Parity Checker</p>
+                            <ul>
+                                <li>It is a combinational logic circuit that is used in the receiving side of the
+                                    communication system where the checking of the parity bit is done for error
+                                    detection.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Example</strong></p>
+                            <ul>
+                                <li><em><code>Design a 3-bit odd parity generator and a checker for that.</code></em>
+                                </li>
+                                <li>We need are <code>3 bits</code> and since the parity generator is a
+                                    <code>odd parity</code> so we add the parity such that the
+                                    <code>number 1's is odd.</code></li>
+                                <li>Truth table for 3-bit odd parity generator is:-</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>C</th>
+                                        <th>P(Parity bit)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li>K-map for P is</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>~B ~C</th>
+                                        <th>~BC</th>
+                                        <th>BC</th>
+                                        <th>B ~C</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>~A</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>A</strong></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <pre><code>
+    P = ~A~B~C + ~ABC + A~BC + AB~C
+      = ~A(~B~C + BC) + A(~BC + B~C)
+      = ~A(B xnor C) + A(B xor C)
+      = ~A~(B xor C) + A(B xor C)
+      = A xnor B xor C 
+
+</code></pre>
+                            <p><img src="./assets/images/3-bit-odd-parity-gen.jpg" alt="3-bit odd parity generator"></p>
+                            <ul>
+                                <li>For the checker we need <code>4-bit</code> as the inputs and a parity bit that
+                                    checks for errors. Same as the generator we add <code>P-bit</code> such that the
+                                    <code>number of 1's is odd.</code></li>
+                                <li>The truth table for checker is:-</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>C</th>
+                                        <th>P</th>
+                                        <th>CH(Parity checker)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li>K-map for CH is</li>
+                            </ul>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>~C ~P</th>
+                                        <th>~CP</th>
+                                        <th>CP</th>
+                                        <th>C ~P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>~A ~B</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>~AB</strong></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>AB</strong></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>A~B</strong></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <pre><code>
+    CH = ~A~B~C~P + ~A~BCP + ~AB~CP + ~ABC~P +     AB~C~P + ABCP + A~B~CP + A~BC~P
+       =  A xnor B xnor C xnor P 
+
+</code></pre>
+                            <p><img src="./assets/images/4-bit-odd-parity-checker.jpg" alt="4-bit odd parity checker">
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h1 id="chapter-7"><code>Chapter 7</code></h1>
+            <ul>
+                <li>
+                    <h2 id="flipflops">FlipFlops</h2>
+                    <ul>
+                        <li>It is a basi unit of memory which store either 1 or 0(1-bit information). It has two outputs
+                            and 1 or more inputs.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="rs-flipflop">RS-FlipFlop</h2>
+                    <ul>
+                        <li>RS-FF stands Reset-Set flipflop.</li>
+                    </ul>
+                    <p><img src="./assets/images/rs-ff-lc.jpg" alt="RS-FlipFlop logic circuit"></p>
+                    <p><img src="./assets/images/rs-ff.jpg" alt="RS-FlipFlop block diagram"></p>
+                    <ul>
+                        <li><strong>Excitation table</strong></li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Q(t)</th>
+                                <th>Q(t+1)</th>
+                                <th>S</th>
+                                <th>R</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <h2 id="jk-flipflop">JK-FlipFlop</h2>
+                    <ul>
+                        <li>JK flipflop is a rifinement of RS FF. Here the invalid state of RS FF is defined.</li>
+                    </ul>
+                    <p><img src="./assets/images/j-ff-lc.jpg" alt="JK-FlipFlop logic circuit"></p>
+                    <p><img src="./assets/images/j-ff.jpg" alt="JK-FlipFlop block diagram"></p>
+                    <ul>
+                        <li><strong>Excitation table</strong></li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Q(t)</th>
+                                <th>Q(t+1)</th>
+                                <th>J</th>
+                                <th>K</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <h2 id="t-flipflop">T-FlipFlop</h2>
+                    <ul>
+                        <li>T-FF stands for toggle flipflop.</li>
+                    </ul>
+                    <p><img src="./assets/images/t-ff-lc.jpg" alt="T-FlipFlop logic circuit"></p>
+                    <p><img src="./assets/images/t-ff.jpg" alt="T-FlipFlop block diagram"></p>
+                    <ul>
+                        <li><strong>Excitation table</strong></li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Q(t)</th>
+                                <th>Q(t+1)</th>
+                                <th>T</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <h2 id="d-flipflop">D-FlipFlop</h2>
+                    <ul>
+                        <li>D-FF stands for Data-flipflop or Delay-flipflop. It is made by using a <code>NOT gate</code>
+                            at the <code>R input of RS FF</code></li>
+                    </ul>
+                    <p><img src="./assets/images/d-ff-lc.jpg" alt="D-FlipFlop logic circuit"></p>
+                    <p><img src="./assets/images/d-ff.jpg" alt="D-FlipFlop block diagram"></p>
+                    <ul>
+                        <li><strong>Excitation table</strong></li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Q(t)</th>
+                                <th>Q(t+1)</th>
+                                <th>D</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <h2 id="master-slave-flipflop">Master-slave-FlipFlop</h2>
+                    <ul>
+                        <li>A master-slave flipflop can be constructed with either 2 JK-FF or 2 RS-FF. In either case
+                            one of the flipflop serve as master flipflop and another serve as slave flipflop.</li>
+                        <li>A invertor is used to compliment the clock signal for second/slave flipflop.</li>
+                        <li>When the clock signal is 1 the master ff is active and input is fed to the J and K terminal
+                            of master ff and slave ff is passive.</li>
+                        <li>When the clock signal is 0 the slave ff is active and output if master ff is fed to the J
+                            and K terminal of slave ff, also master ff is passive.</li>
+                    </ul>
+                    <p><img src="./assets/images/master-slave-ff.jpg" alt="Master-slave ff block diagram"></p>
+                </li>
+            </ul>
+            <h1 id="chapter-8"><code>Chapter 8</code></h1>
+            <ul>
+                <li>
+                    <h2 id="register">Register</h2>
+                    <ul>
+                        <li>Register is a memory element for holding binary information. A group of flipflop makes a register. A
+                            n-bit register has a group of n-flipflops.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="shift-register">Shift Register</h2>
+                    <ul>
+                        <li>A register which is capable of shifting its binary information either to left or right is called a shift
+                            register.</li>
+                        <li>There are four types of shift registers:-
+                            <ul>
+                                <li>
+                                    <h3 id="serial-in-serial-out-siso-shift-register">Serial In Serial Out (SISO) shift register
+                                    </h3>
+                                    <ul>
+                                        <li>It is the shift register that takes in input bits serially i.e one bit at a time on a
+                                            single line also produces output serially.</li>
+                                    </ul>
+                                    <p><img src="./assets/images/siso-block.jpg" alt="4-bit SISO"></p>
+                                    <ul>
+                                        <li>
+                                            <p>Considering a 4-bit SISO, and input bits 1010</p>
+                                            <ul>
+                                                <li>At CP 1, Q<sub>0</sub> = 0</li>
+                                                <li>At CP 2, Q<sub>0</sub> = 1, Q<sub>1</sub> = 0</li>
+                                                <li>At CP 3, Q<sub>0</sub> = 0, Q<sub>1</sub> = 1, Q<sub>2</sub> = 0</li>
+                                                <li>At CP 4, Q<sub>0</sub> = 1, Q<sub>1</sub> = 0, Q<sub>2</sub> = 1, Q<sub>3</sub>
+                                                    = 0</li>
+                                                <li>At CP 5, Q<sub>1</sub> = 1, Q<sub>2</sub> = 0, Q<sub>3</sub> = 1</li>
+                                                <li>At CP 6, Q<sub>2</sub> = 1, Q<sub>3</sub> = 0</li>
+                                                <li>At CP 7, Q<sub>3</sub> = 1</li>
+                                            </ul>
+                                            <p><img src="./assets/images/siso-timing.jpg" alt="timing diagram of 4-bit SISO"></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3 id="parallel-in-parallel-out-pipo-shift-register">Parallel In Parallel Out (PIPO) shift
+                                        register</h3>
+                                    <ul>
+                                        <li>It is the shift register that takes data inputs simultaneously at same time and produces
+                                            the output bits parallelly too.</li>
+                                    </ul>
+                                    <p><img src="./assets/images/pipo-block.jpg" alt="4-bit PIPO"></p>
+                                    <ul>
+                                        <li>
+                                            <p>Considering a 4-bit PIPO, and input bits 1010</p>
+                                            <ul>
+                                                <li>D<sub>0</sub> = 1, D<sub>1</sub> = 0, D<sub>2</sub> = 1, D<sub>3</sub> = 0</li>
+                                                <li>At CP 4, Q<sub>0</sub> = 1, Q<sub>1</sub> = 0, Q<sub>2</sub> = 1, Q<sub>3</sub>
+                                                    = 0</li>
+                                            </ul>
+                                            <p><img src="./assets/images/pipo-timing.jpg" alt="timing diagram of 4-bit PIPO"></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3 id="serial-in-parallel-out-sipo-shift-register">Serial In Parallel Out (SIPO) shift register
+                                    </h3>
+                                    <ul>
+                                        <li>It is the shift register that takes data inputs serially one at a time but gives the
+                                            output bits simultaneously.</li>
+                                    </ul>
+                                    <p><img src="./assets/images/sipo-block.jpg" alt="4-bit SIPO"></p>
+                                    <ul>
+                                        <li>
+                                            <p>Considering a 4-bit SIPO, and input bits 1010</p>
+                                            <ul>
+                                                <li>At CP 1, Q<sub>0</sub> = 0</li>
+                                                <li>At CP 2, Q<sub>0</sub> = 1, Q<sub>1</sub> = 0</li>
+                                                <li>At CP 3, Q<sub>0</sub> = 0, Q<sub>1</sub> = 1, Q<sub>2</sub> = 0</li>
+                                                <li>At CP 4, Q<sub>0</sub> = 1, Q<sub>1</sub> = 0, Q<sub>2</sub> = 1, Q<sub>3</sub>
+                                                    = 0</li>
+                                            </ul>
+                                            <p><img src="./assets/images/sipo-timing.jpg" alt="timing diagram of 4-bit SIPO"></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3 id="parallel-in-serial-out-piso-shift-register">Parallel In Serial Out (PISO) shift register
+                                    </h3>
+                                    <ul>
+                                        <li>It is the shift register that takes input bits parallelly at the same time but gives the
+                                            output serially one at a time.</li>
+                                    </ul>
+                                    <p><img src="./assets/images/piso-block.jpg" alt="4-bit PISO"></p>
+                                    <ul>
+                                        <li>
+                                            <p>Considering a 4-bit PISO, and input bits 1010</p>
+                                            <ul>
+                                                <li>At CP 1, Q<sub>0</sub> = 1, Q<sub>1</sub> = 0, Q<sub>2</sub> = 1, Q<sub>3</sub>
+                                                    = 0</li>
+                                                <li>At CP 2, Q<sub>1</sub> = 0, Q<sub>2</sub> = 1, Q<sub>3</sub> = 0</li>
+                                                <li>At CP 3, Q<sub>2</sub> = 1, Q<sub>3</sub> = 0</li>
+                                                <li>At CP 4, Q<sub>3</sub> = 0</li>
+                                            </ul>
+                                            <p><img src="./assets/images/piso-timing.jpg" alt="timing diagram of 4-bit PISO"></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="counter">Counter</h2>
+                    <ul>
+                        <li>It is a sequential device made up of group of flipflops that are connected together to perform counting
+                            operation.</li>
+                        <li>It is of 2 types:-
+                            <ol>
+                                <li>Asynchronous counter
+                                    <ul>
+                                        <li>It is the type of counter where the timing for clock pulse for each flipflop is
+                                            different, i.e the first flipflop is given the external clock pulse, and then each
+                                            successive flipflop is clocked by output of preceding flipflop.</li>
+                                        <li>It is also called as ripple counter</li>
+                                    </ul>
+                                </li>
+                                <li>Synchronous counter
+                                    <ul>
+                                        <li>It is the type of counter where the timing for clock pulse for each flipflop is same,
+                                            i,e every flipflop is given the same external clock pulse at the same time.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="synchronous-up-counter-using-jk-ff">Synchronous up counter using JK FF</h2>
+                    <ul>
+                        <li>The diagram of the counter looks like:-</li>
+                    </ul>
+                    <p><img src="./assets/images/synchronous-up-counter-jk-block.jpg" alt="Synchronous up counter"></p>
+                    <ul>
+                        <li>Excitation table for the counter is:-</li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>A<sub>t</sub></th>
+                                <th>B<sub>t</sub></th>
+                                <th>C<sub>t</sub></th>
+                                <th>A<sub>t+1</sub></th>
+                                <th>B<sub>t+1</sub></th>
+                                <th>C<sub>t+1</sub></th>
+                                <th>J<sub>A</sub></th>
+                                <th>K<sub>A</sub></th>
+                                <th>J<sub>B</sub></th>
+                                <th>K<sub>B</sub></th>
+                                <th>J<sub>C</sub></th>
+                                <th>K<sub>C</sub></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>x</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>1</td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><em><strong>Note: When making k-map look at the inputs with t</strong></em></li>
+                        <li>Now K-Map for J<sub>A</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td>x</td>
+                                <td>x=1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td>x</td>
+                                <td>x</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>J<sub>A</sub> = BC</strong></li>
+                        <li>Now K-Map for J<sub>B</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td>x</td>
+                                <td>x=1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td>x</td>
+                                <td>x=1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>J<sub>B</sub> = C</strong></li>
+                        <li>Now K-Map for J<sub>C</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td>1</td>
+                                <td>x</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>J<sub>C</sub> = ~C</strong></li>
+                        <li>Now K-Map for K<sub>A</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td>x</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td>x</td>
+                                <td>x=1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>K<sub>A</sub> = BC</strong></li>
+                        <li>Now K-Map for K<sub>B</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td>x</td>
+                                <td>x=1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td>x</td>
+                                <td>x=1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>K<sub>B</sub> = C</strong></li>
+                        <li>Now K-Map for K<sub>C</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td>x</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>K<sub>C</sub> = C</strong></li>
+                    </ul>
+                    <p><img src="./assets/images/synchronous-up-counter-jk.jpg" alt="synchronous up counter block diagram"></p>
+                </li>
+                <li>
+                    <h2 id="asynchronous-down-counter-using-t-ff">Asynchronous down counter using T FF</h2>
+                    <ul>
+                        <li>The diagram of the counter looks like:-</li>
+                    </ul>
+                    <p><img src="./assets/images/asynchronous-down-counter-t-block.jpg" alt="asynchronous down counter"></p>
+                    <ul>
+                        <li>Excitation table for the counter is:-</li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>A<sub>t</sub></th>
+                                <th>B<sub>t</sub></th>
+                                <th>C<sub>t</sub></th>
+                                <th>A<sub>t+1</sub></th>
+                                <th>B<sub>t+1</sub></th>
+                                <th>C<sub>t+1</sub></th>
+                                <th>T<sub>A</sub></th>
+                                <th>T<sub>B</sub></th>
+                                <th>T<sub>C</sub></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><em><strong>Note: When making k-map look at the inputs with t</strong></em></li>
+                        <li>Now K-Map for T<sub>A</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>T<sub>A</sub> = ~A ~B ~C + ~ABC + A ~BC = ~A ~B ~C + C(A xor B)</strong></li>
+                        <li>Now K-Map for T<sub>B</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>T<sub>B</sub> = ~C</strong></li>
+                        <li>Now K-Map for T<sub>C</sub></li>
+                    </ul>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>~C</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>~A ~B</strong></td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>~AB</strong></td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AB</strong></td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A~B</strong></td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>T<sub>C</sub> = 1</strong></li>
+                    </ul>
+                    <p><img src="./assets/images/asynchronous-down-counter-t.jpg" alt="asynchronous down counter block diagram"></p>
+                </li>
+            </ul>
+            <h1 id="difference-between"><code>Difference between</code></h1>
+            <ul>
+                <li>
+                    <h2 id="latch-and-flipflops">Latch and Flipflops</h2>
+                </li>
+            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Latch</th>
+                        <th>FlipFlop</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>It is a sequential logic circuit that is used to store binary information made using logic gates.</td>
+                        <td>It is a sequential logic circuit used to store binary information made using latch and clock signals.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>It is based on level triggering approach.</td>
+                        <td>It is based on edge triggering approach.</td>
+                    </tr>
+                    <tr>
+                        <td>It is complex to implement and has faster operation speed.</td>
+                        <td>It is easy to implement and has slower operation speed compared to latch.</td>
+                    </tr>
+                    <tr>
+                        <td>The operation depends on present, past input and past output values.</td>
+                        <td>The operations depends on present, past input and past output values along with clock pulse.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>
+                    <h2 id="synchronous-and-asynchronous-counter">Synchronous and asynchronous counter</h2>
+                </li>
+            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Synchronous Counter</th>
+                        <th>Asynchronous Counter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>In synchronous counter, all flip flops are triggered with same clock simultaneously.</td>
+                        <td>In asynchronous counter, different flip flops are triggered with different clock, not simultaneously.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Synchronous Counter is faster than asynchronous counter in operation.</td>
+                        <td>Asynchronous Counter is slower than synchronous counter in operation.</td>
+                    </tr>
+                    <tr>
+                        <td>Synchronous Counter will operate in any desired count sequence.</td>
+                        <td>Asynchronous Counter will operate only in fixed count sequence (UP/DOWN).</td>
+                    </tr>
+                    <tr>
+                        <td>Synchronous Counter designing as well implementation are complex due to increasing the number of states.
+                        </td>
+                        <td>Asynchronous Counter designing as well as implementation is very easy.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>
+                    <h2 id="combinational-and-sequential-circuit">Combinational and Sequential circuit</h2>
+                </li>
+            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Combinational Circuit</th>
+                        <th>Sequential Circuit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The logic circuits that depends upon the present input values only to determine the output of the
+                            instance are called combinational logic circuit.</td>
+                        <td>The logic circuits that depends upon the present input values as well as past output values for
+                            determining the output of the instance are called sequential logic circuit.</td>
+                    </tr>
+                    <tr>
+                        <td>It does not have any feedback path as well as memory elements.</td>
+                        <td>It has both feedback path and memory elements.</td>
+                    </tr>
+                    <tr>
+                        <td>The operations doesn’t depend on clock transition.</td>
+                        <td>The operations depend on clock transition.</td>
+                    </tr>
+                    <tr>
+                        <td>The circuit are easy to implement and can be described using truth table.</td>
+                        <td>The circuit are harder to implement compared to combinational and can be described using truth table as
+                            well as timing diagram.</td>
+                    </tr>
+                    <tr>
+                        <td>Example: Adder, Encoder, etc.</td>
+                        <td>Example: Latch, flipflop, counter, etc</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

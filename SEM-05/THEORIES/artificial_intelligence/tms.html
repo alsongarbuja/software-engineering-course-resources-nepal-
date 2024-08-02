@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>TMS</h1>
+        <p>
+            TMS <b>(Truth Maintainence System)</b> is a system that is used in a problem solving inference where
+            the truth of the knowledge base must be tautology or else the system may give error.
+            <br><br>
+            For example: let's say we have a problem solving inference with the following data in the knowledge Base(KB)
+            <br>
+            P &rarr; Q <br>
+            P &rarr; R <br>
+            Q &iff; T <br>
+            <br>
+            Say we add a new knowledge &not;Q to the system, then the line Q &iff; T becomes false or errorfull. <br>
+            <br><br>
+            In such cases the <b>TMS</b> comes into play and manages the truth of the KB.
+        </p>
+        <br><br>
+        <p>
+            There are methods of doing so:
+            <ul>
+                <li>
+                    <details>
+                        <summary>TMS</summary>
+                        <ul class="inner-ul">
+                            <li>It is a simple TMS where if a contradicting knowledge is found then we retract all the errorfull lines of the KB and refill with updated values.</li>
+                            <li>This method is not much practical as it may take enormous amount of time.</li>
+                            <li>
+                                In the above example if we had <span class="tooltip">asserted<span>To put in KB</span></span>
+                                &not;P then all the lines would be errorfull and assume if we had 100's of lines of fact with P
+                                then we have to retract all those lines and re enter the correct one, which is time consuming and
+                                not practical.
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>JTMS (Justification Based TMS)</summary>
+                        <ul class="inner-ul">
+                            <li>JTMS is a modification to simple TMS where we have a <b>justification</b> for each fact we assert into the KB</li>
+                            <li>
+                                In above example we can do: <br>
+                                P <br>
+                                {P, P &rarr; Q} <br>
+                                {P, P &rarr; R} <br>
+                                {P, Q &iff; T} <br>
+                                Then all the lines of fact with P as the justification can be marked as <b>OUT</b> which means the fact is not
+                                used anymore in the system.
+                            </li>
+                            <li>
+                                The advantage of using justification is: we can easily find which facts are errorfull than in simple TMS, we can mark the
+                                contradicting facts as <b>OUT</b> and mark them <b>IN</b> which means the fact are used again when the fact are again correct.
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>ATMS (Assumption Based TMS)</summary>
+                        <ul class="inner-ul">
+                            <li>ATMS is a modified version of JTMS where we can keep multiple set of possibly contradicting assumptions in the memory</li>
+                            <li>It can simultaneously deal with different set of beliefs that may be mutually contradictory and investigate their consequences</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </p>
+        <br><br>
+        <div id="reason-uncertain">
+            <h3>Reasoning under uncertainty</h3>
+            <p>
+                The problem that an Reasoning system faces doesnot always have a certainty to their solution. For example:
+                random problems like Filiping coin, or other real life problems like weather forecasting all have that
+                uncertainty in them.
+                <br><br>
+                Those type of problem doesnot have either enough domain knowledge or have some randomness in them that makes 
+                the solution uncertain.
+                <br>
+                Though an Reasoning system must be <b>complete</b> which means it must provide a solution if there exists one,
+                the fliping of coin have a solution either head or tail and the weather forecast also have a solution either rain
+                or not, sunny or not. Hence Reasoning under uncertainty is important and must be in any Reasoning agent system.
+            </p>
+            <p>
+                The two methods of Reasoning under uncertainty are:
+                <ul>
+                    <li>
+                        <b>Non-monotonic Reasoning: </b> Extending the facts or rules to reason with incomplete information, such as default reasoning.
+                    </li>
+                    <li>
+                        <b>Statistical Reasoning: </b> Representation is extended to allow some kind of numeric measure of certainty(rather than simply ture or false),
+                        example: 70% chance of raining rather than saying it will rain.
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </main>
+</body>
+</html>

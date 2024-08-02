@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCS</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>Reasoning</h1>
+        <p>
+            The act of describing a concept with help of some knowledge base.
+            <br>
+            It refers to the process of concluding some output based on the knowledge base and the input provided.
+            <br>
+            A reasoning system is a system that generates conclusion from avialable knowledge using logical technique
+            such as deduction and induction.
+        </p>
+        <br>
+        <p>
+            It is of two types:
+            <ul>
+                <li>
+                    <details>
+                        <summary>Forward Reasoning</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                It works with a set of facts or rules towards a set of goals or conclusion. Also
+                                known as event-driven mode, antecedent mode, or data-driven mode.
+                            </li>
+                            <li>
+                                The steps involved in forward reasoning are: Collecting rules or facts, recogonizing the rule that
+                                can succeed, conclusion is asserted to the working memory, iteratively find conclusion until solution
+                                is found. 
+                            </li>
+                            <li>
+                                Used in planning, monitoring,control,collecting symptoms to decide disease
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Backward Reasoning</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                It works with a conclusion or goal towards the fact or rule it should have started. Also 
+                                known as consequent mode, goal-driven mode, hypothesis driven mode.
+                            </li>
+                            <li>
+                                The steps involved are: Derive hypothesis to the goal given, if the hypothesis is a fact we
+                                found the answer if not make it a sub-goal and do the same for those sub-goals until fact is found.
+                            </li>
+                            <li>
+                                Used in diagnosis: from disease telling symptoms
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </p>
+        <br>
+        <h1>Constraint Satisfaction</h1>
+        <p>
+            Constraint Satisfaction is the process of finding solution to a problem that imposes a pre condition or constraint which
+            must be satisfied.
+            <br>
+            <br>
+            It consists of the following steps:
+            <ul>
+                <li>Constraint are discovered and propagated as far as possible throughout the system.</li>
+                <li>
+                    If no solution, search begins. A guess is made and added as new constraint which can be propagated
+                    and continue to finding solution.
+                </li>
+            </ul>
+            <br>
+            Examples: Suduko, Graph coloring, N-Queen, etc
+            <br><br>
+            We have a initial constraint given we have to solve the problem by first propagating those constraint to the sub-problems
+            and solution to those sub-problem is searched and finally the solution to problem is find.
+        </p>
+        <br>
+        <h3>Means End Analysis</h3>
+        <p>
+            <b>M.E.A</b> is a process of achieving a bigger goal by first dividing the bigger goal/problem into smaller sub-goals/sub-problems 
+            which have less complexity and easy to achieve and solving those sub-goals first then combining to get the final solution.
+
+            <br>
+            It consists of both forward and backward reasoning to help divide and conqure those sub-problems.
+            <br><br>
+            MEA relies on a set of rules that transforms one problem state into another.
+            <br><br>
+            The sub problems can be assigned priorities and higher priority can be solved first. The process of sub dividing the bigger problem
+            into sub problem is called <b>sub-goaling</b> and the process of combining together the sub problems is called <b>gluing</b>.
+        </p>
+        <br>
+        <p>
+            For example: a company has to get turnover of 20 million dollars in this year.
+            It can be sub-goaled into marketing, prodcution, campaining.
+            <br>
+            Which can be further divided by marketing (in social media, newspapers, commercials),
+            prodcution (new product, product to go hand to hand with new product), etc
+            <br><br>
+            Now those smaller goals are completed in priority order which ultimately leads to the final 
+            turnover of 20 million dollars.
+        </p>
+    </main>
+</body>
+</html>

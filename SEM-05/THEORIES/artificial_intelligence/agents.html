@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>Agents</h1>
+        <p>
+            An <b>agent</b> is anything that can be viewed as preceiving its environment
+            through its sensor and acting upon that environment through actuators. <br /><br />
+            An agent consists of some sort of <span class="tooltip">Sensors<span>(cameras,sensors,rays,etc)</span></span> that
+            takes in the input from its environment and feed to the agent system after processing
+            the agent then response with some sort of actions with helps of their 
+            <span class="tooltip">Actuators<span>(wheels,speakers,etc)</span></span>
+        </p>
+        <br>
+        <h3>Types of Agents</h3>
+        <ul>
+            <li>
+                <details>
+                    <summary>Simple Reflex Agent</summary>
+                    <ul class="inner-ul">
+                        <li>Simple <b>If-then,</b> <span class="tooltip">Reactive<span>Act on given input.</span></span> approach</li>
+                        <li>Cannot learn from experience</li>
+                        <li>If the percept is not in the agents database it cannot react properly</li>
+                        <li><b>Example: simple mercury type thermostat/ heater, basic rover</b></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Modal Based Reflex Agent</summary>
+                    <ul class="inner-ul">
+                        <li>More Reactive than Simple Reflex agents</li>
+                        <li>Keeps track of the experience it collects</li>
+                        <li><b>Example: Rover with sample collection</b></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Goal Based Agent</summary>
+                    <ul class="inner-ul">
+                        <li>Has a <span class="tooltip">Proactive<span>Act after making decision</span></span> approach</li>
+                        <li>
+                            It generally knows some knowledge on how the environment works.
+                            And it uses that knowledge to search and identify plan before acting.
+                        </li>
+                        <li>
+                            It uses a <b>Search and Plan</b> pattern that helps it do be more
+                            proactive than reactive.
+                        </li>
+                        <li><b>Example: Vaccum World Problem</b></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Utility Based Agent</summary>
+                    <ul class="inner-ul">
+                        <li>All the agents before had only one goal but it has multiple.</li>
+                        <li>
+                            Uses a <b>Utility Function</b> to calculate the possibility of each
+                            plan to be successful.
+                        </li>
+                        <li>
+                            It also looks into account the probability of success, how much resource
+                            is needed, what is the prority of the goal, how much time will it take,
+                            and many more.
+                        </li>
+                        <li><b>Example: Auto Taxi</b></li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+        <br>
+        <h3>PAGE Description</h3>
+        <p>
+            <b>PAGE</b> stands for <b>P</b>ercepts <b>A</b>ctions <b>G</b>oals <b>E</b>nvironment.
+            <br /><br />
+            <b>Percepts :-</b> Information accquired by the sensors of the agent.
+            <br><br>
+            <b>Actions :-</b> Operations performed by the agent using actuators.
+            <br><br>
+            <b>Goals :-</b> Desired outcome of the task with a measurable performance.
+            <br><br>
+            <b>Environment :-</b> Surroundings beyond the control of the agent.
+        </p>
+    </main>
+</body>
+</html>

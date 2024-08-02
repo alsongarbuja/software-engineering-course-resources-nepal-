@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>Machine Learning</h1>
+        <p>
+            <b>Machine Learning</b> is a part of Artificial Intelligence that deals with the automatic
+            learning process of the system.
+        </p>
+        <p>
+            It provides the ability to automatically learn and improve from experience without being 
+            explicitly programmed.
+            <br>
+            The ability to learn by itself after the initial dataset and improve upon the problems and 
+            further become accurate.
+        </p>
+        <br>
+        <div>
+            <h3>Components of Machine Learning</h3>
+            <ul>
+                <li>
+                    <b>Learning Element: </b>Responsible for making improvement
+                </li>
+                <li>
+                    <b>Performance Element: </b>Responsible for selecting appropriate actions to environment
+                </li>
+                <li>
+                    <b>Critic: </b>Responsible for telling how well the agent is doing
+                </li>
+                <li>
+                    <b>Problem Generator: </b>Responsible for exploratory actions to the performance element
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h3>Methods of machine learning</h3>
+            <ul>
+                <li>
+                    <details>
+                        <summary>Supervised Learning</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                In this method the dataset(input) and the correct output to those inputs are provided to the system,
+                                from which the system learns and further modify the algorithm to match the outputs more accuratetly in
+                                the future.
+                            </li>
+                            <li>
+                                It is used in Regression and Classification
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Unsupervised Learning</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                In this method only the dataset(input) are provided and no output is provided, from the given dataset the
+                                system has to find the pattern and predict the output of the problem.
+                            </li>
+                            <li>
+                                It is used in Clustering systems
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Reinforcement Learning</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                In this method there are no dataset(input) and output provided to the system, only the environment is provided,
+                                the system works in a cause and effect idea where it interacts with the environment using actions (cause) and 
+                                analyiz the output of the actions (effect) which is either good(reward) or bad(failure).
+                            </li>
+                            <li>
+                                It is used in the complex systems like Game playing.
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+            <br>
+            <h3>Difference</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Supervised</th>
+                        <th>Unsupervised</th>
+                        <th>Reinforcement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Learning by analyzing the given dataset and output and further improving upon that.
+                        </td>
+                        <td>
+                            Learning by analyzing the pattern in the given dataset and further improving.
+                        </td>
+                        <td>
+                            Learning by interacting with the environment and analyzing the effect of causes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Both the input and output is given to learn from.</td>
+                        <td>Only the input data is given to learn from.</td>
+                        <td>No input and output are provided only the environment is given.</td>
+                    </tr>
+                    <tr>
+                        <td>It has supervision</td>
+                        <td>It doesnot have supervision</td>
+                        <td>It doesnot have supervision</td>
+                    </tr>
+                    <tr>
+                        <td>Used in Regression and Classification systems</td>
+                        <td>Used in Clustering systems</td>
+                        <td>Used in complex systems like Game playing systems</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <h3>Rote Learning (Parrot learning/Data Caching)</h3>
+            <p>
+                It is a simple learning method for Machine Learning systems where the system don't calculate but memorize the outpt.
+                In other words this system simply learn the problem in repetition and memorize the output of certain input that is used
+                when problem is put forward to it rather than recalculating.
+            </p>
+            <br>
+            <p>
+                For this system to work it needs:
+                <ul>
+                    <li>Organized storage of information: Information must be organized and quickly accessible.</li>
+                    <li>Generalization: To keep the large amount of information down to a manageable level.</li>
+                </ul>
+            </p>
+        </div>
+        <br>
+        <div>
+            <h3>Types of Learning</h3>
+            <ul>
+                <li>
+                    <details>
+                        <summary>Learning in problem solving</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                It is the method of learning where it solves the problem and further improve upon it.
+                            </li>
+                            <li>
+                                It may come up with qualitatively better solutions.
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Learning by analogy</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                It is the method of learning where it observe or compare the problem with a significantly similar problem and try to solve it.
+                            </li>
+                            <li>
+                                It is further divided into two type:
+                                <ul class="inner-ul">
+                                    <li>
+                                        <details>
+                                            <summary>Transformational Analogy</summary>
+                                            <ul>
+                                                <li>
+                                                    It is the process of transforming the solution of old problem into solution of current problem.
+                                                </li>
+                                                <li>
+                                                    It doesnot look at the how old problem was solved but looks at the final solution only.
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary>Derivational Analogy</summary>
+                                            <ul>
+                                                <li>
+                                                    It is the process of deriving the solution of old problem into solution of current problem.
+                                                </li>
+                                                <li>
+                                                    It looks at the how old problem was solved and try to derive the main structure of the solution to the new problem.
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Learning by examples/Induction</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                It is the method of learning where the system uses examples to come up with an solution to the problem.
+                            </li>
+                            <li>
+                                For example alphabet recognition system, where it has examples of alphabet and with the given alphabet it compares
+                                with its example and try to find the answer.
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Explanation based learning</summary>
+                        <ul class="inner-ul">
+                            <li>
+                                It is the method of learning where the system has analytical and knowledge intensive approach.
+                            </li>
+                            <li>
+                                It is a generalization to learning by examples, where it uses only one example and try to explain why
+                                that example is used as training concept.
+                            </li>
+                            <li>
+                                For example: the <b>Fork trap</b> is a concept of attacking in chess where the opponent has to lose its one piece inorder to save its another piece(usually king).
+                                The system can study one example of such move and try to explain why is that happening hence can use this move in real game later
+                                in its advantage.
+                                <br>
+                                <figure>
+                                    <table class="chess-table">
+                                        <tr>
+                                            <td>Rook</td>
+                                            <td></td>
+                                            <td>King</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Knight</td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <figcaption>Fig: Fork Trap</figcaption>
+                            </li>
+                            <li>
+                                For this system to work it needs the following Components:
+                                <ul>
+                                    <li>
+                                        <b>A training example:</b> What learning program sees in the world.
+                                    </li>
+                                    <li>
+                                        <b>A goal Concept:</b> A high level description of what the program has to learn.
+                                    </li>
+                                    <li>
+                                        <b>An operational criterion:</b> A description of which concepts are usable.
+                                    </li>
+                                    <li>
+                                        <b>A domain theory:</b> A set of rules that describe the relationship between objects and action in domain.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h3>Winston's Learning Program</h3>
+            <ul>
+                <li>
+                    It is the early structural concept learning program developed by Patrick Henry Winston(MIT)
+                </li>
+                <li>
+                    It introduces the concept of <b>near miss</b> which is an object that is not the instance of the concept but that is very similar to such instances.
+                </li>
+                <li>
+                    The basic approach that winston's program took to the problem of concept formationcan be described as:
+                    <ul>
+                        <li>
+                            Beign with a structural description of one known instance of the concept. Call that description the <b>concept description.</b>
+                        </li>
+                        <li>
+                            Examine description of other known instances of the concept. Generalize the definition to include them.
+                        </li>
+                        <li>
+                            Examine description of near misses of the concept. Restrict the definition to exclude them.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

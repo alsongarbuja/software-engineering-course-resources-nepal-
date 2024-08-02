@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>num</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2196f3"/>
+  
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackedit.io/style.css" />
+<link rel="stylesheet" href="./css/style.css">
+
+<style>
+  @media screen and (max-width: 700px){
+    .stackedit__html>ul {
+      padding-left: 0;
+    }
+
+    table {
+      font-size: .5rem;
+    }
+
+    .tb {
+      font-size: .2rem;
+    }
+
+    code {
+      max-width: 370px;
+    }
+  }
+</style>
+
+<script defer src="./js/script.js"></script>
+</head>
+
+<body class="stackedit" onload="modeChoose()">
+  <span class="night"><i class="fas fa-moon"></i></span>
+  <span class="menu">&rarr;</span>
+  <span class="closeMenu">&times;</span>
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#job-scheduling">Job Scheduling</a>
+<ul>
+<li><a href="#fcfs-first-come-first-serve">FCFS (First Come First Serve)</a></li>
+<li><a href="#sjf-shortest-job-first">SJF (Shortest Job Firts)</a></li>
+<li><a href="#srtn-shortest-remaining-time-next">SRTN (Shortest Remaining Time Next)</a></li>
+<li><a href="#priority-pre-emptive">Priority (Pre-emptive)</a></li>
+<li><a href="#priority-non-pre-emptive">Priority (Non Pre-emptive)</a></li>
+<li><a href="#round-robin">Round Robin</a></li>
+<li><a href="#multilevel-queue">Multilevel queue</a></li>
+<li><a href="#multilevel-feedback">Multilevel feedback</a></li>
+</ul>
+</li>
+<li><a href="#banker-algorithm">Banker algorithm</a></li>
+<li><a href="#memory-allocation">Memory allocation</a>
+<ul>
+<li><a href="#first-fit">First Fit</a></li>
+<li><a href="#next-fit">Next Fit</a></li>
+<li><a href="#best-fit">Best Fit</a></li>
+<li><a href="#worst-fit">Worst Fit</a></li>
+</ul>
+</li>
+<li><a href="#page-replacement">Page Replacement</a>
+<ul>
+<li><a href="#fifo-first-in-first-out">FIFO (First In First Out)</a></li>
+<li><a href="#lru-least-recently-used">LRU (Least Recently Used)</a></li>
+<li><a href="#optimal">Optimal</a></li>
+<li><a href="#second-chance">Second Chance</a></li>
+</ul>
+</li>
+<li><a href="#disk-scheduling">Disk Scheduling</a>
+<ul>
+<li><a href="#fcfs">FCFS</a></li>
+<li><a href="#sstf-shortest-seek-time-first">SSTF (Shortest Seek Time First)</a></li>
+<li><a href="#scan--elevator">SCAN / Elevator</a></li>
+<li><a href="#cscan-circular-scan">CSCAN (Circular SCAN)</a></li>
+<li><a href="#look">LOOK</a></li>
+<li><a href="#clook">CLOOK</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="job-scheduling">Job Scheduling</h1>
+<ul>
+<li>Every job scheduling has this components:
+<ul>
+<li><strong>Arrival Time(AT)</strong>:  The time each job arrives at the CPU</li>
+<li><strong>Brust Time(BT)</strong>: The time each job takes inside the CPU</li>
+</ul>
+</li>
+<li>For Round Robin it also has:
+<ul>
+<li><strong>Quantum Time(QT)</strong>: The time each jobs will be processed for</li>
+</ul>
+</li>
+<li>For Priority it also has:
+<ul>
+<li><strong>Priority</strong>: Priority given to each job</li>
+</ul>
+</li>
+<li><em>2nd part</em> of each job scheduling consists:
+<ul>
+<li><strong>Complete Time(CT)</strong>: The time for strat to the job completing its processing</li>
+<li><strong>Turn Around Time(TT)</strong>: The time for a job to arrive and complete its processing, CT - AT</li>
+<li><strong>Waiting Time(WT)</strong>: The total time job to wait in the queue, TT - BT</li>
+</ul>
+</li>
+</ul>
+<h2 id="fcfs-first-come-first-serve">FCFS (First Come First Serve)</h2>
+<ul>
+<li>Look at the <strong>AT</strong></li>
+<li>Process Jobs in order they arrive</li>
+<li><em>2nd part</em></li>
+</ul>
+<h2 id="sjf-shortest-job-first">SJF (Shortest Job First)</h2>
+<ul>
+  <li>Look at the <strong>AT</strong></li>
+  <li>
+    If 2 or more jobs encountered
+    <ul>
+      <li>Process the job with shortest <strong>BT</strong></li>
+    </ul>
+  </li>
+  <li><em>2nd part</em></li>
+</ul>
+<h2 id="srtn-shortest-remaining-time-next">SRTN (Shortest Remaining Time Next)</h2>
+<ul>
+<li>Look at the <strong>AT</strong></li>
+<li>Process the job that arrives first</li>
+<li>During the process
+<ul>
+<li>if another job arrives with less <strong>BT</strong> then current job, process the new job</li>
+<li>else continue processing the current job</li>
+</ul>
+</li>
+<li>Repeat untill all jobs are processed</li>
+<li><em>2nd part</em></li>
+</ul>
+<h2 id="priority-pre-emptive">Priority (Pre-emptive)</h2>
+<ul>
+<li>Look at the <strong>AT</strong></li>
+<li>Process the job that arrives first</li>
+<li>During the process
+<ul>
+<li>if another job arrives with higher <strong>priority</strong> then current job, process the new job</li>
+<li>else continue processing the current job</li>
+</ul>
+</li>
+<li>Repeat until all jobs are processed</li>
+<li><em>2nd part</em></li>
+</ul>
+<h2 id="priority-non-pre-emptive">Priority (Non Pre-emptive)</h2>
+<ul>
+<li>Look at the <strong>AT</strong></li>
+<li>Process the job that arrives first</li>
+<li>If two or more jobs arrives
+<ul>
+<li>process job with <strong>higher priority</strong></li>
+</ul>
+</li>
+<li>Repeat until all jobs are processed</li>
+<li><em>2nd part</em></li>
+</ul>
+<h2 id="round-robin">Round Robin</h2>
+<ul>
+<li>Look at the <strong>AT</strong></li>
+<li>Loop
+<ul>
+<li>Put the arrived jobs in the <strong>queue</strong></li>
+<li>Process the first job in the queue for <strong>QT</strong></li>
+<li>Put new arrived jobs in the <strong>queue</strong></li>
+<li>If the current job hasn’t finished put back in the <strong>queue</strong></li>
+</ul>
+</li>
+<li>Until all the process are completed</li>
+<li><em>2nd part</em></li>
+</ul>
+<h2 id="multilevel-queue">Multilevel queue</h2>
+<ul>
+<li>Each queue has there own jobs</li>
+<li>Each queue will work independently</li>
+<li>Later we merge them</li>
+</ul>
+<h2 id="multilevel-feedback">Multilevel feedback</h2>
+<ul>
+<li>Each queue will process each job once</li>
+<li>Then remaining jobs passes on to next queue</li>
+</ul>
+<h1 id="banker-algorithm">Banker algorithm</h1>
+<ul>
+<li>Find <strong>Need Matrix</strong> = (Max - Allocation)</li>
+<li>For each process
+<ul>
+<li>If (Need &gt;  available)
+<ul>
+<li>donot execute the process and go to next process</li>
+</ul>
+</li>
+<li>if (available &gt; Need)
+<ul>
+<li>execute the process</li>
+<li>Avialable = Avialable + allocation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Continue till all process are checked</li>
+<li>If all the process are processed
+<ul>
+<li>it is in safe state</li>
+</ul>
+</li>
+<li>else
+<ul>
+<li>it is in deadlock state</li>
+</ul>
+</li>
+</ul>
+<h1 id="memory-allocation">Memory allocation</h1>
+<ul>
+<li><strong>Important Note:</strong> Once the memory block is used then we can’t use the block and its memory hole again for other unallocated blocks.</li>
+</ul>
+<h2 id="first-fit">First Fit</h2>
+<ul>
+<li>Use the first memory block that fits the unallocated block</li>
+<li>Then again search from start</li>
+</ul>
+<h2 id="next-fit">Next Fit</h2>
+<ul>
+<li>Use the first memory block that fits the unallocated block</li>
+<li>Now start from the next memory block</li>
+</ul>
+<h2 id="best-fit">Best Fit</h2>
+<ul>
+<li>Use the first memory block that fits the unallocated block also has the smallest memory hole</li>
+<li>Then again search from start</li>
+</ul>
+<h2 id="worst-fit">Worst Fit</h2>
+<ul>
+<li>Use the first memory block that fits the unallocated block also has the largest memory hole</li>
+<li>Then again search from start</li>
+</ul>
+<h1 id="page-replacement">Page Replacement</h1>
+<ul>
+<li><strong>Page Hit(PH)</strong>: When the next string reference is already in the frames</li>
+<li><strong>Page Fault(PF)</strong>: When the next string reference is not present in the frames and must be replaced</li>
+</ul>
+<h2 id="fifo-first-in-first-out">FIFO (First In First Out)</h2>
+<ul>
+<li>Add Strings till frames are available</li>
+<li>After frames are full
+<ul>
+<li>If <strong>PF</strong>, Replace the oldest or first string</li>
+</ul>
+</li>
+<li>Continue until all string are replaced</li>
+</ul>
+<h2 id="lru-least-recently-used">LRU (Least Recently Used)</h2>
+<ul>
+<li>Add Strings till frames are available</li>
+<li>After frames are full
+<ul>
+<li>If <strong>PF</strong>, Replace the string which was used the furthest from current position</li>
+</ul>
+</li>
+<li>Continue until all string are replaced</li>
+</ul>
+<h2 id="optimal">Optimal</h2>
+<ul>
+<li>Add Strings till frames are available</li>
+<li>After frames are full
+<ul>
+<li>If <strong>PF</strong>, Replace the string which will be used the furthest from current position</li>
+</ul>
+</li>
+<li>Continue until all string are replaced</li>
+</ul>
+<h2 id="second-chance">Second Chance</h2>
+<ul>
+<li>Add strings till frames are available</li>
+<li>After frames are full
+<ul>
+<li>If <strong>PH</strong>, Give the string reference a second chance bit</li>
+<li>If <strong>PF</strong>, Check for the string reference that has no second bit and replace that
+<ul>
+<li>If there are two or more string references that has no second bit replace the one that is oldest.</li>
+</ul>
+</li>
+<li>After every two string reference the second chance bit is removed.</li>
+</ul>
+</li>
+</ul>
+<h1 id="disk-scheduling">Disk Scheduling</h1>
+<ul>
+<li>Always starts at a <strong>Head Position</strong> given</li>
+<li>Has a sequence of position to be read given</li>
+</ul>
+<h2 id="fcfs">FCFS</h2>
+<ul>
+<li>In sequence of given order read each position</li>
+<li><strong>Seek Time:</strong> = sum of all distance travelled</li>
+</ul>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200608201201/fcfs3.jpg" alt="FCFS disk scheduling"></p>
+<h2 id="sstf-shortest-seek-time-first">SSTF (Shortest Seek Time First)</h2>
+<ul>
+<li>Read the position which has shortest distance from current Head position</li>
+<li>Continue till all the position are read</li>
+<li><strong>Seek Time:</strong> = sum of all distance travelled</li>
+</ul>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200608201702/sstf1.jpg" alt="SSTF disk scheduling"></p>
+<h2 id="scan--elevator">SCAN / Elevator</h2>
+<ul>
+<li>Given <strong>towards higher or smaller</strong></li>
+<li>If <em>(towards higher)</em>
+<ul>
+<li>Start scaning towards the last disk position while reading the positions</li>
+<li>Now move towards the smaller side of disk till the smallest disk position given</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Largest pos - initial pos) + (Largest pos - smallest given pos)</li>
+<li>If <em>(towards smaller)</em>
+<ul>
+<li>Start scaning towards the first disk position while reading the positions</li>
+<li>Now move towards the larger side of disk till the largest disk position given</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Initial pos - smallest pos) + (Largest given pos - smallest pos)</li>
+</ul>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200608202008/scan4.jpg" alt="SCAN scheduling"></p>
+<h2 id="cscan-circular-scan">CSCAN (Circular SCAN)</h2>
+<ul>
+<li>Given <strong>towards higher or smaller</strong></li>
+<li>If <em>(towards higher)</em>
+<ul>
+<li>Start scaning towards the last disk position while reading the positions</li>
+<li>Now move towards the smallest disk position <strong>without scanning</strong></li>
+<li>Now move towards the larger side of disk till the remaining given disk positions are read</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Largest pos - initial pos) + (Largest pos - smallest pos) + (final pos - smallest pos)</li>
+<li>If <em>(towards smaller)</em>
+<ul>
+<li>Start scaning towards the first disk position while reading the positions</li>
+<li>Now move towards the largest disk position <strong>without scanning</strong></li>
+<li>Now move towards the smaller side of disk till the remaining given disk positions are read</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Initial pos - smallest pos) + (Largest pos - smallest pos) + (largest pos - final pos)</li>
+</ul>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200608202230/cscan1.jpg" alt="CSCAN scheduling"></p>
+<h2 id="look">LOOK</h2>
+<ul>
+<li>Given <strong>towards higher or smaller</strong></li>
+<li>If <em>(towards higher)</em>
+<ul>
+<li>Start scaning towards the largest given position while reading the positions</li>
+<li>Now move towards the smaller side of disk till the smallest disk position given</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Largest given pos - initial pos) + (Largest given pos - smallest given pos)</li>
+<li>If <em>(towards smaller)</em>
+<ul>
+<li>Start scaning towards the smallest given position while reading the positions</li>
+<li>Now move towards the larger side of disk till the largest disk position given</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Initial pos - smallest given pos) + (Largest given pos - smallest given pos)</li>
+</ul>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200608202613/look1.jpg" alt="LOOK scheduling"></p>
+<h2 id="clook">CLOOK</h2>
+<ul>
+<li>Given <strong>towards higher or smaller</strong></li>
+<li>If <em>(towards higher)</em>
+<ul>
+<li>Start scaning towards the largest given position while reading the positions</li>
+<li>Now move towards the smallest given disk position <strong>without scanning</strong></li>
+<li>Now move towards the larger side of disk till the remaining given disk positions are read</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Largest given pos - initial pos) + (Largest given pos - smallest given pos) + (final pos - smallest given pos)</li>
+<li>If <em>(towards smaller)</em>
+<ul>
+<li>Start scaning towards the first disk position while reading the positions</li>
+<li>Now move towards the largest given disk position <strong>without scanning</strong></li>
+<li>Now move towards the smaller side of disk till the remaining given disk positions are read</li>
+</ul>
+</li>
+<li><strong>Seek Time</strong> = (Initial pos - smallest given pos) + (Largest given pos - smallest given pos) + (largest given pos - final pos)</li>
+</ul>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200608202846/clook1.jpg" alt="CLOOK scheduling"></p>
+
+    </div>
+  </div>
+</body>
+
+</html>

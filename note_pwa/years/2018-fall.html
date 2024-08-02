@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2018-fall</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body class="stackedit">
+	<span class="menu">&rarr;</span>
+  <span class="closeMenu">&times;</span>
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#fall">2018-Fall</a>
+<ul>
+<li><a href="#a">1a</a></li>
+<li><a href="#b">1b</a></li>
+<li><a href="#a-1">2a</a></li>
+<li><a href="#b-1">2b</a></li>
+<li><a href="#a-2">3a</a></li>
+<li><a href="#b-2">3b</a></li>
+<li><a href="#a-3">4a</a></li>
+<li><a href="#b-3">4b</a></li>
+<li><a href="#a-4">5a</a></li>
+<li><a href="#b-4">5b</a></li>
+<li><a href="#a-5">6a</a></li>
+<li><a href="#b-5">6b</a></li>
+<li><a href="#a-divide-and-conquer-algorithm">7a Divide and conquer algorithm</a></li>
+<li><a href="#b-radix-sort">7b Radix sort</a></li>
+<li><a href="#c-worst-case-complexity">7c Worst case complexity</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="fall">2018-Fall</h1>
+<h2 id="a">1a</h2>
+<h3 id="define-abstract-data-typeadt-with-example.-what-are-teh-data-structures-used-in-the-following-areas-print-jobs-in-computer-network-data-model-and-hierarchical-data-model">Define Abstract Data type(ADT) with example. What are teh data structures used in the following areas: Print jobs in computer, Network data model and Hierarchical data model?</h3>
+<ul>
+<li>
+<p>ADT is a useful tool for specifying the logical properties of the data type. The definition of ADT only mentions what operations are to be performed but not how these operations will be implemented. It does not specify how data will be organized in memory and what algorithms will be used for implementing the operations. ADT is a Black box that hides the inner structure and design of the data type. Since ADT hides the implementation of the data types only showing how to use them so, ADT is an abstract data type.</p>
+</li>
+<li>
+<p><strong>Print jobs:-</strong> They use queue data structures in their working process. Sometimes priority queue is also used as a working data structure.</p>
+</li>
+<li>
+<p><strong>Network model:-</strong> They use graph-like structure for its data structure and are allowed to have more than one parent node.</p>
+</li>
+<li>
+<p><strong>Hierarchy model:-</strong> They use tree-like structure for its data structure with a single root to which all the data is linked.</p>
+</li>
+</ul>
+<h2 id="b">1b</h2>
+<h3 id="what-is-the-advantage-of-postfix-expression-over-infix-expression-evaluate-the-given-expression-using-prefix-notation.">What is the advantage of Postfix expression over infix expression? Evaluate the given expression using prefix notation.</h3>
+<h3 id="abc-de-assume-a5b6c2d12-and-e4">A*(B+C)-(D/E) (Assume A=5,B=6,C=2,D=12 and E=4)</h3>
+<ul>
+<li>
+<p>Advantages of postfix expression over infix exxpression are:-</p>
+<ol>
+<li>Any formula can be expressed without parenthesis.</li>
+<li>It is very convenient for evaluating formulas on a computer with stacks.</li>
+<li>Postfix expression doesn’t have the operator precedence.</li>
+<li>Postfix is slightly easier to evaluate.</li>
+<li>It reflects the order in which operations are performed.</li>
+<li>You need to worry about the left and right associativity.</li>
+</ol>
+</li>
+<li>
+<p><code>To evaluate the given expression in postfix notation</code></p>
+</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">Step  <span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span> Convert  the  given  infix  expression  to  prefix  expression
+Reverse  the  <span class="token function">expression</span> <span class="token punctuation">(</span>E<span class="token operator">/</span>D<span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">(</span>C<span class="token operator">+</span>B<span class="token punctuation">)</span><span class="token operator">*</span>A
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Read</th>
+<th>Stack</th>
+<th>Output list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘(‘</td>
+<td>(</td>
+<td></td>
+</tr>
+<tr>
+<td>'E’</td>
+<td>(</td>
+<td>E</td>
+</tr>
+<tr>
+<td>‘/’</td>
+<td>(/</td>
+<td>E</td>
+</tr>
+<tr>
+<td>‘D’</td>
+<td>(/</td>
+<td>ED</td>
+</tr>
+<tr>
+<td>‘)’ <code>since closing parenthesis is encountered the operators till the opening parenthesis is popped first</code></td>
+<td></td>
+<td>ED/</td>
+</tr>
+<tr>
+<td>‘-’</td>
+<td>-</td>
+<td>ED/</td>
+</tr>
+<tr>
+<td>‘(’</td>
+<td>-(</td>
+<td>ED/</td>
+</tr>
+<tr>
+<td>‘C’</td>
+<td>-(</td>
+<td>ED/C</td>
+</tr>
+<tr>
+<td>‘+’</td>
+<td>-(+</td>
+<td>ED/C</td>
+</tr>
+<tr>
+<td>‘B’</td>
+<td>-(+</td>
+<td>ED/CB</td>
+</tr>
+<tr>
+<td>‘)’ <code>since closing parenthesis is encountered the operators till the opening parenthesis is popped first</code></td>
+<td>-</td>
+<td>ED/CB+</td>
+</tr>
+<tr>
+<td>‘*’</td>
+<td>-*</td>
+<td>ED/CB+</td>
+</tr>
+<tr>
+<td>‘A’</td>
+<td>-*</td>
+<td>ED/CB+A</td>
+</tr>
+<tr>
+<td><code>since no more character to read remaining operators are popped and pushed to output list</code></td>
+<td></td>
+<td>ED/CB+A*-</td>
+</tr>
+</tbody>
+</table><pre class=" language-js"><code class="prism  language-js">Step  <span class="token number">2</span><span class="token punctuation">:</span><span class="token operator">-</span> Evaluate  the  prefix  expression <span class="token punctuation">{</span>Given  A<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> B<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> C<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> D<span class="token operator">=</span><span class="token punctuation">,</span><span class="token number">12</span>  E<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">}</span>
+Put  the  expression  one  by  one  on  the  stack
+If  operator  is  encountered  pop  the  top  two  operand  and  calculate  <span class="token keyword">as</span>  B<span class="token punctuation">.</span><span class="token punctuation">.</span>A
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Stack</th>
+<th>Operation</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>4,12</td>
+<td></td>
+<td>4,12</td>
+</tr>
+<tr>
+<td>4,12,/</td>
+<td>12/4=3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3,2</td>
+<td></td>
+<td>3,2</td>
+</tr>
+<tr>
+<td>3,2,6</td>
+<td></td>
+<td>3,2,6</td>
+</tr>
+<tr>
+<td>3,2,6,+</td>
+<td>6+2=8</td>
+<td>3,8</td>
+</tr>
+<tr>
+<td>3,8,5</td>
+<td></td>
+<td>3,8,5</td>
+</tr>
+<tr>
+<td>3,8,5,*</td>
+<td>5*8=40</td>
+<td>3,40</td>
+</tr>
+<tr>
+<td>3,40,-</td>
+<td>40-3</td>
+<td>37</td>
+</tr>
+</tbody>
+</table><h2 id="a-1">2a</h2>
+<h3 id="write-difference-between-linear-and-circular-queue.-write-an-algorithm-for-insert-and-delete-operations-for-circular-queue.">Write difference Between linear and circular queue. Write an algorithm for insert and delete operations for circular queue.</h3>
+
+<table>
+<thead>
+<tr>
+<th>Linear Queue</th>
+<th>Circular Queue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In this queue the front and rear pointer points at different places.</td>
+<td>In this queue the front and rear pointer points at the same place.</td>
+</tr>
+<tr>
+<td>In this queue the last node is not connected to the first node.</td>
+<td>In this queue the last node is connected to the first node to make a circle.</td>
+</tr>
+<tr>
+<td>Pointers are updated by 1.</td>
+<td>Pointers are updated by (P+1)%n , where P = pointer value, n = max value</td>
+</tr>
+<tr>
+<td>For inserting data more than the size of the queue, the queue has to be empty first.</td>
+<td>For inserting data more than the size of the queue, we can delete the first data and add the new data there.</td>
+</tr>
+</tbody>
+</table><ul>
+<li><code>Algorithm for insertion in circular queue</code></li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">Initialize  front  and  rear  <span class="token keyword">as</span> <span class="token operator">-</span><span class="token number">1</span>  and  an  array  Q<span class="token punctuation">[</span>max<span class="token punctuation">]</span>
+Step  <span class="token number">1</span><span class="token punctuation">:</span> Start
+Step  <span class="token number">2</span><span class="token punctuation">:</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>front <span class="token operator">==</span> <span class="token punctuation">(</span>rear<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">%</span>max<span class="token punctuation">)</span>
+print  error  <span class="token string">"Circular queue overflow"</span>
+Step  <span class="token number">3</span><span class="token punctuation">:</span> <span class="token keyword">else</span>
+		<span class="token punctuation">{</span>
+		rear <span class="token operator">=</span> <span class="token punctuation">(</span>rear<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">%</span>max
+		Q<span class="token punctuation">[</span>rear<span class="token punctuation">]</span> <span class="token operator">=</span> element<span class="token punctuation">;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>front <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> f<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+Step  <span class="token number">4</span><span class="token punctuation">:</span> stop
+</code></pre>
+<ul>
+<li><code>Algorithm for deletion in circular queue</code></li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">Initialize  element <span class="token operator">=</span> <span class="token number">0</span>
+Step  <span class="token number">1</span><span class="token punctuation">:</span> Start
+Step  <span class="token number">2</span><span class="token punctuation">:</span> <span class="token function">If</span><span class="token punctuation">(</span><span class="token punctuation">(</span>front <span class="token operator">==</span> rear<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>rear <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+print  error  <span class="token string">"circular queue underflow"</span>
+Step  <span class="token number">3</span><span class="token punctuation">:</span> <span class="token keyword">else</span>
+		<span class="token punctuation">{</span>
+		element <span class="token operator">=</span> Q<span class="token punctuation">[</span>front<span class="token punctuation">]</span>
+		<span class="token function">If</span><span class="token punctuation">(</span>front <span class="token operator">==</span> rear<span class="token punctuation">)</span> 
+			front <span class="token operator">=</span> rear <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+		Else
+			front <span class="token operator">=</span> <span class="token punctuation">(</span>front<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">%</span>max
+		<span class="token punctuation">}</span>
+Step  <span class="token number">4</span><span class="token punctuation">:</span> End
+</code></pre>
+<h2 id="b-1">2b</h2>
+<h3 id="how-many-steps-are-required-to-solve-tower-of-hanoi-problem-write-the-steps-to-solve-toh-problem-for-4-discs-giving-pictorial-illustrations.">How many steps are required to solve Tower of hanoi problem? Write the steps to solve TOH problem for 4 discs giving pictorial illustrations.</h3>
+<ul>
+<li><code>Steps to solve TOH problem for 4 discs</code></li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">Let  us  suppose  top  <span class="token function">disc</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span> lower  to  <span class="token function">t</span> <span class="token punctuation">(</span>t<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lower  to  t<span class="token operator">+</span><span class="token number">1</span> <span class="token punctuation">(</span>t<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">)</span> and  bottom  <span class="token function">disc</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+<span class="token function">Source</span> <span class="token punctuation">(</span>starting  peg<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">aux</span> <span class="token punctuation">(</span>auxiliary  peg<span class="token punctuation">)</span> <span class="token punctuation">,</span> <span class="token function">dest</span> <span class="token punctuation">(</span>destination  peg<span class="token punctuation">)</span>
+Step  <span class="token number">1</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  source  to  aux
+Step  <span class="token number">2</span><span class="token punctuation">:</span> Move  disc  t<span class="token operator">+</span><span class="token number">1</span>  <span class="token keyword">from</span>  source  to  dest
+Step  <span class="token number">3</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  aux  to  dest
+Step  <span class="token number">4</span><span class="token punctuation">:</span> Move  disc  t<span class="token operator">+</span><span class="token number">2</span>  <span class="token keyword">from</span>  source  to  aux
+Step  <span class="token number">5</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  dest  to  source
+Step  <span class="token number">6</span><span class="token punctuation">:</span> Move  disc  t<span class="token operator">+</span><span class="token number">1</span>  <span class="token keyword">from</span>  dest  to  aux
+Step  <span class="token number">7</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  source  to  aux
+Step  <span class="token number">8</span><span class="token punctuation">:</span> Move  disc  n  <span class="token keyword">from</span>  source  to  dest
+Step  <span class="token number">9</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  aux  to  dest
+Step  <span class="token number">10</span><span class="token punctuation">:</span> Move  disc  t<span class="token operator">+</span><span class="token number">1</span>  <span class="token keyword">from</span>  aux  to  source
+Step  <span class="token number">11</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  dest  to  source
+Step  <span class="token number">12</span><span class="token punctuation">:</span> Move  disc  t<span class="token operator">+</span><span class="token number">2</span>  <span class="token keyword">from</span>  aux  to  dest
+Step  <span class="token number">13</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  source  to  aux
+Step  <span class="token number">14</span><span class="token punctuation">:</span> Move  disc  t<span class="token operator">+</span><span class="token number">1</span>  <span class="token keyword">from</span>  source  to  dest
+Step  <span class="token number">15</span><span class="token punctuation">:</span> Move  disc  t  <span class="token keyword">from</span>  aux  to  dest
+</code></pre>
+<h2 id="a-2">3a</h2>
+<h3 id="differentiate-between-static-and-dynamic-list.-write-an-algorithm-to-insert-a-node-at-the-end-of-doubly-linked-list.">Differentiate between static and dynamic list. Write an algorithm to insert a node at the end of doubly linked list.</h3>
+
+<table>
+<thead>
+<tr>
+<th>Static list</th>
+<th>Dynamic list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory allocation is done in compile time.</td>
+<td>Memory allocation is done in runtime.</td>
+</tr>
+<tr>
+<td>Data is stored in a stack.</td>
+<td>Data is stored in heap.</td>
+</tr>
+<tr>
+<td>Datas cannot be changed during the program.</td>
+<td>Datas are determined during the program.</td>
+</tr>
+<tr>
+<td>Max size is predetermined.</td>
+<td>Max size of the list can be determined during program time.</td>
+</tr>
+</tbody>
+</table><ul>
+<li><code>Algorithm to insert node at the end of doubly linked list</code></li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">Step  <span class="token number">1</span><span class="token punctuation">:</span> Create  a  <span class="token keyword">new</span>  <span class="token class-name">node</span>
+Step  <span class="token number">2</span><span class="token punctuation">:</span> t <span class="token operator">=</span> start<span class="token punctuation">,</span> where  t  is  temporary  variable
+Step  <span class="token number">3</span><span class="token punctuation">:</span> Traverse  the  tree  until  t<span class="token operator">-</span><span class="token operator">&gt;</span>right <span class="token operator">=</span> <span class="token keyword">null</span>
+Step  <span class="token number">4</span><span class="token punctuation">:</span> t<span class="token operator">-</span><span class="token operator">&gt;</span>right <span class="token operator">=</span> n
+Step  <span class="token number">5</span><span class="token punctuation">:</span> n<span class="token operator">-</span><span class="token operator">&gt;</span>left <span class="token operator">=</span> t
+</code></pre>
+<h2 id="b-2">3b</h2>
+<h3 id="what-is-circular-linked-list-write-an-algorithm-for-push-and-pop-operation-on-stack-using-linked-list.">What is Circular linked list? Write an algorithm for push and pop operation on stack using Linked list.</h3>
+<ul>
+<li>
+<p>Circular linked list is a type of linked list in which the next field of the last node is connected back to the first node.</p>
+</li>
+<li>
+<p>Since the given linked list is stack so we can insert and delete items from the front or rear only.</p>
+</li>
+<li>
+<p>We say push and pop can only be done at the front of the linked list.</p>
+</li>
+<li>
+<p><code>Algorithm for Insertion in a linked list At the first of list</code></p>
+</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js"><span class="token punctuation">[</span>start <span class="token operator">=</span> points  to  the  first  node  <span class="token keyword">of</span>  the  list<span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token operator">-</span><span class="token operator">&gt;</span>next  points  to  next  node  address<span class="token punctuation">]</span>
+Step  <span class="token number">1</span><span class="token punctuation">:</span> create  a  <span class="token keyword">new</span>  <span class="token class-name">node</span>  <span class="token function">named</span> <span class="token punctuation">(</span>newnode<span class="token punctuation">)</span>
+Step  <span class="token number">2</span><span class="token punctuation">:</span> newnode<span class="token operator">-</span><span class="token operator">&gt;</span>next <span class="token operator">=</span> start
+Step  <span class="token number">3</span><span class="token punctuation">:</span> start <span class="token operator">=</span> newnode
+</code></pre>
+<ul>
+<li><code>Algorithm for Deletion in a linked list From the first of list</code></li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">Step  <span class="token number">1</span><span class="token punctuation">:</span> t1 <span class="token operator">=</span> start
+Step  <span class="token number">2</span><span class="token punctuation">:</span> start <span class="token operator">=</span> start<span class="token operator">-</span><span class="token operator">&gt;</span>next
+Step  <span class="token number">3</span><span class="token punctuation">:</span> <span class="token keyword">delete</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="a-3">4a</h2>
+<h3 id="suppose-the-following-list-of-letters-is-inserted-in-order-into-an-empty-binary-search-tree.jrdtgeamhfqub.-find-the-final-tree-and-perform-different-tree-traversals.">Suppose the following list of letters is inserted in order into an empty binary search tree.J,R,D,T,G,E,A,M,H,F,Q,U,B. Find the final tree and perform different tree traversals.</h3>
+<p><img src="../assets/BST_one.jpg" alt="BST constructed tree"></p>
+<p><code>(V= visit a node, L=Visit the left subtree, R=visit the right subtree)</code></p>
+<ul>
+<li>VLR (PreOrder)<br>
+<em><strong>J,D,A,B,G,E,F,H,R,M,Q,T,U</strong></em></li>
+<li>LVR (InOrder)<br>
+<em><strong>A,B,D,E,F,G,H,J,M,Q,R,T,U</strong></em></li>
+<li>LRV(PostOrder)<br>
+<em><strong>B,A,F,E,H,G,D,Q,M,U,T,R,J</strong></em></li>
+</ul>
+<h2 id="b-3">4b</h2>
+<h3 id="write-a-structure-definition-to-represent-avl-tree.-create-a-avl-treefrom-the-given-set-of-values.-35118411272">Write a structure definition to represent AVL tree. Create a AVL treefrom the given set of values. 3,5,118,4,1,12,7,2</h3>
+<ul>
+<li>AVL tree is a special type of BST tree that is a self-balancing height tree. In this tree every node must have height balanced, i.e the difference between height of left subtree and right subtree is no more than 1.</li>
+</ul>
+<p><img src="../assets/AVL_one.jpg" alt="AVL tree constructed"></p>
+<h2 id="a-4">5a</h2>
+<h3 id="trace-quick-sort-to-sort-the-following-data-43-16-11-89-35-47-1-92">Trace quick sort to sort the following data (43, 16, 11, 89, 35, 47, 1, 92)</h3>
+<pre class=" language-js"><code class="prism  language-js">We  take  a  pivot  point<span class="token punctuation">,</span> usually  the  first  data  and  divide  the  remaining  datas  either  to  left  <span class="token keyword">if</span>  small  than  pivot  or  to  right  <span class="token keyword">if</span>  greater  than  pivot<span class="token punctuation">.</span>
+	<span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`43`</span></span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">47</span><span class="token punctuation">,</span> <span class="token number">92</span>
+Repeat  the  same  process  <span class="token keyword">in</span>  the  sub  groups
+	<span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`16`</span></span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`43`</span></span><span class="token punctuation">,</span> <span class="token number">47</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`89`</span></span><span class="token punctuation">,</span> <span class="token number">92</span>
+	<span class="token number">1</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`11`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`16`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`35`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`43`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`47`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`89`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`92`</span></span>
+</code></pre>
+<h2 id="b-4">5b</h2>
+<h3 id="define-collision.-what-are-the-techniques-used-for-collision-resolution-in-hashing.-explain-with-example.">Define Collision. What are the techniques used for collision resolution in hashing. Explain with example.</h3>
+<ul>
+<li>
+<p>Hashing is the process of making tables or lists of data using hash functions that convert the given key into smaller key that is used for indexing the table.</p>
+</li>
+<li>
+<p>A situation in which a newly inserted data maps to an already occupied slot in the table is called collision hashing</p>
+</li>
+<li>
+<p>To handle collision we have two main techniques:-</p>
+<ol>
+<li>Open hashing (Separate chaining)
+<ul>
+<li>It is the method in which each cell of the table where collision occurs points to a linked list.</li>
+<li>It is used mostly when we don’t know the number of datas to be inserted or deleted.</li>
+<li>Advantage:-
+<ul>
+<li>It is simple to implement.</li>
+<li>Hash table never fills up.</li>
+</ul>
+</li>
+<li>Disadvantage:-
+<ul>
+<li>If the chain becomes long, searching time becomes long.</li>
+<li>Uses extra spaces for links</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Closed hashing (Open addressing)
+<ul>
+<li>It is the method in which each data is stored in the hash table itself.</li>
+<li>It is used when the number of datas to be inserted or deleted is known.</li>
+<li>Advantage:-
+<ul>
+<li>No extra spaces for links.</li>
+<li>Every slot of the hash table is used.</li>
+</ul>
+</li>
+<li>Disadvantage:-
+<ul>
+<li>It requires more computation.</li>
+<li>Clustering and load factor may occur.</li>
+</ul>
+</li>
+<li>There are three ways of obtaining Closed hashing:-
+<ol>
+<li>Linear probing
+<ul>
+<li>It is the method in which probing (Searching for next empty slot) is linear.</li>
+<li>Clustering occurs while using this method as more collision occurs.</li>
+</ul>
+</li>
+<li>Quadratic probing
+<ul>
+<li>It is the method in which probing is quadratic.</li>
+<li>It works in i2 in i’th iteration.</li>
+</ul>
+</li>
+<li>Double hashing
+<ul>
+<li>It is the method in which a second hashing function is done for the same key.</li>
+<li>Clustering is not encountered but time for 2 hashing functions is more.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="a-5">6a</h2>
+<h3 id="what-do-you-mean-by-spanning-tree-of-graph-find-the-minimal-spanning-tree-of-the-following-graph-using-kruskals-algorithm.">What do you mean by Spanning tree of graph? Find the minimal spanning tree of the following graph using Kruskal’s algorithm.</h3>
+<ul>
+<li>Spanning tree is a subset of a tree that contains all the nodes in the parent tree and have no cyclic graph formed.</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">We  have  number  <span class="token keyword">of</span>  <span class="token function">vertices</span> <span class="token punctuation">(</span>V<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">6</span>
+Step  <span class="token number">1</span><span class="token punctuation">:</span> Sort  all  the  edges  <span class="token keyword">in</span>  ascending  order<span class="token punctuation">.</span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span>
+Step  <span class="token number">2</span><span class="token punctuation">:</span> Take  the  smallest  <span class="token function">edge</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> and  repeat  taking  the  next  small  edge<span class="token punctuation">.</span>
+If  <span class="token keyword">new</span>  <span class="token class-name">edge</span>  forms  a  cycle  then  take  the  next  small  edge  and  check  <span class="token keyword">for</span>  cyclic<span class="token punctuation">.</span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="../assets/spanningtree_one.jpg" alt="Spanning tree figure"></p>
+<p><strong><code>It has (V-1) = 6-1 = 5 edges</code></strong></p>
+<h2 id="b-5">6b</h2>
+<h3 id="explain-with-suitable-example-bfs-and-dfs-traversal-of-a-graph.">Explain with suitable example, BFS and DFS traversal of a graph.</h3>
+<ul>
+<li>
+<p>BFS(Breadth First Search) is a way of traversing in the graph, where we start from the node we want to start searching from (Usually root node) and visit all its unvisited neighbour nodes in that depth before moving to the next depth level of the node.</p>
+</li>
+<li>
+<p>In this traversal all the nodes from a level are visited first before moving to more deep level.</p>
+</li>
+<li>
+<p>DFS(Depth First Search) is a way of traversing in the graph, where we start from the node we want to start searching from (Usually root node) and visit all its children nodes moving to the next depth level of the node, then coming back to move to the next unvisited neighbour’s children nodes.</p>
+</li>
+<li>
+<p>In this traversal nodes from the deepest level are visited first and move backup to visit next neighbour nodes.</p>
+<p><img src="../assets/example_one.jpg" alt="A graph figure"></p>
+</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js">In  BFS<span class="token punctuation">:</span> A<span class="token punctuation">,</span>B<span class="token punctuation">,</span>C<span class="token punctuation">,</span>D<span class="token punctuation">,</span>E<span class="token punctuation">,</span>F<span class="token punctuation">,</span>G<span class="token punctuation">,</span>H<span class="token punctuation">,</span>I
+In  DFS<span class="token punctuation">:</span> A<span class="token punctuation">,</span>B<span class="token punctuation">,</span>E<span class="token punctuation">,</span>F<span class="token punctuation">,</span>C<span class="token punctuation">,</span>G<span class="token punctuation">,</span>H<span class="token punctuation">,</span>I<span class="token punctuation">,</span>D
+</code></pre>
+<h2 id="a-divide-and-conquer-algorithm">7a Divide and conquer algorithm</h2>
+<ul>
+<li>Divide and conquer algorithm is a type of algorithm in which we divide the given sets of data into sub groups and repeat the same algorithm within those sub groups until we get the desired output.</li>
+<li>Some of the divide and conquer algorithm are:- quick sort, merge sort, etc</li>
+</ul>
+<h2 id="b-radix-sort">7b Radix sort</h2>
+<ul>
+<li>It is a type of sort in which the numbers are sorted comparing the digits according to their positions.</li>
+<li>It can be used to sort only positive numbers.</li>
+<li>Each position is compared in a pass, from ones to tens to hundreds to so on.</li>
+<li>It is also called as bucket sort as the numbers are compared and put at a bucket from 0 - 9</li>
+</ul>
+<h2 id="c-worst-case-complexity">7c Worst case complexity</h2>
+<ul>
+<li>Worst case complexity is a method that measures the resources(i.e running time, memory, etc) of an algorithm for the given number of inputs.</li>
+<li>It gives an upper bound of the algorithm determining the maximum time an algorithm is running or maximum memory usage it does.</li>
+<li>It is used to check the efficiency of two or more algorithms for a given number of inputs.</li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>

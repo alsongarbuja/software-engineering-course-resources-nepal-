@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+main {
+    margin: 1em auto;
+    padding: 1em;
+    text-align: center;
+    width: 80%;
+    display: flex;
+
+    flex-wrap: wrap;
+}
+a {
+    text-decoration: none;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+    width: fit-content;
+}
+a:hover {
+    color: rgb(96, 96, 204);
+    border-color: rgb(96, 96, 204);
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-block: .5em;
+}
+b {
+    color: darksalmon;
+}
+ul {
+    padding-left: 2.5em;
+}
+summary {
+    cursor: pointer;
+    color: lightslategrey;
+    font-weight: 600;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+figure {
+    margin-block: 1em;
+}
+table, td, th {
+    border: 1px solid #444;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1em;
+}
+h4 {
+    margin-top: 1em;
+}
+.big-img {
+    width: min(100%, 600px);
+}
+
+/* utility classes */
+.inner-ul {
+    padding-left: 2em;
+}
+.main {
+    text-align: start;
+    display: block;
+}
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(142, 20, 190);
+}
+.tooltip>span {
+    display: none;
+    position: absolute;
+    z-index: 2000;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.781);
+    color: #ffffff;
+    padding: .5em;
+    border-radius: 2px;
+    /* max-width: 200px; */
+    word-wrap: break-word;
+}
+.tooltip:hover span{
+    display: block;
+}
+.object {
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: rgba(233, 159, 75, 0.747);
+    padding: .5em;
+}
+.chess-table tr:nth-child(even)>td:nth-child(even), .chess-table tr:nth-child(odd)>td:nth-child(odd) {
+    background-color: #000;
+    color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 90%;
+    }
+    img {
+        width: 100%;
+    }
+}

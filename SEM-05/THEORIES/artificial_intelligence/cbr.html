@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBR</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>CBR - Case Based Reasoning</h1>
+        <p>
+            CBR is a reasoning and problem solving system that uses a large library of cases(problems) that it
+            solved in the past to solve the new cases (unsolved present problem).
+
+            <br><br>
+            It is a cyclic and intergrated process where it uses the old cases solution and also intergate it 
+            and learn from it back to the system.
+
+            <br><br>
+            The advantages of CBR systems are:
+            <ul>
+                <li>Almost all of the work is performed virtually in query time saving alot of memory</li>
+                <li>It can be both problem solving and a self learning system</li>
+                <li>It can be used in regression and classification problems</li>
+            </ul>
+            <br>
+            Some examples are: <b>CHEF, Meal planning system</b>, <b>CASEY (diagnoses cardiac diseases based on diagnosis of earlier patient)</b>, etc
+        </p>
+        <br><br>
+        <p>
+            The main 4 process of CBR are:
+            <ul>
+                <li>
+                    <details>
+                        <summary>Retrive</summary>
+                        <p>
+                            In this step the CBR system <b>retrives</b> all the previous cases that are similar to the new
+                            case presented.
+                        </p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Reuse</summary>
+                        <p>
+                            In this step the CBR system <b>reuses</b> the most effective case solution it can find to solve the
+                            new case.
+                        </p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Revise</summary>
+                        <p>
+                            In this step the CBR system <b>revises</b> the solution it came up with for the new case and check if
+                            that works or needs to be revised again.
+                        </p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Retain</summary>
+                        <p>
+                            In this step the CBR system <b>retains</b> the new revised solution to the new case if it is relaible and
+                            can be useful in the future.
+                        </p>
+                    </details>
+                </li>
+            </ul>
+        </p>
+        <br>
+        <img src="./assets/cbr.jpg" alt="CBR system">
+    </main>
+</body>
+</html>

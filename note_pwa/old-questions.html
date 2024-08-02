@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>old-questions</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196f3"/>
+    
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    @media screen and (max-width: 700px){
+      .stackedit__html>ul {
+        padding-left: 0;
+      }
+
+      table {
+        font-size: .5rem;
+      }
+
+      .tb {
+        font-size: .2rem;
+      }
+
+      code {
+        max-width: 370px;
+      }
+    }
+  </style>
+
+<script defer src="./js/script.js"></script>
+</head>
+
+<body class="stackedit" onload="moodChoose()">
+  <span class="night"><i class="fas fa-moon"></i></span>
+  <span class="menu">&rarr;</span>
+  <span class="closeMenu">&times;</span>
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li>
+<ul>
+<li><a href="#multiprogramming-spooling-in-operating-system">Multiprogramming Spooling in operating system</a></li>
+<li><a href="#critical-section-and-minimum-requirements-for-a-solution-of-critical-section-problem">Critical section and minimum requirements for a solution of Critical section problem</a></li>
+<li><a href="#semaphores">Semaphores</a></li>
+<li><a href="#solution-to-dining-philosopher-problem-using-semaphores.">Solution to Dining philosopher problem using semaphores.</a></li>
+<li><a href="#methods-of-logical-implementation-of-message-passing">Methods of logical implementation of message passing</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h2 id="multiprogramming-spooling-in-operating-system">Multiprogramming Spooling in operating system</h2>
+<ul>
+<li>In some devices where the peripheral are slower Input devices gives the process to the CPU during the time of transfer from input devices to CPU, the CPU is in idle state.</li>
+<li>Also after the execution of the process , the sending of output data from CPU to output devices also take time during which the CPU is again idle.</li>
+<li>In that way the CPU is in idle state most of the time, which is bad for any operating system design.</li>
+<li>Hence the concept of spooling was introduced in which we store the data first in a memory (such as buffer, I/O device-specific interrupts, etc) so when the CPU requests for the process, it can transfer faster meaning CPU idle time is lesser.</li>
+<li>Spooling is a specialized form of multiprogramming for the purpose of copying data between different devices.</li>
+<li>It is usually used as a mediater between two devices with different speed flow, for example: printers, While the computer produces the files to be printed fast the printer is slower than any CPU hence a SPOOL is used to store the files which will be later used by the printer to print.</li>
+</ul>
+<h2 id="critical-section-and-minimum-requirements-for-a-solution-of-critical-section-problem">Critical section and minimum requirements for a solution of Critical section problem</h2>
+<ul>
+<li>The critical section is a code segment where the shared variables can be accessed. That resource may be any resource in a computer like a memory location, Data structure, CPU or any IO device.</li>
+<li>Minimum requirements are:-
+<ol>
+<li><strong>Mutual Exclusion</strong> When one process is executing in its critical section, no other process is allowed to execute in its critical section.</li>
+<li><strong>Progress</strong> When no process is executing in its critical section, and there exists a process that wishes to enter its critical section, it should not have to wait indefinitely to enter it.</li>
+<li><strong>Bounded waiting</strong> There must be a limited waiting time for each process.</li>
+</ol>
+</li>
+</ul>
+<h2 id="semaphores">Semaphores</h2>
+<ul>
+<li>Semaphores are the interger variable used as a synchronizing tool for managing concurrent processes.</li>
+<li>Properties of semaphores are:-
+<ul>
+<li>It has a non-negative value</li>
+<li>They are machine independent</li>
+<li>Each critical section has unique semaphores</li>
+</ul>
+</li>
+<li>Used for solving synchronization problem</li>
+<li>Used for achieving mutual exclusion</li>
+<li>Limitations are:-
+<ul>
+<li>They are global variables</li>
+<li>No linguistic connection between semaphore and data the process holds.</li>
+</ul>
+</li>
+</ul>
+<h2 id="solution-to-dining-philosopher-problem-using-semaphores.">Solution to Dining philosopher problem using semaphores.</h2>
+<ul>
+<li>Dining philoshoper problem statement…</li>
+<li>We can have a solution to the problem using semaphores as follows:
+<ul>
+<li>Each fork is represented as a semaphores which contains either 1 which means it is on the table ot 0 which means it is lifted by one of the philoshopher.</li>
+<li>For each philoshopher
+<ul>
+<li>Check the semaphore of right and left fork</li>
+<li>If( both Semaphores == 1 ) pick up the forks, then semaphores = semaphores - 1 and eat</li>
+<li>If( both Semaphores != 1 ) think</li>
+<li>After eating add 1 to each Semaphores that had became 0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="methods-of-logical-implementation-of-message-passing">Methods of logical implementation of message passing</h2>
+<ul>
+<li>Message passing is a important concept in IPC (Interprocess communication) that allows processes to interact with each other and communicate for completing certain tasks.</li>
+<li>There are 2 main functions message passing system provides
+<ul>
+<li><strong>Send</strong> : To send message</li>
+<li><strong>Recieve</strong>: To receive message</li>
+</ul>
+</li>
+<li>The logical implementation of message passing system are:-
+<ol>
+<li><strong>Direct communication</strong> - In this method of implementation the processes directly send and recieve message among each other. It is done by using send function as send(A, message) which means A is sending message and recieve function as recieve(A, message) which means recieving message sent by A</li>
+<li><strong>Indirect communication</strong>- In this method of implementation the processes send the message first to a mailbox or queue then receive the message from that mailbox. Using send(M, message) send message to mailbox M and recieve(M, message) to receive message from mailbox M</li>
+<li><strong>Synchronous and asychronous</strong>
+<ul>
+<li>Synchronous or blocking method is where the sending or receiving end is blocked until the other end response. It has two ways: <strong>blocking send</strong> which means block the sender until message is recieved first and <strong>blocking recieve</strong> which means blocking any recieved message until it sends a message</li>
+<li>Asynchronous or non-blocking method is where there is no blocking to any end of the communication. Sender sends the message and resume the operation and the reciever gets message which can be null also</li>
+</ul>
+</li>
+<li><strong>Automatic and explict buffer</strong> - In this method we have a temporary queue that holds the message before sending it. It is of 3 types:
+<ul>
+<li><strong>Zero capacity</strong> which means blocking send type no queue at all</li>
+<li><strong>Bounded capacity</strong> which means a finite length of queue until which sender can send but after full again blocking the send</li>
+<li><strong>Unbounded capacity</strong> which means an infinite length of queue and message never gets blocked.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Playing</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>Game Playing</h1>
+        <p>
+            Game playing is one of the major fields that have been used by AI systems to improve. A Game is a fun program
+            that gives us a initial state, some pre conditions / rules and a goal state. The objective of an AI system is 
+            to be able to play the game within those constraints and try to win.
+
+            <br><br>
+            A Game playing AI system must do the following things:
+            <ul>
+                <li>Try to win</li>
+                <li>Try to minimize the loss</li>
+            </ul>
+
+            <br><br>
+            <p>It has always been a challenge for AI system to play general games (i.e have a system that can take the basic instruction of any game and play it effectively)</p>
+        </p>
+        <br>
+        <div>
+            <h3>MinMax Algorithm</h3>
+            <p>
+                Many deterministic, Non-zero sum games where two players have to play against each other and try to win
+                has a catch that each player is alternatively playing hence one try to maximize its win while other minimize
+                the loss.
+                <br><br>
+                The algorithm that gives the min and max value possible for each state of the game is called MinMax Algorithm.
+                <br>
+                In this algorithm we build a game tree that represents the initial state as the root node and the child nodes 
+                represents the next possible state of the game. Each alternative level of nodes represent either min or max value.
+                <br>
+                For example lets say we want to maximize our win hence we play at the maximize level while the opponent tries to minimize
+                his/her loss.
+            </p>
+            <br><br>
+            <p>
+                The advantage of using this algorithm is:
+                <ul>
+                    <li>The system can predict all possible moves hence for best case can win easily.</li>
+                    <li>Even for worst case where the system is lossing, it can predict the lowest loss.</li>
+                </ul>
+            </p>
+            <br>
+            <p>
+                It propagates the min or max value of each level back till the root node then uses a 
+                <span class="tooltip">Static Evaluation Function<span>A function that evaluates the current min or max point one can aquire</span></span>
+                and chooses its next move.
+            </p>
+            <p>
+                For example: 
+                <br>
+                We have this game tree with max - min - max format <br>
+                We do a 2 <span class="tooltip">ply<span>Level of state search done</span></span> and see that
+                the last level have 9, 8, -3 as max points but before that the middle level is opponents turn and
+                they choose the minimum value possible making -6, -2, -4 hence our best choice is to go with <b>C</b>
+                as our loss rate will be less than when we choose other path.
+                <br>
+                <img src="./assets/minmax.jpg" alt="Minmax tree">
+            </p>
+        </div>
+        <br><br>
+        <div>
+            <h3>Alpha Beta cutoff/pruning Technique</h3>
+            <p>
+                The minmax algorithm is a useful algorithm for deterministic and multiplayer games but for games with
+                thousands of possible number of states in each step like chess, GO, etc developing the whole game tree
+                is resource intensive and makes the algorithm slow.
+                <br><br>
+                To optimize the minmax algorithm and try to make it faster for games with larger possible moves too, the 
+                alpha beta cutoff or pruning Technique was developed.
+                <br>
+                The basic concept of this technique is to cutoff/prune/ignore some section or childs of the game tree that
+                doesnot yield any good points than already present. Hence in alpha beta cutoff technique the system doesnot
+                have to build the entire game tree but only those are usefull.
+            </p>
+            <br>
+            <p>
+                Advantages of using alpha beta cutoff:
+                <ul>
+                    <li>It optimizes the minmax algorithm</li>
+                    <li>It uses less space as some nodes doesnot have to be expanded</li>
+                    <li>It is much faster than minmax in most cases</li>
+                </ul>
+            </p>
+            <br><br>
+            <p>
+                For the same game tree as the minmax above this time we don't have to develope the whole
+                game tree. <br>
+                <ul>
+                    <li>The Node <b>G</b> is not expanded as the minimum value possible is -6</li>
+                    <li>The Node <b>K</b> is not expanded as the minimum value possible -2 is already propagated to root node <b>A</b></li>
+                </ul>
+                <br><br>
+                <img src="./assets/alphabeta.jpg" alt="alpha beta cutoff techinque">
+            </p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main class="main">
+        <h1>NLP (Natural Language Processing)</h1>
+        <p>
+            <b>NLP</b> is a part of Artificial Intelligence which consists of Natural Language Understanding
+            as well as Natural Language Generation.
+        </p>
+        <p>
+            It is the process of understanding as well as generating <span class="tooltip">natural language<span>Language used by us to communicate</span></span>
+            so that human can interact with computers/devices in much more fluent and natural manner as if talking with each other.
+        </p>
+        <br>
+        <div>
+            <h3>Levels of NLP</h3>
+            <ul>
+                <li>
+                    <details>
+                        <summary>Morphological Analysis</summary>
+                        <ul class="inner-ul">
+                            <li>This level of analysis is concerned with the structure of words</li>
+                            <li>
+                                It breaks every word in the sentence into
+                                <span class="tooltip">
+                                    Prefix <span>morphemes that attach to front of word (un,non)</span>
+                                </span>,
+                                <span class="tooltip">
+                                    Stem<span>The actual word</span>
+                                </span>,
+                                <span class="tooltip">
+                                    Suffix <span>morphemes that attach to back of word (ness)</span>
+                                </span>
+                            </li>
+                            <li>
+                                For example: The word <b>unhappiness</b>
+                                is divided into Prefix - un, Stem - happy, and Suffix - ness
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Syntatic Analysis</summary>
+                        <ul class="inner-ul">
+                            <li>This level of analysis is concerned with the formation of clauses and forming more meaning than a single word.</li>
+                            <li>
+                                The goal of this process called <b>Parsing</b> is to convert the flat list of word that forms the sentences
+                                into a structure that defines the units that are represented by that flat list.
+                            </li>
+                            <li>
+                                For example: boy to store go is <b>rejected</b>, and go to store or boy go to store, is <b>accepted</b>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Semantic Analysis</summary>
+                        <ul class="inner-ul">
+                            <li>This level of analysis is concerned with the <b>lexical</b> meaning of the words</li>
+                            <li>
+                                A single word can have many different meanings to it and is realted with other words used in
+                                the sentence.
+                            </li>
+                            <li>
+                                By generating map of all the meaning a word can give and running through all the other words 
+                                to see which meaning gives more sense is choosen.
+                            </li>
+                            <li>
+                                For example: I will meet you at a diamond.
+                                In this sentence the word <b>diamond</b> has many meanings like shape, baseball field, etc,
+                                but the fact that <b>`at`</b> is present in the sentence makes the diamond either a time or place.
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Discourse Integration</summary>
+                        <ul class="inner-ul">
+                            <li>This level of analysis deals with the analysis of structure and meaning of text beyond sentences.</li>
+                            <li>
+                                Some <b>morphemes(mostly pronoun)</b> are used to represent some other word in a compund sentences,
+                                and this Discourse integration level is where we analyiz them.
+                            </li>
+                            <li>
+                                For example: <b>I</b> am playing <b style="color: cornflowerblue;">football</b> and <b style="color: cornflowerblue;">it</b> is a fun game which is <b>my</b> thoughts.
+                                The pronoun <b>my</b> represents <b>I</b> and <b style="color: cornflowerblue;">it</b> represents <b style="color: cornflowerblue;">football</b>. 
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Pragmatic Analysis</summary>
+                        <ul class="inner-ul">
+                            <li>This level of analysis eals with the use of real-world knowledge and understanding of how this impacts the meaning of what is being communicated.</li>
+                            <li>This enables for communication with systems and users possible.</li>
+                            <li>It may use the user's history of queries and try to understand what the user wants to convey</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h3>Errors Encountered during NLP Process</h3>
+            <ul>
+                <li>
+                    <details>
+                        <summary>Phonetic Error</summary>
+                        <ul class="inner-ul">
+                            <li>The error due to poor cognition on part of listener</li>
+                            <li>
+                                For example: Read or Reed, I scream or Icecream, etc
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Typographic Error</summary>
+                        <ul class="inner-ul">
+                            <li>The error due to typing mistakes</li>
+                            <li>
+                                For example: Comptuer instead of computer
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Orthographic Error</summary>
+                        <ul class="inner-ul">
+                            <li>The error due to lack of comprehension of the concerned language</li>
+                            <li>
+                                For example: Arithametic instead of Arithmetic
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
